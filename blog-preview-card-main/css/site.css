@@ -1,6 +1,7 @@
 @import 'meyer-reset.css';
 body {
 	font-family: Figtree;
+	font-size: clamp(.8em, 16px, 1.2em);
 	font-weight: 600;
 	font-color: hsl(0, 0%, 7%);
 	background-color: hsl(46, 90%, 64%);
@@ -18,7 +19,7 @@ img {
 .card {
 	border: 1px solid black;
 	box-shadow: 10px 8px;
-	max-width: 370px;
+	max-width: 270px;
 	margin: 100px auto;
 	padding: 20px;
 	background-color: white;
@@ -42,7 +43,7 @@ img {
 
 .publish-date {
 	font-weight: 400;
-	font-size: 13px;
+	font-size: clamp(.5em, 13px, 1.2em);
 }
 
 .header {
@@ -72,7 +73,11 @@ img {
 	max-width: 45px;
 }
 
-
+@media (min-width: 420px) {
+	.card {
+		min-width: 350px;
+	}
+}
 
 
 
