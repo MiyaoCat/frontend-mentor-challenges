@@ -1,0 +1,76 @@
+body {
+	font-family: Figtree;
+	font-weight: 600;
+	font-color: hsl(0, 0%, 7%);
+}
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.border {
+	border-radius: 15px;
+	color: black;
+}
+
+.card {
+	border: 1px solid black;
+	box-shadow: 8px 8px;
+	max-width: fit-content;
+	margin: 20px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+
+.illustration {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tag {
+	margin-top: 20px;
+	max-width: fit-content;
+	padding: 5px 8px;
+	border-radius: 5px;
+	background-color: hsl(47, 88%, 63%);
+}
+
+.publish-date {
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.header {
+	font-weight: 800;
+	font-style: bold;
+}
+.header:hover {
+	cursor: pointer;
+	color: hsl(47, 88%, 63%);;
+}
+
+.intro {
+	color: hsl(0, 0%, 50%);
+	line-height: 1.4em;
+	font-weight: 300;
+}
+.author {
+	display: flex;
+	column-gap: 10px;
+	font-size: 14px;
+	font-weight: 700;
+
+}
+
+.avatar {
+	max-width: 50px;
+
+}
+
+
+
+
+
+ .attribution { font-size: 11px; text-align: center; }
