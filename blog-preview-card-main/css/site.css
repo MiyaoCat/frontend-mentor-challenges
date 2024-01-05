@@ -1,5 +1,10 @@
 @import 'meyer-reset.css';
-
+body {
+	font-family: Figtree;
+	font-weight: 600;
+	font-color: hsl(0, 0%, 7%);
+	background-color: hsl(46, 90%, 64%);
+}
 img {
 	display: block;
 	width: 100%;
@@ -16,6 +21,7 @@ img {
 	max-width: 370px;
 	margin: 100px auto;
 	padding: 20px;
+	background-color: white;
 }
 
 .info > * {
@@ -58,7 +64,7 @@ img {
 	display: flex;
 	column-gap: 10px;
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: 600;
 	align-items: center;
 }
 

@@ -28,12 +28,8 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
 body {
 	line-height: 1;
-	font-family: Figtree;
-	font-weight: 600;
-	font-color: hsl(0, 0%, 7%);
 }
 
 ol, ul {
