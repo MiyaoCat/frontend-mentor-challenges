@@ -1,8 +1,5 @@
-body {
-	font-family: Figtree;
-	font-weight: 600;
-	font-color: hsl(0, 0%, 7%);
-}
+@import 'meyer-reset.css';
+
 img {
 	display: block;
 	width: 100%;
@@ -15,15 +12,15 @@ img {
 
 .card {
 	border: 1px solid black;
-	box-shadow: 8px 8px;
-	max-width: fit-content;
-	margin: 20px;
+	box-shadow: 10px 8px;
+	max-width: 370px;
+	margin: 100px auto;
 	padding: 20px;
-	display: flex;
-	flex-direction: column;
 }
 
-
+.info > * {
+	margin: 17px 0;
+}
 .illustration {
 	margin-left: auto;
 	margin-right: auto;
@@ -32,7 +29,7 @@ img {
 .tag {
 	margin-top: 20px;
 	max-width: fit-content;
-	padding: 5px 8px;
+	padding: .5em .8em;
 	border-radius: 5px;
 	background-color: hsl(47, 88%, 63%);
 }
@@ -43,9 +40,9 @@ img {
 }
 
 .header {
-	font-weight: 800;
-	font-style: bold;
+	font-size: clamp(1em, 21px, 2em);
 }
+
 .header:hover {
 	cursor: pointer;
 	color: hsl(47, 88%, 63%);;
@@ -56,17 +53,17 @@ img {
 	line-height: 1.4em;
 	font-weight: 300;
 }
+
 .author {
 	display: flex;
 	column-gap: 10px;
 	font-size: 14px;
 	font-weight: 700;
-
+	align-items: center;
 }
 
 .avatar {
-	max-width: 50px;
-
+	max-width: 45px;
 }
 
 
