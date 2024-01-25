@@ -1,0 +1,26 @@
+@import 'meyer-reset.css';
+
+
+header {
+	display: flex;
+	align-items: center;
+}
+
+details > summary {
+	list-style-type: none;
+}
+
+h2 {
+	color: red;
+}
+h2:after {
+	background-image: './assets/images/icon-plus.svg';
+}
+
+
+
+
+    
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
