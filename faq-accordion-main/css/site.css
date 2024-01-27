@@ -50,6 +50,7 @@ main {
 	background-color: white;
 	margin-top: -7em;
 	padding: 25px 20px;
+	box-shadow: 0 8px 6px 0px hsl(275, 100%, 97%);
 }
 
 li {
