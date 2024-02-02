@@ -1,0 +1,6 @@
+@import 'meyer-reset.css';
+
+body * {
+	border: 1px solid grey;
+	padding: 2px;
+}
