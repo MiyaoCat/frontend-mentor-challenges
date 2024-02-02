@@ -63,8 +63,12 @@ img {
 	margin: 20px auto;
 }
 
+.social-links {
+	display: flex;
+	flex-direction: column;
+}
 
-li {
+a {
 	background-color: var(--highlight);
 	border-radius: 5px;
 	margin: 10px;
@@ -72,7 +76,7 @@ li {
 	text-align: center;
 }
 
-li:hover {
+a:hover {
 	background-color: var(--primary);
 	color: var(--card-background);
 }
