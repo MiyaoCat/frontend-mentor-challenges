@@ -38,21 +38,12 @@ body {
    align-items: center;	
 }
 
-
-main {
-	width: 85vw;
-	flex-grow: 1;
-}
-
 .social-card {
-	margin-left: auto;
-	margin-right: auto;
 	text-align: center;
 	background-color: var(--card-background);
 	border-radius: 5px;
 	padding: 15px;
 	max-width: 350px;
-	margin-top: 80px;
 }
 
 img {
