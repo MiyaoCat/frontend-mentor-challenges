@@ -28,21 +28,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/MiyaoCat/frontend-mentor-challenges/tree/main/blog-preview-card)
-- Live Site URL: [Add live site URL here](https://frontend-mentor-challenges-coral.vercel.app/blog-preview-card/index.html)
-
-## My process
+- Solution URL: [Code](https://github.com/MiyaoCat/frontend-mentor-challenges/tree/main/blog-preview-card)
+- Live Site URL: [Blog Preview](https://frontend-mentor-challenges-coral.vercel.app/blog-preview-card/index.html)
 
 ### Built with
 
 - Semantic HTML5 markup
 - Flexbox
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ## Author
 
