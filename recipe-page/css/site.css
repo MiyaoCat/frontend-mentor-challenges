@@ -43,22 +43,18 @@ ul {
 	list-style-position: inside;
 }
 
-ol {
-/*	list-style: number;*/
-/*	list-style-position: inside;*/
-}
-
-li {
-/*	padding-left: 1.5em; /* Adjust as needed */
-/*   text-indent: -1.5em; /* Create a hanging indent */
-}
-
 ol li {
 	margin-left: 1em;
 	text-indent: 0;
 	list-style: number;
 	padding-left: 1em;
 }
+
+ol li::marker {
+	font-weight: 600;
+	color: var(--sub-header-color);
+}
+
 li + li {
 		margin-top: .8em;
 }
@@ -129,13 +125,6 @@ div + div {
 	padding: 1.5em 0;
 	border-top: 1px solid var(--light-accent);
 	border-bottom: 1px solid var(--light-accent);
-}
-
-
-ol li::marker {
-	font-weight: 600;
-	color: var(--sub-header-color);
-/*	padding-right: 1em;*/
 }
 
 .nutrition p {
