@@ -35,6 +35,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Flexbox
+- Mobile-first workflow
 
 ## Author
 

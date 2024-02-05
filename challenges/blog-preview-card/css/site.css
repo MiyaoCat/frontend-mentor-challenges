@@ -1,4 +1,4 @@
-@import 'meyer-reset.css';
+@import '../../style/meyer-reset.css';
 body {
 	font-family: Figtree;
 	font-size: clamp(.8em, 16px, 1.2em);
