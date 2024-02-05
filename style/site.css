@@ -1,0 +1,19 @@
+@import 'meyer-reset.css';
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-family: Work Sans;;
+}
+
+header {
+	margin-left: auto;
+	margin-right: auto;
+}
+footer {
+	margin-bottom: 40px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
