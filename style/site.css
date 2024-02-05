@@ -1,17 +1,68 @@
 @import 'meyer-reset.css';
+@font-face {
+	font-family: Clash Display;
+	src: url('https://frontend-mentor-challenges-coral.vercel.app/assets/fonts/clashDisplay/ClashDisplay-Regular.otf') format("opentype");
+}
 
+:root {
+	--ff: 'Clash Display';
+	--ff-bold: 'Clash Display Bold';
+	--primary: hsl(75, 94%, 57%); /*-- green */
+	--primary-light: hsl(0, 0%, 100%); /*-- white */
+	--highlight: hsl(0, 0%, 20%); /*-- grey */	
+	--card-background: hsl(0, 0%, 12%); /*-- dark grey */
+	--background: hsl(0, 0%, 8%); /*-- off black */
+}
+
+.loud-voice {
+	font-size: 3em;
+	font-weight: 700;
+	letter-spacing: .1em;	
+}
+
+.challenges a {
+	text-decoration: none;
+	color: var(--primary-light);
+	font-weight: 600;
+	font-size: .9em;
+	background-color: var(--highlight);
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+}
+
+.challenges a:hover {
+	background-color: var(--primary);
+	color: var(--card-background);
+}
+
+li + li {
+	margin-top: 2em;
+}
 
 body {
+	font-family: var(--ff);
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	font-family: Work Sans;;
+	gap: 2em;
+	background-color: var(--background);
 }
 
 header {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 7.5em;
+	color: var(--primary);
+	text-align: center;
 }
+
+main {
+	flex-grow: 1;
+	text-align: center;
+}
+
 footer {
 	margin-bottom: 40px;
 }
