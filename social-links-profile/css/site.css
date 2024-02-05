@@ -16,7 +16,7 @@
 	
 }
 
-a {
+.social-card a {
 	text-decoration: none;
 	color: var(--primary-light);
 	font-weight: 600;
@@ -36,6 +36,13 @@ body {
 	background-color: var(--background);
    justify-content: center;
    align-items: center;	
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .social-card {
@@ -59,7 +66,7 @@ img {
 	flex-direction: column;
 }
 
-a {
+.social-card a {
 	background-color: var(--highlight);
 	border-radius: 5px;
 	margin: 10px;
@@ -67,7 +74,7 @@ a {
 	text-align: center;
 }
 
-a:hover {
+.social-card a:hover {
 	background-color: var(--primary);
 	color: var(--card-background);
 }
