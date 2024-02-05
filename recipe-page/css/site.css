@@ -49,13 +49,15 @@ ol {
 }
 
 li {
-	padding-left: 1.5em; /* Adjust as needed */
-   text-indent: -1.5em; /* Create a hanging indent */
+/*	padding-left: 1.5em; /* Adjust as needed */
+/*   text-indent: -1.5em; /* Create a hanging indent */
 }
 
 ol li {
 	margin-left: 1em;
 	text-indent: 0;
+	list-style: number;
+	padding-left: 1em;
 }
 li + li {
 		margin-top: .8em;
@@ -129,6 +131,7 @@ div + div {
 	border-bottom: 1px solid var(--light-accent);
 }
 
+
 ol li::marker {
 	font-weight: 600;
 	color: var(--sub-header-color);
@@ -144,6 +147,11 @@ table {
 
 tr + tr {
 	border-top: 1px solid var(--light-accent);
+}
+
+td {
+	padding-bottom: .5em;
+	padding-top: .5em;
 }
 
 .special {
