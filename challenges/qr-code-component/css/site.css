@@ -1,1 +1,67 @@
 @import '/style/meyer-reset.css';
+
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--background: hsl(212, 45%, 89%);/* Light gray */
+	--card-background: white;
+	--fc-dark: hsl(218, 44%, 22%); /* Dark Blue */
+	--fc-light: hsl(220, 15%, 55%); /* Grayish Blue */
+	--ff: Outfit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: var(--background);
+	font-family: var(--ff);
+	font-size: 15px;
+	font-weight: 400;
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.qr-card {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--card-background);
+	max-width: 300px;
+	padding: 15px 15px 20px 15px;
+	border-radius: 15px;
+	text-align: center;
+}
+
+#qr-code {
+	max-width: 100%;
+	border-radius: 15px;
+}
+
+.description {
+	margin: 20px 10px;
+}
+
+h1 {
+	font-weight: 600;
+	color: var(--fc-dark);
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	margin-bottom: 10px;
+}
+
+p {
+	color: var(--fc-light);
+	margin-top: 5px;
+	line-height: 1.2rem;
+}
+footer {
+	margin: 30px auto;
+}                                                                                                                                                                                                                      

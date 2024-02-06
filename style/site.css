@@ -24,7 +24,7 @@
 }
 
 .loud-voice {
-	font-size: 5em;
+	font-size: clamp(1.5rem, 7vw, 6rem);
 	font-weight: 700;
 	letter-spacing: .06em;	
 	font-family: var(--ff-semibold);
