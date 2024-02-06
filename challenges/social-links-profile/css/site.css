@@ -1,19 +1,17 @@
 @import 'meyer-reset.css';
 
-
 @font-face {
-	font-family: Inter;
-	src: url(https://fonts.google.com/specimen/Inter);
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
 }
 
 :root {
-	--ff-sans: Inter, sans-serif;
+	--ff-sans: 'Inter';
 	--primary: hsl(75, 94%, 57%); /*-- green */
 	--primary-light: hsl(0, 0%, 100%); /*-- white */
 	--highlight: hsl(0, 0%, 20%); /*-- grey */	
 	--card-background: hsl(0, 0%, 12%); /*-- dark grey */
 	--background: hsl(0, 0%, 8%); /*-- off black */
-	
 }
 
 .social-card a {
