@@ -30,6 +30,18 @@
 	font-family: var(--ff-semibold);
 }
 
+.attention-voice {
+	font-size: 1.4rem;
+	font-family: var(--ff-medium);
+	color: var(--primary-light);
+}
+
+.explanation {
+	color: var(--primary);
+	margin: 15px 0;
+	font-size: .8rem;
+}
+
 .challenges a {
 	text-decoration: none;
 	color: var(--primary-light);
@@ -73,6 +85,23 @@ main {
 	text-align: center;
 }
 
+.newbie-card {
+	background-color: var(--card-background);
+	padding: 20px;
+	max-width: 350px;
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	transition-duration: .5s;
+}
+
+.newbie-card:hover {
+	box-shadow: 0 0 20px 2px var(--primary);	
+}
+
+.challenge-list {
+	margin: 20px 0;
+}
 footer {
 	margin-bottom: 40px;
 }
