@@ -139,6 +139,34 @@ li {
 	margin-top: 15px;
 }
 
+li:nth-of-type(1) {
+	background-color: hsla(0, 100%, 67%, .4);;
+}
+li:nth-of-type(1) h2 {
+	color: var(--reaction-color);
+}
+
+li:nth-of-type(2) {
+	background-color: hsla(39, 100%, 56%, .4);
+}
+li:nth-of-type(2) h2 {
+	color: var(--memory-color);
+}
+
+li:nth-of-type(3) {
+	background-color: hsla(166, 100%, 37%, .4);
+}
+li:nth-of-type(3) h2 {
+	color: var(--verbal-color);
+}
+
+li:nth-of-type(4) {
+	background-color: hsla(234, 85%, 45%, .4);
+}
+li:nth-of-type(4) h2 {
+	color: var(--visual-color);
+}
+
 li p {
 	display: flex;
 	align-items: center;

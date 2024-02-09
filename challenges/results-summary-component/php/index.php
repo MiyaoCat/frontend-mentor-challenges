@@ -11,6 +11,20 @@
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 </head>
 
+<?php 
+  $json = file_get_contents('data.json');
+  $results = json_decode($json, true);
+
+  $totalScore = 0;
+
+  forEach($results as $result) {
+    $score = $result['score'];
+
+    $totalScore += $score;
+  } 
+
+  $averageScore = round($totalScore / count($results));  
+?>
 <body>
   
 <main>
@@ -18,7 +32,7 @@
     <div class="result">
       <h2 class="attention-voice">Your Result</h2>
       <div class="score">
-        <p id="overrall-score">76</p> 
+        <p id="overrall-score"><?=$averageScore?></p> 
         <p class="quiet-voice">of 100</p>
       </div>
 
@@ -29,45 +43,25 @@
     <div class="summary">
       <h1 class="loud-voice">Summary</h1>
       <ul> 
-        <li class="category">
+      <?php
+        forEach($results as $result) {
+          $category = $result['category'];
+          $score = $result['score'];
+          $icon = $result['icon'];
+          $color = $result['color'];
+      ?>
+        <li class="category" style="background-color: <?=str_replace(', 1)', ', .1)', $color)?>">
+
           <div class="icon-wrap">
-            <img src="./assets/images/icon-reaction.svg" alt="category icon" class="icon">
+            <img src="<?=$icon?>" alt="category icon" class="icon">
             
-            <h2 class="attention-voice">Reaction</h2>
+            <h2 class="attention-voice" style="color:<?=$color?>"><?=$category?></h2>
           </div>
 
-          <p class="normal-voice"><strong>80</strong>&nbsp;/ 100</p>
+          <p class="normal-voice"><strong><?=$score?></strong>&nbsp;/ 100</p>
         </li>
 
-       <li class="category">
-          <div class="icon-wrap">
-            <img src="./assets/images/icon-memory.svg" alt="category icon" class="icon">
-            
-            <h2 class="attention-voice">Memory</h2>
-          </div>
-
-          <p class="normal-voice"><strong>80</strong>&nbsp;/ 100</p>
-        </li>
-
-        <li class="category">
-          <div class="icon-wrap">
-            <img src="./assets/images/icon-verbal.svg" alt="category icon" class="icon">
-            
-            <h2 class="attention-voice">Verbal</h2>
-          </div>
-
-          <p class="normal-voice"><strong>80</strong>&nbsp;/ 100</p>
-        </li>
-
-        <li class="category">
-          <div class="icon-wrap">
-            <img src="./assets/images/icon-visual.svg" alt="category icon" class="icon">
-            
-            <h2 class="attention-voice">Visual</h2>
-          </div>
-
-          <p class="normal-voice"><strong>80</strong>&nbsp;/ 100</p>
-        </li>
+       <?php } ?> 
       </ul>
 
       <button>Continue</button>
