@@ -1,4 +1,4 @@
-@import '/style/meyer-reset.css';
+@import 'meyer-reset.css';
 @font-face {
 	font-family: 'Hanken Grotesk';
 	src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
@@ -64,7 +64,6 @@ body {
 main {
 	flex-grow: 1;
 	display: flex;
-	height: 100vh;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -75,7 +74,6 @@ main {
 	display: flex;
 	flex-direction: column;
 	min-width: 300px;
-	min-height: 100%;
 }
 
 .result {
@@ -130,6 +128,7 @@ main {
 
 ul {
 	margin: 20px 0; 
+	padding-inline-start: 0;
 }
 
 li {
@@ -140,6 +139,10 @@ li {
 	margin-top: 15px;
 }
 
+li p {
+	display: flex;
+	align-items: center;
+}
 .icon-wrap {
 	display: flex;
 	align-items: center;
@@ -168,21 +171,27 @@ button {
 	}
 	.result-card {
 		flex-direction: row;
-		max-width: 690px;
-		min-width: 400px;
-		min-height: 45vh;
+		height: 450px;
+		position: relative;
 	}
 
 	.result {
-		width: 50%;
-		border-radius: 20px 0 0 20px;
+		position: absolute;
+		width: 340px;
+		height: 100%;
+		border-radius: 20px;
+		left: -200px;
+		z-index: 1;
 	}
 
 	.summary {
-		width: 50%;
+		position: absolute;
+		width: 380px;
+		height: 100%;
 		border-radius: 0 20px 20px 0;
 		margin: 0;
-		padding: 40px;
+		padding: 40px 40px 40px 60px;
+		right: -195px;
 	}
 
 	button {

@@ -32,7 +32,7 @@
     <div class="result">
       <h2 class="attention-voice">Your Result</h2>
       <div class="score">
-        <div id="overrall-score"><?=$averageScore?></div> 
+        <p id="overrall-score"><?=$averageScore?></p> 
         <p class="quiet-voice">of 100</p>
       </div>
 
@@ -55,10 +55,10 @@
           <div class="icon-wrap">
             <img src="<?=$icon?>" alt="category icon" class="icon">
             
-            <h2 style="color:<?=$color?>"><?=$category?></h2>
+            <h2 class="attention-voice" style="color:<?=$color?>"><?=$category?></h2>
           </div>
 
-          <p class="normal-voice"><strong><?=$score?></strong> / 100</p>
+          <p class="normal-voice"><strong><?=$score?></strong>&nbsp;/ 100</p>
         </li>
 
        <?php } ?> 
