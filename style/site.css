@@ -78,6 +78,7 @@ header {
 	margin-top: 7.5em;
 	color: var(--primary);
 	text-align: center;
+	max-width: 75%;
 }
 
 main {
