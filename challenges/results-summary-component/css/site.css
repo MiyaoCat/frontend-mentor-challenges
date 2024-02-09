@@ -197,6 +197,11 @@ button {
 	margin-top: 10px;
 }
 
+button:hover {
+	cursor: pointer;
+	background:linear-gradient(var(--gradient-circle-top), var(--gradient-royal));
+}
+
 @media (min-width: 630px) {
 	main {
 		background-color: var(--background-color);
