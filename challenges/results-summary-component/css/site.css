@@ -1,4 +1,5 @@
 @import 'meyer-reset.css';
+
 @font-face {
 	font-family: 'Hanken Grotesk';
 	src: url('../assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
@@ -110,8 +111,10 @@ main {
 	color: var(--light-accent);
 	font-weight: 800;
 	font-size: 3rem;
-	margin-block-start: .3em;
-	margin-block-end: -0.4em:;
+}
+
+.score p {
+	margin-top: 10px;
 }
 
 #word-score {
@@ -136,7 +139,7 @@ li {
 	display: flex;
 	justify-content: space-between;
 	border-radius: 10px;
-	padding: 0 15px;
+	padding: 15px;
 	margin-top: 15px;
 }
 
@@ -200,7 +203,7 @@ button {
 	}
 	.result-card {
 		flex-direction: row;
-		height: 540px;
+		height: 450px;
 		position: relative;
 	}
 
