@@ -15,42 +15,183 @@
 	--verbal-color: hsl(166, 100%, 37%); /*Green teal*/
 	--visual-color: hsl(234, 85%, 45%); /*Cobalt blue*/
 
-	--gradient-slate: hsl(252, 100%, 67%); /*Light slate blue*/
-	--gradient-royal: hsl(241, 81%, 54%); /*Light royal blue*/
+	--gradient-slate: hsla(252, 100%, 67%, 1); /*Light slate blue*/
+	--gradient-royal: hsla(241, 81%, 54%, 1); /*Light royal blue*/
 	--gradient-circle-top: hsla(256, 72%, 46%, 1); /*Violet blue*/
 	--gradient-circle-btm: hsla(241, 72%, 46%, 0); /*Persian blue*/
 
 	--light-accent: white;
-	--pale-blue: hsl(221, 100%, 96%); /*Pale blue*/
+	--background-color: hsl(221, 100%, 96%); /*Pale blue*/
  	--font-color: hsl(241, 100%, 89%); /*Light lavender*/
-	--button-color: hsl(224, 30%, 27%); /*Dark gray blue*/
+	--font-color-dark: hsl(224, 30%, 27%); /*Dark gray blue*/
 
 }
 
-body * {
-	border: 1px solid black;
-	margin: 2px;	
-}
 body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: var(--background);
+	background-color: var(--background-color);
 	font-family: var(--ff);
-	font-size: 15px;
+	font-size: 18px;
 	font-weight: 400;
 }
+
+.loud-voice {
+	color: var(--font-color-dark);
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.attention-voice {
+	color: var(--font-color);
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.normal-voice {
+	color: var(--font-color);
+	font-size: 1em; 
+	line-height: 1.3em;
+}
+
+.quiet-voice {
+	color: var(--font-color);
+	font-size: .9em;
+}
+
 
 main {
 	flex-grow: 1;
 	display: flex;
+	height: 100vh;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--light-accent);
+}
+
+.result-card {
+	display: flex;
+	flex-direction: column;
+	min-width: 300px;
+	min-height: 100%;
+}
+
+.result {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background:linear-gradient(hsla(241, 81%, 54%, .8), var(--gradient-royal));
+	text-align: center;
+	padding: 40px;
+	border-radius: 0 0 20px 20px;
+}
+
+.score {
+	background:linear-gradient(var(--gradient-circle-top), var(--gradient-circle-btm));
+	width: 50vmin;
+	height: 50vmin;
+	
+	min-width: 110px;
+	min-height: 110px;
+
+	max-width: 180px;
+	max-height: 180px;
+
+	border-radius: 100%;
+	padding: 30px;
+	margin: 20px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 }
 
-.category {
-	display: flex;
+#overrall-score {
+	color: var(--light-accent);
+	font-weight: 800;
+	font-size: 3rem;
+	margin-bottom: 10px;
 }
+
+#word-score {
+	color: var(--light-accent);
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-bottom: 15px;
+}
+
+.summary {
+	background-color: var(--light-accent);
+	padding: 15px;
+	margin: 20px 0;
+}
+
+ul {
+	margin: 20px 0; 
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	padding: 15px;
+	margin-top: 15px;
+}
+
+.icon-wrap {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+strong {
+	color: var(--font-color-dark);
+	font-weight: 500;
+}
+
+button {
+	border: none;
+	border-radius: 40px;
+	background-color: var(--font-color-dark);
+	color: var(--light-accent);
+	padding: 20px;
+	width: 100%;
+	font-size: 1em;
+	margin-top: 10px;
+}
+
+@media (min-width: 630px) {
+	main {
+		background-color: var(--background-color);
+	}
+	.result-card {
+		flex-direction: row;
+		max-width: 690px;
+		min-width: 400px;
+		min-height: 45vh;
+	}
+
+	.result {
+		width: 50%;
+		border-radius: 20px 0 0 20px;
+	}
+
+	.summary {
+		width: 50%;
+		border-radius: 0 20px 20px 0;
+		margin: 0;
+		padding: 40px;
+	}
+
+	button {
+		padding: 10px;
+	}
+}
+
 footer {
 	margin: 30px auto;
-}                                                                                                                                                                                                                      
+}                                                                                                                                                                   
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }                                                   

@@ -27,21 +27,17 @@
 ?>
 <body>
   
-  
-  
-
-
-  
 <main>
   <div class="result-card">
     <div class="result">
       <h2 class="attention-voice">Your Result</h2>
       <div class="score">
-        <?=$averageScore?> of 100
+        <div id="overrall-score"><?=$averageScore?></div> 
+        <p class="quiet-voice">of 100</p>
       </div>
 
-      <h1>Great</h1>
-      <p>You scored higher than 65% of the people who have taken these tests.</p>
+      <p id="word-score">Great</p>
+      <p class="normal-voice">You scored higher than 65% of the people who have taken these tests.</p>
     </div>
 
     <div class="summary">
@@ -52,11 +48,17 @@
           $category = $result['category'];
           $score = $result['score'];
           $icon = $result['icon'];
+          $color = $result['color'];
       ?>
-        <li class="category">
-          <img src="<?=$icon?>" alt="category icon" class="icon">
-          <h2><?=$category?></h2>
-          <div class="score"><strong><?=$score?></strong> / 100</div>
+        <li class="category" style="background-color: <?=str_replace(', 1)', ', .1)', $color)?>">
+
+          <div class="icon-wrap">
+            <img src="<?=$icon?>" alt="category icon" class="icon">
+            
+            <h2 style="color:<?=$color?>"><?=$category?></h2>
+          </div>
+
+          <p class="normal-voice"><strong><?=$score?></strong> / 100</p>
         </li>
 
        <?php } ?> 
