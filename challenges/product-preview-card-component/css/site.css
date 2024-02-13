@@ -57,9 +57,9 @@ img {
 }
 
 
-img {
-	max-width: 345px;
-	max-height: 268px;
+.mobile img {
+	width: 345px;
+	height: 268px;
 	border-radius: 10px 10px 0 0;
 }
 
@@ -68,8 +68,8 @@ img {
 }
 
 .product-component {
-	max-width: 345px;
-	max-height: 611px;
+	width: 345px;
+	height: 611px;
 	border-radius: 10px;
 }
 
@@ -158,11 +158,15 @@ footer {
 	.desktop {
 		display: block;
 		width: 50%;
+		height: 100%;
 	}
 
-	.product-description {
+	.product-info {
 		width: 50%;
+		height: 100%;
+		padding: 32px;
 	}
+
 }
 
 
