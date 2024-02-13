@@ -159,12 +159,14 @@ footer {
 		display: block;
 		width: 50%;
 		height: 100%;
+		border-radius: 10px 0 0 10px;
 	}
 
 	.product-info {
 		width: 50%;
 		height: 100%;
 		padding: 32px;
+		border-radius: 0 10px 10px 0;
 	}
 
 }
