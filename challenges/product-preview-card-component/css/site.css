@@ -69,7 +69,7 @@ img {
 
 .product-component {
 	width: 345px;
-	height: 611px;
+/*	height: 611px;*/
 	border-radius: 10px;
 }
 
@@ -135,9 +135,9 @@ button img {
 button p {
 	font-weight: 700;
 }
-footer {
+/*footer {
 	margin-bottom: 5em;
-}
+}*/
 
 @media (min-width: 610px) {
 
