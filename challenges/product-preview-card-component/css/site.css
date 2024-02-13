@@ -57,7 +57,7 @@ img {
 }
 
 
-.mobile img {
+.mobile {
 	width: 345px;
 	height: 268px;
 	border-radius: 10px 10px 0 0;
