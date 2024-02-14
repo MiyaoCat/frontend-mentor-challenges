@@ -106,11 +106,22 @@ li + li {
 	margin-top: 20px;
 }
 
+.input-header {
+	display: flex;
+	justify-content: space-between;
+}
+
 .email {
 	font-family: var(--ff-bold);
 	font-size: .8rem;
 }
 
+.error {
+	font-family: var(--ff-bold);
+	font-size: .8rem;	
+	color: var(--primary);
+	display: none;
+}
 input {
 	margin-top: 13px;
 	margin-bottom: 24px;
