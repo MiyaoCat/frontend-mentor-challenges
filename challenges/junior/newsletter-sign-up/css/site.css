@@ -4,7 +4,6 @@
 	font-family: 'Roboto';
 	src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
 }	
-
 @font-face {
 	font-family: 'Roboto Bold';
 	src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
@@ -19,13 +18,10 @@
 	--ff-bold: 'Roboto Bold';
 
 	--primary: hsl(4, 100%, 67%); /*Tomato*/
-	--gradient-royal: hsla(241, 81%, 54%, 1); /*Light royal blue*/
-	--gradient-circle-top: hsla(256, 72%, 46%, 1); /*Violet blue*/
-	--gradient-circle-btm: hsla(241, 72%, 46%, 0); /*Persian blue*/
 
 	--accent: hsl(231, 7%, 60%); /* Grey */
 	--light-accent: white;
-	--background-color: hsl(234, 29%, 20%); /*Dark Slate Grey*/
+	--dark-accent: hsl(234, 29%, 20%); /*Dark Slate Grey*/
  	--font-color: hsl(235, 18%, 26%); /*Charcoal Grey*/
 	--font-color-dark: hsl(224, 30%, 27%); /*Dark gray blue*/
 
@@ -35,7 +31,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: var(--background-color);
+	background-color: var(--dark-accent);
 	font-family: var(--ff);
 	font-size: 16px;
 }
@@ -70,8 +66,7 @@ main {
 
 .signup-form {
 	max-width: 375px;
-	min-height: 642px;
-	border: 1px solid blue;
+	min-height: 842px;
 }
 
 img.mobile {
@@ -87,19 +82,55 @@ img.desktop {
 	margin: 40px 24px;
 }
 
-.signup-content p {
+.signup-content .intro {
 	margin: 26px 0;
 }
 
+ul {
+	margin-top: 28px;
+	margin-bottom: 44px;
+}
+
 li {
-/*	list-style-image: url('../assets/images/icon-list.svg');
-	margin-left: 24px;*/
+	display: flex;
+	align-items: center;
 }
 
 li::before {
 	content: url('../assets/images/icon-list.svg');
-/*	border: 1px solid black;*/
 	vertical-align: middle;
+	margin-right: 18px;
+}
+
+li + li {
+	margin-top: 20px;
+}
+
+.email {
+	font-family: var(--ff-bold);
+	font-size: .8rem;
+}
+
+input {
+	margin-top: 13px;
+	margin-bottom: 24px;
+	padding: 18px 25px;
+	width: 100%;
+	border-radius: 10px;
+	border: 1.2px solid var(--accent);
+	font-size: .9rem;
+	color: var(--accent);
+}
+
+button {
+	width: 100%;
+	background-color: var(--dark-accent);
+	font-family: var(--ff-bold);
+	font-size: 1rem;
+	color: var(--light-accent);
+	border-radius: 10px;
+	border: none;
+	padding: 24px 0px;
 }
 .success-card {
 	display: none;
