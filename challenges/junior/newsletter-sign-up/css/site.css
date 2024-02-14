@@ -98,10 +98,8 @@ li {
 
 li::before {
 	content: url('../assets/images/icon-list.svg');
-	border: 1px solid black;
-	height: 10px;
-	width: 10px;
-	padding-top: 10px;
+/*	border: 1px solid black;*/
+	vertical-align: middle;
 }
 .success-card {
 	display: none;
