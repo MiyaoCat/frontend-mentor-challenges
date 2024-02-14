@@ -61,12 +61,14 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--light-accent);
+	background-color: var(--background-color);
 }
 
 .signup-form {
 	max-width: 375px;
 	min-height: 842px;
+	background-color: var(--light-accent);
+	border-radius: 10px;
 }
 
 img.mobile {
@@ -159,6 +161,53 @@ button:hover {
 
 footer {
 	margin: 30px auto;
-}                                                                                                                                                                   
+}                                                                                         
+
+@media (min-width: 700px) {
+	.loud-voice {
+		font-size: 3.5rem;
+	}
+	.signup-form {
+		display: flex;
+		flex-direction: row-reverse;
+		max-width: 928px;
+		min-height: 641px;
+		padding: 24px;
+		border: 1px solid black;
+		border-radius: 35px;
+	}
+
+	.mobile {
+		display: none;
+	}
+
+	img.desktop {
+		display: block;
+		max-width: 50%;
+		height: 100%;
+	}
+
+	.signup-content {
+		padding: 40px;
+		height: 100%;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.signup-content .intro {
+		margin-top: 26px;
+		margin-bottom: 30px;
+	}
+
+	ul {
+		margin-top: 0;
+	}
+
+	li + li {
+		margin-top: 13px;
+	}
+}                                                                          
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }                                                   
