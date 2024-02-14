@@ -42,6 +42,9 @@
 	font-size: .8rem;
 }
 
+.challenges {
+	display: flex;
+}
 .challenges a {
 	text-decoration: none;
 	color: var(--primary-light);
@@ -86,7 +89,7 @@ main {
 	text-align: center;
 }
 
-.newbie-card {
+.challenges-card {
 	background-color: var(--card-background);
 	padding: 20px;
 	max-width: 350px;
@@ -96,7 +99,7 @@ main {
 	transition-duration: .5s;
 }
 
-.newbie-card:hover {
+.challenges-card:hover {
 	box-shadow: 0 0 20px 2px var(--primary);	
 }
 
