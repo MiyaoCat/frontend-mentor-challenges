@@ -20,8 +20,8 @@
   <!-- Sign-up form start -->
   
   <div class="signup-form">
-    <img class="mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="">
-    <img class="desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="">
+    <img class="mobile" src="assets/images/illustration-sign-up-mobile.svg" alt="decorative drawings of computer screens">
+    <img class="desktop" src="assets/images/illustration-sign-up-desktop.svg" alt="decorative drawings of computer screens">
 
     <div class="signup-content">
       <h1 class="loud-voice">Stay updated!</h1>
@@ -44,10 +44,10 @@
     
       <form class="emailSubmission" method="POST">
         <div class='input-header'>
-          <h2 class="email">Email address</h2>
+          <label for="email-form" class="email">Email address</label>
           <h2 class='error'>Valid Email Required</h2>
         </div>
-        <input type="text" placeholder="email@company.com" value=""></input>
+        <input type="email" name="email-form" placeholder="email@company.com" value="" formnovalidate></input>
 
         <button type="submit">Subscribe to monthly newsletter</button>
       </form>
@@ -109,12 +109,11 @@
     }
   })
 
-
   $dismiss = document.querySelector('.dismiss');
 
   $dismiss.addEventListener('click', function(event) {
-    $successCard.style.display = 'none';    
     $signUpForm.style.display = 'block';
+    $successCard.style.display = 'none';    
   })
   console.log('hello');
 </script>
