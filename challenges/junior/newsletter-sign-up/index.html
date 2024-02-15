@@ -42,7 +42,7 @@
         </li>
       </ul>
     
-      <form method="POST">
+      <form class="emailSubmission" method="POST">
         <div class='input-header'>
           <h2 class="email">Email address</h2>
           <h2 class='error'>Valid Email Required</h2>
@@ -59,14 +59,17 @@
   <!-- Success message start -->
   
   <div class="success-card">
-    <h1 class="loud-voice">Thanks for subscribing!</h1>
+    <img src='assets/images/icon-success.svg' alt=''>
+    <h1 class="loud-voice thank-you-header">Thanks for subscribing!</h1>
     
     <p class="normal-voice">
-      A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. 
+      A confirmation email has been sent to <strong></strong>. 
       Please open it and click the button inside to confirm your subscription.
     </p>
     
-    <button>Dismiss message</button>
+    <form class="dismiss" method="POST">
+      <button>Dismiss message</button>
+    </form>
   </div>
   
   <!-- Success message end -->
@@ -81,11 +84,12 @@
 </body>
 
 <script>
-  $form = document.querySelector('form');
+  $form = document.querySelector('.emailSubmission');
   $input = document.querySelector('input');
   $error = document.querySelector('.error');
   $signUpForm = document.querySelector('.signup-form');
   $successCard = document.querySelector('.success-card');
+  $strong = document.querySelector('strong');
 
   $form.addEventListener('submit', function(event) {
     event.preventDefault();
@@ -100,10 +104,18 @@
       $input.style.border = '1px solid var(--primary)';
     } else {
       $signUpForm.style.display = 'none';
-      $successCard.style.display = 'flex';
+      $successCard.style.display = 'block';
+      $strong.innerHTML = emailInput;
     }
   })
 
+
+  $dismiss = document.querySelector('.dismiss');
+
+  $dismiss.addEventListener('click', function(event) {
+    $successCard.style.display = 'none';    
+    $signUpForm.style.display = 'block';
+  })
   console.log('hello');
 </script>
 </html>
