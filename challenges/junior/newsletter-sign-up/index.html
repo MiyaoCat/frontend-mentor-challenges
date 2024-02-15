@@ -42,15 +42,15 @@
         </li>
       </ul>
     
-      <form action="">
+      <form method="POST">
         <div class='input-header'>
           <h2 class="email">Email address</h2>
           <h2 class='error'>Valid Email Required</h2>
         </div>
-        <input type="email" placeholder="email@company.com"></input>
-      </form>
+        <input type="email" placeholder="email@company.com" value=""></input>
 
-      <button>Subscribe to monthly newsletter</button>
+        <button type="submit">Subscribe to monthly newsletter</button>
+      </form>
     </div> 
   </div>
   
@@ -81,6 +81,21 @@
 </body>
 
 <script>
-  
+  $form = document.querySelector('form');
+  $input = document.querySelector('input');
+
+  $form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let emailInput = $input.value;
+    
+    if ($input === '') {
+      console.log('empty')
+    } else {
+      console.log(emailInput);
+    }
+  })
+
+  console.log('hello');
 </script>
 </html>
