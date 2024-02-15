@@ -75,6 +75,7 @@ main {
 img.mobile {
 	min-width: 100%;
 	max-height: 284px;
+	border-radius: 10px 10px;
 }
 
 img.desktop {
