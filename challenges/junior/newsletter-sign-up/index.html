@@ -47,7 +47,7 @@
           <h2 class="email">Email address</h2>
           <h2 class='error'>Valid Email Required</h2>
         </div>
-        <input type="email" placeholder="email@company.com" value=""></input>
+        <input type="text" placeholder="email@company.com" value=""></input>
 
         <button type="submit">Subscribe to monthly newsletter</button>
       </form>
@@ -83,14 +83,16 @@
 <script>
   $form = document.querySelector('form');
   $input = document.querySelector('input');
+  $error = document.querySelector('.error');
 
   $form.addEventListener('submit', function(event) {
     event.preventDefault();
 
     let emailInput = $input.value;
     
-    if ($input === '') {
-      console.log('empty')
+    if (emailInput === '' || !emailInput.includes('@')) {
+      $error.style.display = 'block';
+      $input.style.border = '1px solid var(--primary)';
     } else {
       console.log(emailInput);
     }
