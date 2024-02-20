@@ -1,29 +1,24 @@
 @import '/style/meyer-reset.css';
 
 @font-face {
-	font-family: 'Roboto';
-	src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+	font-family: 'Overpass';
+	src: url('https://fonts.google.com/specimen/Overpass');
 }	
-@font-face {
-	font-family: 'Roboto Bold';
-	src: url('../assets/fonts/Roboto-Bold.ttf') format('truetype');
-}
 
 * {
 	box-sizing: border-box;
 }
 
 :root {
-	--ff: 'Roboto';
-	--ff-bold: 'Roboto Bold';
+	--ff: 'Overpass';
 
-	--primary: hsl(4, 100%, 67%); /*Tomato*/
+	--primary: hsl(25, 97%, 53%); /*Orange*/
 
-	--accent: hsl(231, 7%, 60%); /* Grey */
-	--light-accent: white;
-	--dark-accent: hsl(234, 29%, 20%); /*Dark Slate Grey*/
- 	--font-color: hsl(235, 18%, 26%); /*Charcoal Grey*/
-	--font-color-dark: hsl(224, 30%, 27%); /*Dark gray blue*/
+	--white: white;
+	--light-grey: hsl(217, 12%, 63%);
+	--med-grey: hsl(216, 12%, 54%);
+	--dark-blue: hsl(213, 19%, 18%);
+	--very-dark-blue: hsl(216, 12%, 8%);
 
 }
 
@@ -31,26 +26,40 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: var(--dark-accent);
+	background-color: var(--very-dark-blue);
 	font-family: var(--ff);
-	font-size: 16px;
+	font-size: 15px;
 }
 
 .loud-voice {
-	color: var(--font-color);
+	color: var(--white);
 	font-family: var(--ff-bold);
 	font-size: 2rem;
 }
 
 .attention-voice {
-	color: var(--font-color);
+	color: var(--white);
 	font-size: 1.2rem;
 	font-weight: 700;
 }
 
 .normal-voice {
-	color: var(--font-color);
+	color: var(--white);
 	font-size: 1rem; 
 	line-height: 1.3em;
 }
     
+
+ol {
+	display: flex;
+}
+
+li {
+	margin-left: 18px;
+	border-radius: 100%;
+	padding: 10px;
+	background-color: var(--dark-blue);
+	width: 40px;
+	height: 40px;
+	text-align: center;
+}
