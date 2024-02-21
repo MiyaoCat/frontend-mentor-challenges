@@ -39,31 +39,52 @@
       <button type="submit">Submit</button>
     </form>
   </div>
-  
   <!-- Rating state end -->
   
   <!-- Thank you state start -->
-  
-  <div class='thank-you'>
-    You selected <!-- Add rating here --> out of 5
-    
-    Thank you!
-    
-    We appreciate you taking the time to give a rating. If you ever need more support, 
-    don’t hesitate to get in touch!
-  </div>
-  
+  <div class='thank-you'></div>
   <!-- Thank you state end -->
-</main>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+</main>
 </body>
 
 <script>
+  const ratings = document.querySelectorAll('.one, .two, .three, .four, .five');
+  
+  const $form = document.getElementById('ratingForm');
+  const message = document.querySelector('.thank-you');
+  let value;
+
+  ratings.forEach(function(rating) {
+    rating.addEventListener('click', function() {
+      value = rating.innerHTML;
+
+      ratings.forEach(function(background) {
+        background.style.backgroundColor = '';
+      });
+
+      rating.style.backgroundColor = 'orange';
+    })
+  })
+
+  $form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    console.log('submit', value);
+
+    message.style.display = 'block';
+
+    message.innerHTML = `
+      <img src='images/illustration-thank-you.svg' alt='receipt icon'>
+      <p class='normal-voice special'>You selected ${value} out of 5</p>
+
+      <h1 class='loud-voice'>Thank you!</h1>
+
+      <p class='normal-voice'>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>`;
+
+
+  });
+
+  //ORIGINAL FUNCTION SETUP
   // const $one = document.querySelector('.one');
   // const $two = document.querySelector('.two');
   // const $three = document.querySelector('.three');
@@ -85,28 +106,5 @@
   //   let value = $three.innerHTML;
   //   console.log(value);
   // })
-
-  const ratings = document.querySelectorAll('.one, .two, .three, .four, .five');
-  
-  const $form = document.getElementById('ratingForm');
-  const message = document.querySelector('.thank-you');
-  let value;
-
-  ratings.forEach(function(rating) {
-    rating.addEventListener('click', function() {
-      value = rating.innerHTML;
-
-      ratings.forEach(function(background) {
-        background.style.backgroundColor = '';
-      });
-
-      rating.style.backgroundColor = 'orange';
-    })
-  })
-
-  $form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    console.log('submit', value)
-  });
 </script>
 </html>
