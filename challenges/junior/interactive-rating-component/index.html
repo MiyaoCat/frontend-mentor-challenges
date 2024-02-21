@@ -19,7 +19,7 @@
 <main>
   <!-- Rating state start -->
   <div class='rating-card'>
-    <img src='images/icon-star.svg' alt=''>
+    <div class='star'><img src='images/icon-star.svg' alt=''></div>
     <h1 class='loud-voice'>How did we do?</h1>
     
     <p class='normal-voice'>
@@ -49,21 +49,23 @@
 </body>
 
 <script>
-  const ratings = document.querySelectorAll('.one, .two, .three, .four, .five');
+  const $ratingCard = document.querySelector('.rating-card');
+  const $ratings = document.querySelectorAll('.one, .two, .three, .four, .five');
   
   const $form = document.getElementById('ratingForm');
-  const message = document.querySelector('.thank-you');
+  const $message = document.querySelector('.thank-you');
   let value;
 
-  ratings.forEach(function(rating) {
+  $ratings.forEach(function(rating) {
     rating.addEventListener('click', function() {
       value = rating.innerHTML;
 
-      ratings.forEach(function(background) {
+      $ratings.forEach(function(background) {
         background.style.backgroundColor = '';
       });
 
-      rating.style.backgroundColor = 'orange';
+      rating.style.backgroundColor = 'var(--light-grey)';
+      rating.style.color = 'var(--white)';
     })
   })
 
@@ -71,9 +73,11 @@
     event.preventDefault();
     console.log('submit', value);
 
-    message.style.display = 'block';
+    $ratingCard.style.display = 'none';
 
-    message.innerHTML = `
+    $message.style.display = 'flex';
+
+    $message.innerHTML = `
       <img src='images/illustration-thank-you.svg' alt='receipt icon'>
       <p class='normal-voice special'>You selected ${value} out of 5</p>
 
