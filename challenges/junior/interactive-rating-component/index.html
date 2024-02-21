@@ -71,21 +71,24 @@
 
   $form.addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log('submit', value);
 
-    $ratingCard.style.display = 'none';
+    if (value) {
+     $ratingCard.style.display = 'none';
 
-    $message.style.display = 'flex';
+      $message.style.display = 'flex';
 
-    $message.innerHTML = `
-      <img src='images/illustration-thank-you.svg' alt='receipt icon'>
-      <p class='normal-voice special'>You selected ${value} out of 5</p>
+      $message.innerHTML = `
+        <img src='images/illustration-thank-you.svg' alt='receipt icon'>
+        <p class='normal-voice special'>You selected ${value} out of 5</p>
 
-      <h1 class='loud-voice'>Thank you!</h1>
+        <h1 class='loud-voice'>Thank you!</h1>
 
-      <p class='normal-voice'>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>`;
-
-
+        <p class='normal-voice'>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      `;     
+    }
+    else {
+      alert('Please select a rating before submitting.');
+    }
   });
 
   //ORIGINAL FUNCTION SETUP
