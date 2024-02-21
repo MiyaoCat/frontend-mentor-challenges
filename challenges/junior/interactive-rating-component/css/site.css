@@ -1,9 +1,7 @@
 @import '/style/meyer-reset.css';
 
-@font-face {
-	font-family: 'Overpass';
-	src: url('https://fonts.google.com/specimen/Overpass');
-}	
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 * {
 	box-sizing: border-box;
@@ -33,7 +31,7 @@ body {
 
 .loud-voice {
 	color: var(--white);
-	font-family: var(--ff-bold);
+	font-family: var(--ff);
 	font-size: 2rem;
 }
 
@@ -44,6 +42,7 @@ body {
 }
 
 .normal-voice {
+	font-family: var(--ff);
 	color: var(--white);
 	font-size: 1rem; 
 	line-height: 1.3em;

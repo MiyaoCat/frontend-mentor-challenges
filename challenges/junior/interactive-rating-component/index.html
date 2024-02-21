@@ -27,13 +27,13 @@
       to help us improve our offering!
     </p>
     
-    <form action=''>
+    <form action='' id='ratingForm'>
       <ol>
-        <li class='normal-voice'>1</li>
-        <li class='normal-voice'>2</li>
-        <li class='normal-voice'>3</li>
-        <li class='normal-voice'>4</li>
-        <li class='normal-voice'>5</li>
+        <li class='normal-voice one'>1</li>
+        <li class='normal-voice two'>2</li>
+        <li class='normal-voice three'>3</li>
+        <li class='normal-voice four'>4</li>
+        <li class='normal-voice five'>5</li>
       </ol>
       
       <button type="submit">Submit</button>
@@ -44,12 +44,14 @@
   
   <!-- Thank you state start -->
   
-  You selected <!-- Add rating here --> out of 5
-  
-  Thank you!
-  
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
+  <div class='thank-you'>
+    You selected <!-- Add rating here --> out of 5
+    
+    Thank you!
+    
+    We appreciate you taking the time to give a rating. If you ever need more support, 
+    don’t hesitate to get in touch!
+  </div>
   
   <!-- Thank you state end -->
 </main>
@@ -60,4 +62,51 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
+<script>
+  // const $one = document.querySelector('.one');
+  // const $two = document.querySelector('.two');
+  // const $three = document.querySelector('.three');
+  // const $four = document.querySelector('.four');
+  // const $five = document.querySelector('.five');
+
+  // $one.addEventListener('click', function() {
+  //   console.log('click one')
+  //   let value = $one.innerHTML;
+  //   console.log(value);
+  // })
+
+  // $two.addEventListener('click', function() {
+  //   let value = $two.innerHTML;
+  //   console.log(value);
+  // })
+
+  // $three.addEventListener('click', function() {
+  //   let value = $three.innerHTML;
+  //   console.log(value);
+  // })
+
+  const ratings = document.querySelectorAll('.one, .two, .three, .four, .five');
+  
+  const $form = document.getElementById('ratingForm');
+  const message = document.querySelector('.thank-you');
+  let value;
+
+  ratings.forEach(function(rating) {
+    rating.addEventListener('click', function() {
+      value = rating.innerHTML;
+
+      ratings.forEach(function(background) {
+        background.style.backgroundColor = '';
+      });
+
+      rating.style.backgroundColor = 'orange';
+    })
+  })
+
+  $form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    console.log('submit', value)
+  });
+</script>
 </html>
