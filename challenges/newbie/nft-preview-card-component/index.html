@@ -5,41 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel='stylesheet' href='./css/site.css'>
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
 <main>
   <div class='nft-card'>
-    <picture>
-      <img src='/images/image-equilibrium' alt=''>
+    <picture class='nft'>
+      <img src='./images/image-equilibrium.jpg' alt='image of nft'>
     </picture>
 
     <div class='nft-info'>
-      <h1 class='loud-voice'><a href='#'>Equilibrium #3429<</a>/h1>
+      <h1 class='loud-voice'><a href='#'>Equilibrium #3429</a></h1>
       
       <p class='normal-voice'>Our Equilibrium collection promotes balance and calm.</p>
     </div>
     
-    <div class='nft-info'>
+    <div class='nft-price'>
       <div class='price'>
-        <div class='icon'>
-          <img src='./images/icon-ethereum.svg' alt=''>
-        </div>
+        
+        <img src='./images/icon-ethereum.svg' alt='ethereum icon'>
 
-        <p class='crypto-price'>0.041 ETH</p>
+        <p class='alert-voice crypto-price'>0.041 ETH</p>
       </div>
 
       <div class='days'>
         <div class='icon'>
-          <img src='/images/icon-clock.svg' alt=''>
+          <img src='./images/icon-clock.svg' alt='clock icon'>
         </div>
 
         <p class='alert-voice'>3 days left</p>

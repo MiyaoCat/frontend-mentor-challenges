@@ -9,29 +9,36 @@
 :root {
 	--ff: 'Outfit';
 
-	--ink: hsl(4, 100%, 67%); /*Soft blue*/
-	--highlight: hsl(178, 100%, 50%);
+	--ink: hsl(215, 51%, 70%); /*Soft blue*/
+	--highlight: hsl(178, 100%, 50%); /* Cyan */
 
 	--main-bg: hsl(217, 54%, 11%); /* Very dark blue */
 	--card-bg: hsl(216, 50%, 16%); /* Very dark blue */	
 	--line: hsl(215, 32%, 27%); /* Very dark blue */	
 
-
 	--ink-alt: white;
+}
 
+a {
+	text-decoration: none;
+	color: var(--ink-alt);
+}
+
+a:hover {
+	color: var(--highlight);
+	cursor: pointer;
 }
 
 body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: var(--dark-accent);
+	background-color: var(--main-bg);
 	font-family: var(--ff);
-	font-size: 16px;
+	font-size: 18px;
 }
 
 .loud-voice {
-	color: var(--font-color);
 	font-family: var(--ff-bold);
 	font-size: 2rem;
 }
@@ -42,10 +49,16 @@ body {
 	font-weight: 700;
 }
 
+.alert-voice {
+	color: var(--ink);
+}
+
 .normal-voice {
-	color: var(--font-color);
+	color: var(--ink);
 	font-size: 1rem; 
-	line-height: 1.3em;
+	line-height: 1.7em;
+	font-weight: 300;
+	color: var(--ink);
 }
 
 
@@ -58,174 +71,88 @@ main {
 	background-color: var(--background-color);
 }
 
-.signup-form {
-	max-width: 375px;
-	min-height: 842px;
-	background-color: var(--light-accent);
-	border-radius: 10px;
-/*	display: none;*/
-}
-
-img.mobile {
-	min-width: 100%;
-	max-height: 284px;
-	border-radius: 10px 10px;
-}
-
-img.desktop {
-	display: none;
-}
-
-.signup-content {
-	margin: 40px 24px;
-}
-
-.signup-content .intro {
-	margin: 26px 0;
-}
-
-ul {
-	margin-top: 28px;
-	margin-bottom: 44px;
-}
-
-li {
+.nft-card {
+	max-width: 325px;
+/*	max-height: 542px;*/
+	background-color: var(--card-bg);
 	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	border-radius: 15px;
+}
+
+.nft img {
+	border-radius: 10px;
+	width: 100%;
+	position: relative;
+}
+
+img::before {
+  content: url('./images/icon-view.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--highlight); /* Specify the overlay color and opacity */
+  transition: background-color 0.3s ease; /* Add a transition for a smoother effect */
+  pointer-events: none; /* Allow interactions with the image beneath the overlay */
+}
+img:hover {
+	cursor: pointer;
+}
+
+.nft-info {
+	margin-top: 28px;
+}
+
+.nft-info p {
+	margin: 16px 0;
+}
+.nft-info h1.loud-voice:hover {
+	color: var(--highlight);
+}
+.nft-price {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	width: 50%;
+}
+
+p.crypto-price {
+	color: var(--highlight);
+	font-weight: 600;
+}
+
+.days {
+	display: flex;
+	gap: 6px;
 	align-items: center;
 }
 
-li::before {
-	content: url('../assets/images/icon-list.svg');
-	vertical-align: middle;
-	margin-right: 18px;
+.icon img {
+	height: 20px;
+	width: 20px;
 }
 
-li + li {
-	margin-top: 20px;
+.days p.alert-voice {
+	font-weight: 300;
 }
-
-.input-header {
+ 
+.attribution {
+	border-top: 1px solid var(--ink);
 	display: flex;
-	justify-content: space-between;
-}
-
-.email {
-	font-family: var(--ff-bold);
-	font-size: .8rem;
-}
-
-.error {
-	font-family: var(--ff-bold);
-	font-size: .8rem;	
-	color: var(--primary);
-	display: none;
-}
-input {
-	margin-top: 13px;
-	margin-bottom: 24px;
-	padding: 18px 25px;
-	width: 100%;
-	border-radius: 10px;
-	border: 1.2px solid var(--accent);
-	font-size: .9rem;
-	color: var(--accent);
-}
-
-input:hover {
-	cursor: pointer;
-}
-
-button {
-	width: 100%;
-	background-color: var(--dark-accent);
-	font-family: var(--ff-bold);
-	font-size: 1rem;
-	color: var(--light-accent);
-	border-radius: 10px;
-	border: none;
-	padding: 24px 0px;
-}
-
-button:hover {
-	background: linear-gradient(.25turn, hsl(350, 100%, 67%), hsl(12, 100%, 63%));
-	cursor: pointer;
-	box-shadow: 2px 5px 5px 8px hsla(4, 100%, 67%, .2);
-}
-
-.success-card {
-	display: none;
-	width: 502px;
-	height: 520px;
-	background: var(--light-accent);
-	border-radius: 10px;
-	padding: 45px 64px;
-}
-
-.thank-you-header {
-	font-size: 2.5em;
-	margin-top: 45px;
-	margin-bottom: 26px;
-}
-
-.success-card p {
-	margin-bottom: 40px;
-	line-height: 1.5rem;
-}
-
-strong {
-	font-family: var(--ff-bold);
-}
-
-footer {
-	margin: 30px auto;
-}                                                                                         
-
-@media (min-width: 700px) {
-	.loud-voice {
-		font-size: 3.5rem;
-	}
-
-	.signup-form {
-		display: flex;
-		flex-direction: row-reverse;
-		max-width: 928px;
-		min-height: 641px;
-		padding: 24px;
-		border: 1px solid black;
-		border-radius: 35px;
-	}
-
-	.mobile {
-		display: none;
-	}
-
-	img.desktop {
-		display: block;
-		max-width: 50%;
-		height: 100%;
-	}
-
-	.signup-content {
-		padding: 40px;
-		height: 100%;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.signup-content .intro {
-		margin-top: 26px;
-		margin-bottom: 30px;
-	}
-
-	ul {
-		margin-top: 0;
-	}
-
-	li + li {
-		margin-top: 13px;
-	}
-}                                                                          
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }                                                   
+	gap: 12px;
+	padding-top: 16px;
+	font-weight: 400;
+}                
+.avatar img {
+	max-width: 33px;
+}                                                                   
+                                                   
