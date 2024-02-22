@@ -169,4 +169,15 @@ p.crypto-price {
 .avatar img {
 	max-width: 33px;
 }                                                                   
-                                                   
+         
+@media (min-width: 700px) {
+	.nft-card {
+		width: 350px;
+		height: 560px;
+		padding: 26px;
+	}
+
+	.nft-price {
+		margin-bottom: 16px;
+	}
+}                                          
