@@ -111,6 +111,7 @@ main {
 @media (hover: hover) {
 	.nft:hover > .overlay {
 		opacity: 1;
+		cursor: pointer;
 	}
 }
 
