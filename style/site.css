@@ -44,7 +44,11 @@
 
 .challenges {
 	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 20px;
 }
+
 .challenges a {
 	text-decoration: none;
 	color: var(--primary-light);
@@ -87,6 +91,8 @@ header {
 main {
 	flex-grow: 1;
 	text-align: center;
+	display: flex;
+	justify-content: center;
 }
 
 .challenges-card {
@@ -111,3 +117,12 @@ footer {
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media (min-width: 750px) {
+	.challenges {
+		flex-direction: row;
+		max-width: fit-content;
+
+	}
+}
