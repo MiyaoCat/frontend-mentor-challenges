@@ -85,10 +85,10 @@ main {
 	position: relative;
 }
 
-.nft img {
+.nft > img {
 	border-radius: 10px;
 	width: 100%;
-/*	position: relative;*/
+	display: block;
 }
 
 .overlay {
@@ -96,16 +96,13 @@ main {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
 	width: 100%;
 	background-color: hsla(178, 100%, 50%, 50.3%);;
 	top: 0;
 	opacity: 0;
 	transition: opacity 0.5s ease-in-out;
 	border-radius: 10px;
-}
-
-.overlay-icon {
-	padding: 7rem;
 }
 
 @media (hover: hover) {
