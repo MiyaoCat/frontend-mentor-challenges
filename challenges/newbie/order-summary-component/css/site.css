@@ -144,7 +144,7 @@ picture > img {
 	display: flex;
 	flex-direction: column;
 	gap: 24px;
-	margin: 24px;
+	margin: 24px 0;
 }
 
 button {
@@ -202,6 +202,6 @@ button:hover {
 
 	.buttons {
 		gap: 30px;
-		margin: 32px;
+		margin: 32px 0;
 	}
 }
