@@ -11,6 +11,7 @@
 
 	--bg-light: hsl(225, 100%, 94%); /*Pale blue*/
 	--highlight: hsl(245, 75%, 52%); /* Bright blue */
+	--active-color: hsl(245, 83%, 68%); /* Bright purple */
 
 	/*	NEUTRAL*/
 	--v-pale-blue: hsl(225, 100%, 98%); /* Very dark blue */
@@ -67,6 +68,7 @@ body {
 	font-size: .8rem;
 	color: var(--ink);
 }
+
 main {
 	flex-grow: 1;
 	display: flex;
@@ -132,4 +134,74 @@ picture > img {
 	font-weight: 700;
 	color: var(--highlight);
 	text-decoration: underline;
+}
+.change:hover {
+	color: var(--active-color);
+	text-decoration: none;	
+}
+
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	margin: 24px;
+}
+
+button {
+	border: none;
+	border-radius: 10px;
+	padding: 16px 0;
+	font-weight: 700;
+}
+button:hover {
+	cursor: pointer;
+}
+
+.payment {
+	background-color: var(--highlight);
+	color: white;
+	box-shadow: 0 10px 25px -15px var(--active-color);
+}
+.payment:hover {
+	background-color: var(--active-color);
+}
+
+.cancel {
+	background-color: white;
+	color: var(--ink);
+}
+.cancel:hover {
+	color: var(--ink-dark);
+}
+
+@media (min-width: 700px) {
+	.order-summary {
+		max-width: 450px;
+		max-height: 698px;
+	}
+
+	picture {
+		max-height: 214px;
+	}
+
+	.content {
+		margin: 50px;
+	}
+
+	.loud-voice {
+		font-size: 1.7rem;
+	}
+
+	.heading {
+		margin-bottom: 22px;
+	}
+
+	.plan-details {
+		margin-bottom: 32px;
+	}
+
+	.buttons {
+		gap: 30px;
+		margin: 32px;
+	}
 }
