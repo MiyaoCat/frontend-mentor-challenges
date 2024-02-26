@@ -1,22 +1,25 @@
 @import '/style/meyer-reset.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap')
 
 * {
 	box-sizing: border-box;
 }
 
 :root {
-	--ff: 'Red Hat Display';
+	--ff: 'Inter', sans-serif;
+	--ff-alt: 'Lexend Deca', 'Times New Roman';
 
-	--bg-light: hsl(225, 100%, 94%); /*Pale blue*/
-	--highlight: hsl(245, 75%, 52%); /* Bright blue */
-	--active-color: hsl(245, 83%, 68%); /* Bright purple */
+	font-size: 15px;
+
+	--bg: hsl(233, 47%, 7%); /*Very dark blue*/
+	--card-bg: hsl(244, 38%, 16%); /* Dark desaturated blue */
+	--accent: hsl(277, 64%, 61%); /* Bright purple */
 
 	/*	NEUTRAL*/
-	--v-pale-blue: hsl(225, 100%, 98%); /* Very dark blue */
-	--ink: hsl(224, 23%, 55%); /* Very dark blue */	
-	--ink-dark: hsl(223, 47%, 23%); /* Very dark blue */	
+	--ink-header: hsl(0, 0%, 100%); /* White */
+	--ink: hsla(0, 0%, 100%, 0.75); /* Transparent white*/	
+	--ink-alt: hsla(0, 0%, 100%, 0.6); /* Slightly transparent white */	
 
 }
 
@@ -40,33 +43,30 @@ body {
 }
 
 .loud-voice {
-	font-size: 1.2rem;
-	font-weight: 700;	
-	color: var(--ink-dark);
-}
-
-.attention-voice {
-	color: var(--ink-dark);
-	font-size: 1.2rem;
+	font-size: 1.8rem;
 	font-weight: 700;
+	line-height: 2rem;	
+	color: var(--ink-header);
 }
 
 .alert-voice {
-	font-size: .9rem;
-	font-weight: 700;
-	color: var(--ink-dark);
+	font-size: .8rem;
+	font-weight: 400;
+	letter-spacing: .1rem;
+	color: var(--ink-alt);
+	text-transform: uppercase;
 }
 
 .normal-voice {
 	font-size: 1rem; 
 	line-height: 1.7em;
-/*	font-weight: 300;*/
+	font-weight: 400;
 	color: var(--ink);
 }
 
-.quiet-voice {
-	font-size: .8rem;
-	color: var(--ink);
+.special {
+	color: var(--accent);
+	display: inline;
 }
 
 main {
@@ -75,133 +75,74 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--bg-light);
+	background-color: var(--bg);
 }
 
-.order-summary {
-	max-width: 327px;
+.stats-preview-card {
+	max-width: 328px;
+	max-height: 780px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	border-radius: 15px;
+	justify-content: center;
+	background-color: var(--card-bg);
+	border-radius: 10px;
 	text-align: center;
-	background-color: white;
-}                  
+}
 
 picture {
 	width: 100%;
-	max-height: 160px;
+	height: 240px;
+	position: relative;
 }
 
-picture > img {
+picture::before {
+	position: absolute;
+	content: '';
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: hsla(277, 64%, 61%, .5);
+	border-radius: 10px 10px 0 0;
+}
+
+.desktop {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.mobile {
 	width: 100%;
 	border-radius: 10px 10px 0 0;
 }
+
 .content {
-	margin: 0 24px;
+	padding: 32px;
 }
 
-.heading {
-	margin: 18px 0;
+.intro {
+	margin-top: 24px;
+	margin-bottom: 50px;
 }
 
-.heading p {
-	margin: 18px;
-}
-
-
-.plan-details {
+.stats {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 16px;
-	background-color: var(--v-pale-blue);
-	border-radius: 10px;
+	flex-direction: column;
+	gap: 32px;
 }
 
-.plan-details > img {
-	max-width: 48px;
-}
-
-.plan-price {
+.stats > div {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 }
-
-.change {
-	font-size: .8rem;
-	font-weight: 700;
-	color: var(--highlight);
-	text-decoration: underline;
-}
-.change:hover {
-	color: var(--active-color);
-	text-decoration: none;	
-}
-
-.buttons {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	margin: 24px;
-}
-
-button {
-	border: none;
-	border-radius: 10px;
-	padding: 16px 0;
-	font-weight: 700;
-}
-button:hover {
-	cursor: pointer;
-}
-
-.payment {
-	background-color: var(--highlight);
-	color: white;
-	box-shadow: 0 10px 25px -15px var(--active-color);
-}
-.payment:hover {
-	background-color: var(--active-color);
-}
-
-.cancel {
-	background-color: white;
-	color: var(--ink);
-}
-.cancel:hover {
-	color: var(--ink-dark);
-}
-
 @media (min-width: 700px) {
-	.order-summary {
-		max-width: 450px;
-		max-height: 698px;
+	.mobile {
+		display: none;
 	}
-
-	picture {
-		max-height: 214px;
-	}
-
-	.content {
-		margin: 50px;
-	}
-
-	.loud-voice {
-		font-size: 1.7rem;
-	}
-
-	.heading {
-		margin-bottom: 22px;
-	}
-
-	.plan-details {
-		margin-bottom: 32px;
-	}
-
-	.buttons {
-		gap: 30px;
-		margin: 32px;
+	.desktop {
+		display: block;
 	}
 }

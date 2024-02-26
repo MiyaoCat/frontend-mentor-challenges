@@ -78,130 +78,16 @@ main {
 	background-color: var(--bg-light);
 }
 
-.order-summary {
-	max-width: 327px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	border-radius: 15px;
-	text-align: center;
-	background-color: white;
-}                  
-
-picture {
-	width: 100%;
-	max-height: 160px;
-}
-
-picture > img {
-	width: 100%;
-	border-radius: 10px 10px 0 0;
-}
-.content {
-	margin: 0 24px;
-}
-
-.heading {
-	margin: 18px 0;
-}
-
-.heading p {
-	margin: 18px;
-}
-
-
-.plan-details {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 16px;
-	background-color: var(--v-pale-blue);
-	border-radius: 10px;
-}
-
-.plan-details > img {
-	max-width: 48px;
-}
-
-.plan-price {
-	display: flex;
-	flex-direction: column;
-	gap: 8px;
-}
-
-.change {
-	font-size: .8rem;
-	font-weight: 700;
-	color: var(--highlight);
-	text-decoration: underline;
-}
-.change:hover {
-	color: var(--active-color);
-	text-decoration: none;	
-}
-
-.buttons {
-	display: flex;
-	flex-direction: column;
-	gap: 24px;
-	margin: 24px 0;
-}
-
-button {
-	border: none;
-	border-radius: 10px;
-	padding: 16px 0;
-	font-weight: 700;
-}
-button:hover {
-	cursor: pointer;
-}
-
-.payment {
-	background-color: var(--highlight);
-	color: white;
-	box-shadow: 0 10px 25px -15px var(--active-color);
-}
-.payment:hover {
-	background-color: var(--active-color);
-}
-
-.cancel {
-	background-color: white;
-	color: var(--ink);
-}
-.cancel:hover {
-	color: var(--ink-dark);
+.desktop {
+	display: none;
 }
 
 @media (min-width: 700px) {
-	.order-summary {
-		max-width: 450px;
-		max-height: 698px;
+	.mobile {
+		display: none;
 	}
-
-	picture {
-		max-height: 214px;
-	}
-
-	.content {
-		margin: 50px;
-	}
-
-	.loud-voice {
-		font-size: 1.7rem;
-	}
-
-	.heading {
-		margin-bottom: 22px;
-	}
-
-	.plan-details {
-		margin-bottom: 32px;
-	}
-
-	.buttons {
-		gap: 30px;
-		margin: 32px 0;
+	
+	.desktop {
+		display: block;
 	}
 }
