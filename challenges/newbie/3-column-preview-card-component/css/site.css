@@ -1,3 +1,90 @@
 @import '/style/meyer-reset.css';
 @import 'setup.css';
 
+.car-type-preview {
+	max-width: 328px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+
+.car-type-preview > div {
+	min-height: 33%;
+	padding: 48px;
+}
+
+.sedan {
+	background-color: var(--bg-sedan);
+	border-radius: 10px 10px 0 0;
+}
+
+.sedan button {
+	color: var(--bg-sedan);
+}
+
+.suv {
+	background-color: var(--bg-suv);
+}
+
+.suv button {
+	color: var(--bg-suv);
+}
+
+.luxury {
+	background-color: var(--bg-luxury);
+	border-radius: 0 0 10px 10px;
+}
+
+.luxury button {
+	color: var(--bg-luxury);
+}
+
+.heading {
+	margin-top: 48px;
+	text-transform: uppercase;
+}
+
+.intro {
+	margin-top: 32px;
+	margin-bottom: 26px;
+}
+
+button {
+	min-width: 148px;
+	padding: 14px;
+	font-size: 1rem;
+	border-radius: 50px;
+	border: 2px solid white;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: hsla(0, 0%, 95%, 0);
+	color: white;
+
+}
+
+@media (min-width: 950px) {
+	.car-type-preview {
+		min-width: 920px;
+		min-height: 500px;
+		flex-direction: row;
+	}
+
+	.car-type-preview > div {
+		min-width: 33%;
+		padding: 44px;
+	}
+
+	.sedan {
+		border-radius: 10px 0 0 10px;
+	}
+
+	.luxury {
+		border-radius: 0 10px 10px 0;
+	}
+
+	.intro {
+		margin-bottom: 88px;
+	}
+}
