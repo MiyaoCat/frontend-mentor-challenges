@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap')
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--ff: 'Kumbh Sans', sans-serif;
+
+	font-size: 18px;
+
+	/* PRIMARY */
+	--primary: hsl(185, 75%, 39%); /* Dark Cyan */
+	--primary-dark: hsl(229, 23%, 23%); /* Very Dark desaturated blue */
+	--primary-alt: hsl(227, 10%, 46%); /* Dark grayish blue */
+
+	/*	NEUTRAL*/
+	--ink: hsl(0, 0%, 59%); /* Dark Gray*/	
+
+	--highlight: hsl(0, 0%, 95%); /* Very Light gray */
+}
+
+a {
+	text-decoration: none;
+	color: var(--ink);
+}
+
+a:hover {
+	color: var(--highlight);
+	cursor: pointer;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: var(--primary);
+	font-family: var(--ff);
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+	font-family: var(--ff);
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 2rem;	
+}
+
+.alert-voice {
+	font-size: .8rem;
+	font-weight: 400;
+	letter-spacing: .1rem;
+	color: var(--ink-alt);
+	text-transform: uppercase;
+}
+
+.normal-voice {
+	font-size: 1rem; 
+	line-height: 1rem;
+	font-weight: 400;
+	color: var(--ink);
+}
+
+.quiet-voice {
+	font-size: .8rem;
+}
+
+.whisper-voice {
+	font-size: .5rem;
+}
+
+.special {
+	color: var(--accent);
+	display: inline;
+}
