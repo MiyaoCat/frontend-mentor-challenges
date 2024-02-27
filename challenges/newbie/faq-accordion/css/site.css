@@ -26,6 +26,7 @@ body {
 		max-width: 500px;
 	}
 }
+
 header {
 	font-size: 2rem;
 	font-weight: 700;
@@ -87,7 +88,6 @@ summary {
 h2 {
 	font-weight: 600;
 	margin-right: 10px;
-	margin-bottom: 20px;
 }
 
 p {
