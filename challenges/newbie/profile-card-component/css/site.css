@@ -1,8 +1,95 @@
 @import '/style/meyer-reset.css';
 @import 'setup.css';
 
+main {
+	position: relative;
+}
 
+.pattern-bottom, .pattern-top {
+	position: absolute;
+}
 
-@media (min-width: 950px) {
+.pattern-top {
+ top: -50%;
+ left: -50%;
+}
 
+.pattern-bottom {
+	bottom: -50%;
+	right: -50%;
+}
+
+.profile-card {
+	min-width: 325px;
+	min-height: 375px;
+	z-index: 9;
+}
+
+.background {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	align-items: center;
+}
+
+.background > img {
+	border-radius: 10px 10px 0 0;	
+}
+
+picture {
+	max-width: 96px;
+	position: absolute;
+	top: 65%;
+}
+
+picture img {
+	border-radius: 50%;
+	border: 3px solid white;	
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;	
+	padding-top: 72px;
+	width: 100%;
+	background-color: var(--highlight);
+	border-radius: 0 0 10px 10px;
+}
+
+.profile-info {
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 24px;
+	gap: 8px;
+}
+
+.name-age {
+	display: flex;
+	align-items: flex-end;
+	gap: 8px;
+}
+
+.line {
+	width: 100%;
+	border-bottom: 1px solid var(--primary-alt);
+}
+.profile-stats {
+	display: flex;
+	gap: 32px;
+	margin: 24px 0;
+}
+
+.profile-stats > div {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+@media (min-width: 700px) {
+	.profile-card {
+		min-width: 350px;
+		min-height: 375px;
+	}
 }

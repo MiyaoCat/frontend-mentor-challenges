@@ -50,9 +50,10 @@ main {
 /* T Y P O G R A P H Y */
 .loud-voice {
 	font-family: var(--ff);
-	font-size: 2rem;
+	font-size: 1.2rem;
 	font-weight: 700;
-	line-height: 2rem;	
+/*	line-height: 2rem;*/
+	color: var(--primary-dark);	
 }
 
 .alert-voice {
@@ -64,21 +65,29 @@ main {
 }
 
 .normal-voice {
-	font-size: 1rem; 
-	line-height: 1rem;
+	font-size: 1.5rem; 
+/*	line-height: 1rem;*/
 	font-weight: 400;
-	color: var(--ink);
+	color: var(--primary-alt);
 }
 
 .quiet-voice {
 	font-size: .8rem;
+	color: var(--primary-alt);
 }
 
 .whisper-voice {
-	font-size: .5rem;
+	font-size: .6rem;
+	letter-spacing: .1rem;
+	color: var(--primary-alt);
 }
 
 .special {
 	color: var(--accent);
 	display: inline;
+}
+
+hr {
+	color: var(--ink);
+	line-height: 5px;
 }
