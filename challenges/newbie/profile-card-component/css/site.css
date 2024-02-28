@@ -3,6 +3,10 @@
 
 main {
 	position: relative;
+  background-color: var(--Dark-cyan);
+  background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;	
 }
 
 .pattern-bottom, .pattern-top {
