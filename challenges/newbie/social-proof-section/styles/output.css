@@ -1,0 +1,151 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, a {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff: "League Spartan", sans-serif;
+  font-size: 15px;
+  /* PRIMARY */
+  --primary: hsl(300, 43%, 22%); /* Magenta */
+  --primary-alt: hsl(333, 80%, 67%); /* Soft Pink */
+  /*	NEUTRAL*/
+  --ink: hsl(303, 10%, 53%); /* Dark Grayish magenta*/
+  --ink-alt: hsl(300, 24%, 96%); /* Light Grayish Magenta */
+  --ink-inverse: white;
+}
+
+a {
+  text-decoration: none;
+  color: var(--ink);
+}
+
+a:hover {
+  color: var(--highlight);
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--primary);
+  font-family: var(--ff);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+  font-family: var(--ff);
+  font-size: 1.2rem;
+  font-weight: 700;
+  /*	line-height: 2rem;*/
+  color: var(--primary-dark);
+}
+
+.alert-voice {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: var(--ink-alt);
+  text-transform: uppercase;
+}
+
+.normal-voice {
+  font-size: 1.5rem;
+  /*	line-height: 1rem;*/
+  font-weight: 400;
+  color: var(--primary-alt);
+}
+
+.quiet-voice {
+  font-size: 0.8rem;
+  color: var(--primary-alt);
+}
+
+.whisper-voice {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: var(--primary-alt);
+}
+
+.special {
+  color: var(--accent);
+  display: inline;
+}
+
+hr {
+  color: var(--ink);
+  line-height: 5px;
+}
+
+.testimonials {
+  background-color: purple;
+}
+.testimonials .name {
+  background-color: limegreen;
+}
+
+/*# sourceMappingURL=output.css.map */

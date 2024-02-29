@@ -1,0 +1,14 @@
+@import '../../../../style/meyer-reset';
+@import 'setup';
+
+.testimonials {
+	background-color: purple;
+
+	.name {
+		background-color: limegreen;
+	}
+}
+
+@media (min-width: 700px) {
+
+}
