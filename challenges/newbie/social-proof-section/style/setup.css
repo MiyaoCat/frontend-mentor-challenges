@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap')
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--ff: 'League Spartan', sans-serif;
+
+	font-size: 15px;
+
+	/* PRIMARY */
+	--primary: hsl(300, 43%, 22%); /* Magenta */
+	--primary-alt: hsl(333, 80%, 67%); /* Soft Pink */
+
+	/*	NEUTRAL*/
+	--ink: hsl(303, 10%, 53%); /* Dark Grayish magenta*/	
+	--ink-alt: hsl(300, 24%, 96%); /* Light Grayish Magenta */	
+	--ink-inverse: white;
+}
+
+a {
+	text-decoration: none;
+	color: var(--ink);
+}
+
+a:hover {
+	color: var(--highlight);
+	cursor: pointer;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: var(--primary);
+	font-family: var(--ff);
+}
+
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary);
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+	font-family: var(--ff);
+	font-size: 1.2rem;
+	font-weight: 700;
+/*	line-height: 2rem;*/
+	color: var(--primary-dark);	
+}
+
+.alert-voice {
+	font-size: .8rem;
+	font-weight: 400;
+	letter-spacing: .1rem;
+	color: var(--ink-alt);
+	text-transform: uppercase;
+}
+
+.normal-voice {
+	font-size: 1.5rem; 
+/*	line-height: 1rem;*/
+	font-weight: 400;
+	color: var(--primary-alt);
+}
+
+.quiet-voice {
+	font-size: .8rem;
+	color: var(--primary-alt);
+}
+
+.whisper-voice {
+	font-size: .6rem;
+	letter-spacing: .1rem;
+	color: var(--primary-alt);
+}
+
+.special {
+	color: var(--accent);
+	display: inline;
+}
+
+hr {
+	color: var(--ink);
+	line-height: 5px;
+}

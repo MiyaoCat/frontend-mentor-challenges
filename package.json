@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "watch:scss": "node-sass -w social-proof-section/styles/style.scss social-proof-section/styles/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
+  }
+}
