@@ -2,26 +2,12 @@
 @import 'setup.css';
 
 main {
-	position: relative;
   background-color: var(--Dark-cyan);
   background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: right 52vw bottom 35vh, left 48vw top 52vh;	
 }
 
-.pattern-bottom, .pattern-top {
-	position: absolute;
-}
-
-.pattern-top {
- top: -50%;
- left: -50%;
-}
-
-.pattern-bottom {
-	bottom: -50%;
-	right: -50%;
-}
 
 .profile-card {
 	min-width: 325px;
