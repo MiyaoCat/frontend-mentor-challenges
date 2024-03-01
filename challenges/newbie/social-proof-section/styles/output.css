@@ -87,8 +87,18 @@ main {
   justify-content: center;
   align-items: center;
   background-color: white;
+  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 0vw top 0vh, right 0vh bottom 0vh;
 }
 
+@media (min-width: 700px) {
+  main {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 40vw bottom 61vh, left 25vw top 16vh;
+  }
+}
 /* T Y P O G R A P H Y */
 .loud-voice {
   font-family: "League Spartan", sans-serif;
@@ -145,9 +155,7 @@ hr {
   align-items: center;
   gap: 44px;
   padding: 80px 24px;
-  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: right 5vw top 5vh, right 25vw bottom -14vh;
+  background-color: transparent;
 }
 
 .title {
@@ -236,16 +244,13 @@ hr {
 
 @media (min-width: 1440px) {
   .social-proof {
-    max-width: 1440px;
-    max-height: 800px;
+    max-width: 1110px;
+    max-height: 556px;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 50% 50%;
-    padding: 100px 165px;
+    padding: 0;
     gap: 0;
-    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: right 50vw bottom 35vh, left 15vw top 16vh;
   }
   .title {
     grid-row: 1;

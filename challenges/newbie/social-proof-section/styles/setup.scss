@@ -45,13 +45,19 @@ main {
 	@include mixins.flex-column;
 	@include mixins.centered;
 	background-color: $ink-inverse;
-	
+	// padding: 80px 24px;
+	background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+		background-repeat: no-repeat, no-repeat;
+  	background-position: right 0vw top 0vh, right 0vh bottom 0vh;		
+
 }
 
 
 @media (min-width: 700px) {
 	main {
-  
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+		background-repeat: no-repeat, no-repeat;
+  	background-position: right 40vw bottom 61vh, left 25vw top 16vh;	
 
 	}
 }
