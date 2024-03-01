@@ -4,15 +4,16 @@
 
 
 .social-proof {
-	max-width: 375px;
+	min-width: 375px;
 	background-color: white;
 	@include mixins.flex-column;
+	@include mixins.centered;
+	gap: 44px;
 	padding: 80px 24px;
 }
 
 .title {
 	text-align: center;
-	margin-bottom: 44px;
 
 	h1 {
 		padding: 0 40px;
@@ -28,17 +29,17 @@
 	border-radius: 10px;
 	background-color: $ink-alt;
 	padding: 16px 0;	
-	min-width: 100%;
+	width: 328px;
 	@include mixins.flex-column;
+	@include mixins.centered;
 	gap: 8px;
-
 }
 
 .ratings {
-	@include mixins.flex-column;
-	min-width: 100%;
+	@include mixins.flex-row;
+	@include mixins.centered;
+	flex-wrap: wrap;
 	gap: 16px;
-	// background-color: $ink-alt;
 
 	.reviews, .guru, .bestTech {
 		@extend %rating-design;
@@ -46,9 +47,59 @@
 
 	.stars {
 		@include mixins.flex-row;
+		@include mixins.centered;
 		gap: 8px;
 	}
 }
-@media (min-width: 700px) {
+
+.testimonials {
+	@include mixins.flex-row;
+	@include mixins.centered;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.testimonial-card {
+	width: 328px;
+	min-height: 248px;
+	@include mixins.flex-column;
+	gap: 24px;
+	padding: 32px;
+	background-color: $primary;
+	border-radius: 10px;
+
+	.heading {
+		@include mixins.flex-row;
+		gap: 16px;
+		align-items: center;
+
+		.profile {
+			max-width: 40px;
+			border-radius: 50%;
+		}
+
+		.buyer-info {
+			@include mixins.flex-column;
+			gap: 4px;	
+		}		
+
+		.name {
+			font-weight: 500;
+			color: $ink-inverse;
+		}
+
+		.buyer {
+			color: $primary-alt;
+
+		}
+	}
+
+	p {
+		color: $ink-inverse;
+		font-weight: 400;
+	}
+
+}
+@media (min-width: 1400px) {
 
 }

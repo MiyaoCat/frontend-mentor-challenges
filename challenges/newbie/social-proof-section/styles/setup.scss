@@ -42,7 +42,9 @@ body {
 main {
 	flex-grow: 1;
 	@include mixins.flex-column;
+	@include mixins.centered;
 	background-color: $primary;
+	min-height: 100%;
 }
 
 /* T Y P O G R A P H Y */

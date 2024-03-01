@@ -87,6 +87,7 @@ main {
   justify-content: center;
   align-items: center;
   background-color: hsl(300, 43%, 22%);
+  min-height: 100%;
 }
 
 /* T Y P O G R A P H Y */
@@ -132,18 +133,18 @@ hr {
 }
 
 .social-proof {
-  max-width: 375px;
+  min-width: 375px;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 44px;
   padding: 80px 24px;
 }
 
 .title {
   text-align: center;
-  margin-bottom: 44px;
 }
 .title h1 {
   padding: 0 40px;
@@ -156,7 +157,7 @@ hr {
   border-radius: 10px;
   background-color: hsl(300, 24%, 96%);
   padding: 16px 0;
-  min-width: 100%;
+  width: 328px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,10 +167,9 @@ hr {
 
 .ratings {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
+  flex-wrap: wrap;
   gap: 16px;
 }
 .ratings .stars {
@@ -177,6 +177,50 @@ hr {
   justify-content: center;
   align-items: center;
   gap: 8px;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.testimonial-card {
+  width: 328px;
+  min-height: 248px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+}
+.testimonial-card .heading {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.testimonial-card .heading .profile {
+  max-width: 40px;
+  border-radius: 50%;
+}
+.testimonial-card .heading .buyer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.testimonial-card .heading .name {
+  font-weight: 500;
+  color: white;
+}
+.testimonial-card .heading .buyer {
+  color: hsl(333, 80%, 67%);
+}
+.testimonial-card p {
+  color: white;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=output.css.map */
