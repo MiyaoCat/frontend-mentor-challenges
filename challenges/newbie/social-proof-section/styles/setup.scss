@@ -1,31 +1,33 @@
+@use 'mixins';
+
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
-:root {
-	--ff: 'League Spartan', sans-serif;
 
-	font-size: 15px;
+$font-stack: 'League Spartan', sans-serif;
 
-	/* PRIMARY */
-	--primary: hsl(300, 43%, 22%); /* Magenta */
-	--primary-alt: hsl(333, 80%, 67%); /* Soft Pink */
+// font-size: 15px;
 
-	/*	NEUTRAL*/
-	--ink: hsl(303, 10%, 53%); /* Dark Grayish magenta*/	
-	--ink-alt: hsl(300, 24%, 96%); /* Light Grayish Magenta */	
-	--ink-inverse: white;
-}
+/* PRIMARY */
+$primary: hsl(300, 43%, 22%); /* Magenta */
+$primary-alt: hsl(333, 80%, 67%); /* Soft Pink */
+
+/*	NEUTRAL*/
+$ink: hsl(303, 10%, 53%); /* Dark Grayish magenta*/	
+$ink-alt: hsl(300, 24%, 96%); /* Light Grayish Magenta */	
+$ink-inverse: white;
+
 
 a {
 	text-decoration: none;
-	color: var(--ink);
+	color: $ink;
 }
 
 a:hover {
-	color: var(--highlight);
+	// color: $highlight;
 	cursor: pointer;
 }
 
@@ -33,60 +35,56 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: var(--primary);
-	font-family: var(--ff);
+	background-color: $primary;
+	font-family: $font-stack;
 }
 
 main {
 	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--primary);
+	@include mixins.flex-column;
+	background-color: $primary;
 }
 
 /* T Y P O G R A P H Y */
 .loud-voice {
-	font-family: var(--ff);
-	font-size: 1.2rem;
+	font-family: $font-stack;
+	font-size: 2.4rem;
 	font-weight: 700;
 /*	line-height: 2rem;*/
-	color: var(--primary-dark);	
+	color: $primary;	
 }
 
-.alert-voice {
-	font-size: .8rem;
-	font-weight: 400;
-	letter-spacing: .1rem;
-	color: var(--ink-alt);
-	text-transform: uppercase;
+.attention-voice {
+	font-size: 1rem;
+	font-weight: 700;
+	// letter-spacing: .1rem;
+	color: $primary;
 }
 
 .normal-voice {
-	font-size: 1.5rem; 
-/*	line-height: 1rem;*/
+	font-size: 1.1rem; 
+	line-height: 1.4rem;
 	font-weight: 400;
-	color: var(--primary-alt);
+	color: $ink;
 }
 
 .quiet-voice {
 	font-size: .8rem;
-	color: var(--primary-alt);
+	color: $primary-alt;
 }
 
 .whisper-voice {
 	font-size: .6rem;
 	letter-spacing: .1rem;
-	color: var(--primary-alt);
+	color: $primary-alt;
 }
 
 .special {
-	color: var(--accent);
+	// color: $accent;
 	display: inline;
 }
 
 hr {
-	color: var(--ink);
+	color: $ink;
 	line-height: 5px;
 }

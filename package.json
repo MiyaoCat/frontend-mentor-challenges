@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "watch:scss": "node-sass -w social-proof-section/styles/style.scss social-proof-section/styles/style.css",
+    "watch:scss": "node-sass -w ./social-proof-section/styles/main.scss ./social-proof-section/styles/output.css",
       "start": "watch:sass"
   },
   "devDependencies": {

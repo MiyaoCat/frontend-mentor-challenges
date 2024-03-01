@@ -1,14 +1,54 @@
+@use 'mixins';
 @import '../../../../style/meyer-reset';
 @import 'setup';
 
-.testimonials {
-	background-color: purple;
 
-	.name {
-		background-color: limegreen;
+.social-proof {
+	max-width: 375px;
+	background-color: white;
+	@include mixins.flex-column;
+	padding: 80px 24px;
+}
+
+.title {
+	text-align: center;
+	margin-bottom: 44px;
+
+	h1 {
+		padding: 0 40px;
+	}
+
+	.intro {
+		margin-top: 24px;
+
 	}
 }
 
+%rating-design {
+	border-radius: 10px;
+	background-color: $ink-alt;
+	padding: 16px 0;	
+	min-width: 100%;
+	@include mixins.flex-column;
+	gap: 8px;
+
+}
+
+.ratings {
+	@include mixins.flex-column;
+	min-width: 100%;
+	gap: 16px;
+	// background-color: $ink-alt;
+
+	.reviews, .guru, .bestTech {
+		@extend %rating-design;
+	}
+
+	.stars {
+		@include mixins.flex-row;
+		gap: 8px;
+	}
+}
 @media (min-width: 700px) {
 
 }
