@@ -56,6 +56,11 @@ main {
 	color: $primary;	
 }
 
+@media (min-width: 700px) {
+	.loud-voice {
+		font-size: 3rem;
+	}
+}
 .attention-voice {
 	font-size: 1rem;
 	font-weight: 700;
