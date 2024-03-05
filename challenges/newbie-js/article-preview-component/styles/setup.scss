@@ -1,0 +1,111 @@
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+$font-stack: 'League Spartan', sans-serif;
+
+// font-size: 15px;
+
+/* PRIMARY */
+$primary: hsl(300, 43%, 22%); /* Magenta */
+$primary-alt: hsl(333, 80%, 67%); /* Soft Pink */
+
+/*	NEUTRAL*/
+$ink: hsl(303, 10%, 53%); /* Dark Grayish magenta*/	
+$ink-alt: hsl(300, 24%, 96%); /* Light Grayish Magenta */	
+$ink-inverse: white;
+
+
+a {
+	text-decoration: none;
+	color: $ink;
+}
+
+a:hover {
+	// color: $highlight;
+	cursor: pointer;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: $primary;
+	font-family: $font-stack;
+
+}
+
+main {
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	background-color: $ink-inverse;
+	// padding: 80px 24px;
+	background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+		background-repeat: no-repeat, no-repeat;
+  	background-position: right 0vw top 0vh, right 0vh bottom 0vh;		
+
+}
+
+
+@media (min-width: 700px) {
+	main {
+  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+		background-repeat: no-repeat, no-repeat;
+  	background-position: right 40vw bottom 61vh, left 25vw top 16vh;	
+
+	}
+}
+/* T Y P O G R A P H Y */
+.loud-voice {
+	font-family: $font-stack;
+	font-size: 2.4rem;
+	font-weight: 700;
+/*	line-height: 2rem;*/
+	color: $primary;	
+}
+
+@media (min-width: 700px) {
+	.loud-voice {
+		font-size: 3rem;
+	}
+}
+.attention-voice {
+	font-size: 1rem;
+	font-weight: 700;
+	// letter-spacing: .1rem;
+	color: $primary;
+}
+
+.normal-voice {
+	font-size: 1.1rem; 
+	line-height: 1.4rem;
+	font-weight: 400;
+	color: $ink;
+}
+
+.quiet-voice {
+	font-size: .8rem;
+	color: $primary-alt;
+}
+
+.whisper-voice {
+	font-size: .6rem;
+	letter-spacing: .1rem;
+	color: $primary-alt;
+}
+
+.special {
+	// color: $accent;
+	display: inline;
+}
+
+hr {
+	color: $ink;
+	line-height: 5px;
+}

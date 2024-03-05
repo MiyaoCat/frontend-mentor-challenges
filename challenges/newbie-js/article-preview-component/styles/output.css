@@ -1,0 +1,303 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, a {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* PRIMARY */
+/* Magenta */
+/* Soft Pink */
+/*	NEUTRAL*/
+/* Dark Grayish magenta*/
+/* Light Grayish Magenta */
+a {
+  text-decoration: none;
+  color: hsl(303, 10%, 53%);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: hsl(300, 43%, 22%);
+  font-family: "League Spartan", sans-serif;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 0vw top 0vh, right 0vh bottom 0vh;
+}
+
+@media (min-width: 700px) {
+  main {
+    background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 40vw bottom 61vh, left 25vw top 16vh;
+  }
+}
+/* T Y P O G R A P H Y */
+.loud-voice {
+  font-family: "League Spartan", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  /*	line-height: 2rem;*/
+  color: hsl(300, 43%, 22%);
+}
+
+@media (min-width: 700px) {
+  .loud-voice {
+    font-size: 3rem;
+  }
+}
+.attention-voice {
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+
+.normal-voice {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  color: hsl(303, 10%, 53%);
+}
+
+.quiet-voice {
+  font-size: 0.8rem;
+  color: hsl(333, 80%, 67%);
+}
+
+.whisper-voice {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: hsl(333, 80%, 67%);
+}
+
+.special {
+  display: inline;
+}
+
+hr {
+  color: hsl(303, 10%, 53%);
+  line-height: 5px;
+}
+
+.social-proof {
+  min-width: 375px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+  padding: 80px 24px;
+  background-color: transparent;
+}
+
+.title {
+  text-align: center;
+}
+.title h1 {
+  padding: 0 40px;
+}
+.title .intro {
+  margin-top: 24px;
+}
+
+.ratings .reviews, .ratings .guru, .ratings .bestTech {
+  border-radius: 10px;
+  background-color: hsl(300, 24%, 96%);
+  padding: 16px 0;
+  width: 328px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.ratings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.ratings .stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.testimonial-card {
+  width: 328px;
+  min-height: 248px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+}
+.testimonial-card .heading {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+}
+.testimonial-card .heading .profile {
+  max-width: 40px;
+  border-radius: 50%;
+}
+.testimonial-card .heading .buyer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.testimonial-card .heading .name {
+  font-weight: 500;
+  color: white;
+}
+.testimonial-card .heading .buyer {
+  color: hsl(333, 80%, 67%);
+}
+.testimonial-card p {
+  color: white;
+  font-weight: 400;
+}
+
+@media (min-width: 1440px) {
+  .social-proof {
+    max-width: 1110px;
+    max-height: 556px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+    gap: 0;
+  }
+  .title {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: left;
+    max-width: 416px;
+  }
+  .title h1 {
+    padding: 0;
+  }
+  .ratings {
+    grid-row: 1;
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .ratings .reviews, .ratings .guru, .ratings .bestTech {
+    display: flex;
+    flex-direction: row;
+    min-width: 448px;
+  }
+  .ratings .reviews {
+    grid-row: 1;
+  }
+  .ratings .guru {
+    grid-row: 2;
+    margin-left: 48px;
+  }
+  .ratings .bestTech {
+    grid-row: 3;
+    margin-left: 96px;
+  }
+  .ratings p {
+    padding-top: 5px;
+  }
+  .testimonials {
+    grid-row: 2;
+    grid-column: 1/span 2;
+    justify-content: space-between;
+  }
+  .testimonials .testimonial-card:nth-of-type(2) {
+    margin-top: 16px;
+  }
+  .testimonials .testimonial-card:nth-of-type(3) {
+    margin-top: 32px;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
