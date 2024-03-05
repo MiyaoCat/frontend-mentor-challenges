@@ -1,29 +1,42 @@
 @use 'mixins';
 
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
 
-$font-stack: 'League Spartan', sans-serif;
+$font-stack: 'Manrope', sans-serif;
 
 // font-size: 15px;
 
 /* PRIMARY */
-$primary: hsl(300, 43%, 22%); /* Magenta */
-$primary-alt: hsl(333, 80%, 67%); /* Soft Pink */
+$ink: hsl(217, 19%, 35%); /* Very Dark Grayish Blue */
+$ink-alt: hsl(214, 17%, 51%); /* Desaturated Dark Blue */
 
-/*	NEUTRAL*/
-$ink: hsl(303, 10%, 53%); /* Dark Grayish magenta*/	
-$ink-alt: hsl(300, 24%, 96%); /* Light Grayish Magenta */	
-$ink-inverse: white;
+$grayish-blue: hsl(212, 23%, 69%);
+$bg-light: hsl(210, 46%, 95%);
 
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
 
 a {
+	display: block;
 	text-decoration: none;
-	color: $ink;
+	color: inherit;
+}
+
+p a {
+	display: inline;
+/*	color: blue;*/
+	text-decoration: underline;
 }
 
 a:hover {
@@ -31,20 +44,37 @@ a:hover {
 	cursor: pointer;
 }
 
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+
 body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: $primary;
+	background-color: $bg-light;
 	font-family: $font-stack;
-
+	font-size: 13px;
 }
 
 main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	background-color: $ink-inverse;
+	background-color: $bg-light;
 	// padding: 80px 24px;
 	background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
 		background-repeat: no-repeat, no-repeat;
@@ -67,7 +97,7 @@ main {
 	font-size: 2.4rem;
 	font-weight: 700;
 /*	line-height: 2rem;*/
-	color: $primary;	
+	color: $bg-light;	
 }
 
 @media (min-width: 700px) {
@@ -78,12 +108,12 @@ main {
 .attention-voice {
 	font-size: 1rem;
 	font-weight: 700;
-	// letter-spacing: .1rem;
-	color: $primary;
+	line-height: 1.5rem;
+	color: $ink;
 }
 
 .normal-voice {
-	font-size: 1.1rem; 
+	font-size: .8rem; 
 	line-height: 1.4rem;
 	font-weight: 400;
 	color: $ink;
@@ -91,13 +121,13 @@ main {
 
 .quiet-voice {
 	font-size: .8rem;
-	color: $primary-alt;
+	color: $ink;
 }
 
 .whisper-voice {
 	font-size: .6rem;
 	letter-spacing: .1rem;
-	color: $primary-alt;
+	color: $ink;
 }
 
 .special {

@@ -3,3 +3,62 @@
 @import 'setup';
 
 
+.article-preview-card {
+	// min-width: 324px;
+	max-width: 325px;
+	// max-height: 667px;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	border: 2px solid black;
+	background-color: white;
+
+	picture {
+		height: 200px;
+	}
+	.hero {
+		// max-height: 200px;
+	}
+
+	.content {
+		padding: 0 32px;
+
+		.excerpt {
+			margin: 40px 0 32px 0;
+
+			.title {
+				margin-bottom: 16px; 
+			}
+		}
+	}
+
+	.attribution {
+		@include mixins.flex-row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 16px;
+		margin-bottom: 20px;
+
+		.person {
+			@include mixins.flex-row;
+			gap: 16px;
+			align-items: center;
+		}
+
+		.avatar {
+			max-width: 40px;
+			border-radius: 50%;
+		}
+
+		.person-details {
+			@include mixins.flex-column;
+			align-items: flex-start;
+			gap: 8px;
+		}
+
+		.share {
+			background-color: $bg-light;
+			padding: 10px;
+			border-radius: 50%;
+		}
+	}
+}
