@@ -9,12 +9,15 @@
 	// max-height: 667px;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	border: 2px solid black;
 	background-color: white;
+	border-radius: 10px;
 
 	picture {
-		height: 200px;
+		max-height: 200px;
+		border-radius: 10px 10px 0 0;
+		flex-shrink: 0;
 	}
+
 	.hero {
 		// max-height: 200px;
 	}
@@ -62,3 +65,70 @@
 		}
 	}
 }
+
+@media (min-width: 750px) {
+	.article-preview-card {
+		@include mixins.flex-row;
+		max-width: 730px;
+		max-height: 280px;
+		align-items: stretch;
+
+		picture {
+			min-height: 100%;
+			max-width: 285px;
+			border-radius: 10px 0 0 10px;
+			flex-shrink: 0;
+
+			img {
+				min-height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		.content {
+			padding: 40px 40px 32px 40px;
+
+			.excerpt {
+				margin: 0;
+				
+				.title {
+					margin: 0;
+				}
+
+				.intro {
+					margin: 20px 0;
+				}
+			}	
+		}
+
+		.attribution {
+			margin: 0;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

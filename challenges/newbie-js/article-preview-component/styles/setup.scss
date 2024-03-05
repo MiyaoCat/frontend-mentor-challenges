@@ -15,9 +15,12 @@ $font-stack: 'Manrope', sans-serif;
 $ink: hsl(217, 19%, 35%); /* Very Dark Grayish Blue */
 $ink-alt: hsl(214, 17%, 51%); /* Desaturated Dark Blue */
 
-$grayish-blue: hsl(212, 23%, 69%);
+$ink-light: hsl(212, 23%, 69%);
 $bg-light: hsl(210, 46%, 95%);
 
+:root {
+	font-size: 15px;
+}
 
 html {
   box-sizing: border-box;
@@ -75,22 +78,12 @@ main {
 	@include mixins.flex-column;
 	@include mixins.centered;
 	background-color: $bg-light;
-	// padding: 80px 24px;
-	background-image: url("../images/bg-pattern-top-mobile.svg"), url("../images/bg-pattern-bottom-mobile.svg");
-		background-repeat: no-repeat, no-repeat;
-  	background-position: right 0vw top 0vh, right 0vh bottom 0vh;		
-
 }
-
 
 @media (min-width: 700px) {
-	main {
-  background-image: url("../images/bg-pattern-top-desktop.svg"), url("../images/bg-pattern-bottom-desktop.svg");
-		background-repeat: no-repeat, no-repeat;
-  	background-position: right 40vw bottom 61vh, left 25vw top 16vh;	
 
-	}
 }
+
 /* T Y P O G R A P H Y */
 .loud-voice {
 	font-family: $font-stack;
@@ -105,6 +98,7 @@ main {
 		font-size: 3rem;
 	}
 }
+
 .attention-voice {
 	font-size: 1rem;
 	font-weight: 700;
@@ -112,16 +106,22 @@ main {
 	color: $ink;
 }
 
+.alert-voice {
+	font-size: .8rem;
+	font-weight: 700;
+	color: $ink;	
+}
+
 .normal-voice {
-	font-size: .8rem; 
+	font-size: .9rem; 
 	line-height: 1.4rem;
 	font-weight: 400;
 	color: $ink;
 }
 
 .quiet-voice {
-	font-size: .8rem;
-	color: $ink;
+	font-size: .7rem;
+	color: $ink-light;
 }
 
 .whisper-voice {
