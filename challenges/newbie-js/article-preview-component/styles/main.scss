@@ -11,6 +11,7 @@
 	@include mixins.centered;
 	background-color: white;
 	border-radius: 10px;
+	position: relative;
 
 	picture {
 		max-height: 200px;
@@ -40,6 +41,7 @@
 		align-items: center;
 		gap: 16px;
 		margin-bottom: 20px;
+		z-index: 9;	
 
 		.person {
 			@include mixins.flex-row;
@@ -63,9 +65,57 @@
 			padding: 10px;
 			border-radius: 50%;
 		}
+
+		.share:hover {
+			cursor: pointer;
+		}
+	}
+
+	.share-menu {
+		background-color: $ink;
+		@include mixins.flex-row;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 22px 32px;
+		position: absolute;
+		left: 0; bottom: 0;
+		border-radius: 0 0 10px 10px;
+		visibility: hidden;
+		opacity: 0;
+		transition: visibility 0s, opacity 1s linear;
+
+		.active {
+	  	opacity: 1; 
+	  	transform: translateY(0); 
+	  	display: flex;
+	  	visibility: visible;
+		}
+		
+		.share-options {
+			@include mixins.flex-row;
+			gap: 18px;
+		}
+
+		p {
+			color: $ink-light;
+			text-transform: uppercase;
+			font-weight: 400;
+			letter-spacing: .2rem;
+		}
 	}
 }
 
+.share {
+background-color: $bg-light;
+			padding: 10px;
+			border-radius: 50%;	
+			max-width: 32px;
+}
+.icon {
+	max-width: 20px;
+	height: auto;
+}
 @media (min-width: 750px) {
 	.article-preview-card {
 		@include mixins.flex-row;

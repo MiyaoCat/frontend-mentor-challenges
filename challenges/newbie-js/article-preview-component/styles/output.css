@@ -183,6 +183,7 @@ hr {
   align-items: center;
   background-color: white;
   border-radius: 10px;
+  position: relative;
 }
 .article-preview-card picture {
   max-height: 200px;
@@ -205,6 +206,7 @@ hr {
   align-items: center;
   gap: 16px;
   margin-bottom: 20px;
+  z-index: 9;
 }
 .article-preview-card .attribution .person {
   display: flex;
@@ -226,6 +228,54 @@ hr {
   background-color: hsl(210, 46%, 95%);
   padding: 10px;
   border-radius: 50%;
+}
+.article-preview-card .attribution .share:hover {
+  cursor: pointer;
+}
+.article-preview-card .share-menu {
+  background-color: hsl(217, 19%, 35%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 22px 32px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 10px 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s linear;
+}
+.article-preview-card .share-menu .active {
+  opacity: 1;
+  transform: translateY(0);
+  display: flex;
+  visibility: visible;
+}
+.article-preview-card .share-menu .share-options {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+.article-preview-card .share-menu p {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+.share {
+  background-color: hsl(210, 46%, 95%);
+  padding: 10px;
+  border-radius: 50%;
+  max-width: 32px;
+}
+
+.icon {
+  max-width: 20px;
+  height: auto;
 }
 
 @media (min-width: 750px) {
