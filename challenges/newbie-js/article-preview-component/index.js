@@ -9,3 +9,14 @@ function shareMenu() {
 	$shareMenu.style.visibility = 'visible';
 	$shareMenu.style.display = 'flex';
 }
+
+
+
+$articleCard = document.querySelector('.share-menu');
+
+$articleCard.addEventListener('click', function() {
+	if ($shareMenu.style.opacity === '1') {
+		$shareMenu.style.opacity = '0';
+		$shareMenu.style.visibility = 'hidden';
+	} 
+})

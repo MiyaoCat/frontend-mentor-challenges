@@ -85,13 +85,13 @@
 		opacity: 0;
 		transition: visibility 0s, opacity 1s linear;
 
-		.active {
-	  	opacity: 1; 
-	  	transform: translateY(0); 
-	  	display: flex;
-	  	visibility: visible;
-		}
-		
+		// .active {
+	  // 	opacity: 1; 
+	  // 	transform: translateY(0); 
+	  // 	display: flex;
+	  // 	visibility: visible;
+		// }
+
 		.share-options {
 			@include mixins.flex-row;
 			gap: 18px;
@@ -106,16 +106,21 @@
 	}
 }
 
-.share {
-background-color: $bg-light;
-			padding: 10px;
-			border-radius: 50%;	
-			max-width: 32px;
+.share, .share-again {
+	background-color: $bg-light;
+	padding: 10px;
+	border-radius: 50%;	
+	max-width: 32px;
 }
+
 .icon {
 	max-width: 20px;
 	height: auto;
 }
+.icon:hover {
+	cursor: pointer;
+}
+
 @media (min-width: 750px) {
 	.article-preview-card {
 		@include mixins.flex-row;
