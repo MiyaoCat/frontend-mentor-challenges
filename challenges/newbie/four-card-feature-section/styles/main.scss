@@ -1,0 +1,7 @@
+@use 'mixins';
+@import '../../../../style/meyer-reset';
+@import 'setup';
+
+.test {
+	color: red;
+}
