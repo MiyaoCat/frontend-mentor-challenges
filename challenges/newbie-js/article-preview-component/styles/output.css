@@ -246,7 +246,7 @@ hr {
   border-radius: 0 0 10px 10px;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, opacity 1s linear;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 .article-preview-card .share-menu .share-options {
   display: flex;
@@ -259,6 +259,9 @@ hr {
   font-weight: 400;
   letter-spacing: 0.2rem;
 }
+.article-preview-card .share-menu .triangle {
+  display: none;
+}
 
 .share, .share-again {
   background-color: hsl(210, 46%, 95%);
@@ -269,10 +272,10 @@ hr {
 
 .icon {
   max-width: 20px;
-  height: auto;
+  max-height: 20px;
 }
 
-.icon:hover {
+.icon:hover, .share:hover, .share-again:hover {
   cursor: pointer;
 }
 
@@ -308,6 +311,26 @@ hr {
   }
   .article-preview-card .attribution {
     margin: 0;
+  }
+  .article-preview-card .share-menu {
+    max-width: 248px;
+    border-radius: 10px;
+    bottom: 90px;
+    left: 540px;
+  }
+  .article-preview-card .share-menu .share-again {
+    display: none;
+  }
+  .article-preview-card .share-menu .triangle {
+    width: 0;
+    height: 0;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-bottom: 16px solid hsl(217, 19%, 35%); /* Adjust the color and size as needed */
+    position: absolute;
+    bottom: -10px;
+    left: 110px;
+    rotate: 180deg;
   }
 }
 
