@@ -2,6 +2,101 @@
 @import '../../../../style/meyer-reset';
 @import 'setup';
 
-.test {
-	color: red;
+
+.four-card-feature {
+	min-width: 375px;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	padding: 32px;
+
+	.heading {
+		text-align: center;
+		margin: 88px 0 78px 0;
+
+		.loud-voice {
+			margin: 12px 0 24px 0;
+		}
+	}
+
+	.cards {
+		@include mixins.flex-row;
+		@include mixins.centered;
+		flex-wrap: wrap;
+		gap: 36px;
+		padding: 30px;
+
+		.card {
+			max-width: 311px;
+			@include mixins.flex-column;
+			gap: 36px;
+			padding: 30px;
+			background-color: white;
+			border-radius: 5px;
+			box-shadow: 5px 5px 5px $ink;
+
+			&:nth-of-type(1) {
+				border-top: 4px solid $cyan;
+			}	
+			&:nth-of-type(2) {
+				border-top: 4px solid $red;
+			}	
+			&:nth-of-type(3) {
+				border-top: 4px solid $orange;
+			}	
+			&:nth-of-type(4) {
+				border-top: 4px solid $blue;
+			}	
+
+			.content {
+				@include mixins.flex-column;
+				flex-direction: flex-start;
+				gap: 12px;
+			}
+
+			.title {
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: $ink;
+			}
+			.icon {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+.icon {
+	max-width: 56px;
+}
+
+@media (min-width: 700px) {
+	.four-card-feature {
+
+		.heading {
+			.intro {
+				max-width: 512px;
+			}
+
+			.loud-voice {
+				margin: 24px 0 24px 0;
+			}
+		}	
+	}	
+}
+
+@media (min-width: 1144px) {
+	.four-card-feature .heading {
+		margin-bottom: 188px;
+	}
+	
+	.cards {
+		.card {
+			&:nth-of-type(2) {
+				transform: translateY(-110px);
+			}
+			&:nth-of-type(4) {
+				transform: translateY(-110px);
+			}
+		}
+	}
 }

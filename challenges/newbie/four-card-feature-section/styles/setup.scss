@@ -1,22 +1,23 @@
 @use 'mixins';
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 
 * {
 	box-sizing: border-box;
 }
 
+$font-stack: 'Poppins', sans-serif;
 
-$font-stack: 'Manrope', sans-serif;
-
-// font-size: 15px;
 
 /* PRIMARY */
-$ink: hsl(217, 19%, 35%); /* Very Dark Grayish Blue */
-$ink-alt: hsl(214, 17%, 51%); /* Desaturated Dark Blue */
+$ink-dark: hsl(234, 12%, 34%); /* Very Dark  Blue */
+$ink: hsl(229, 6%, 66%); /* Grayish Blue */
+$ink-light: hsl(0, 0%, 98%); /* Very Light Gray */
 
-$ink-light: hsl(212, 23%, 69%);
-$bg-light: hsl(210, 46%, 95%);
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
 
 :root {
 	font-size: 15px;
@@ -68,7 +69,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	background-color: lightblue;
+	background-color: $ink-light;
 	font-family: $font-stack;
 	font-size: 13px;
 }
@@ -77,7 +78,18 @@ main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	background-color: $bg-light;
+	// background-color: $bg-light;
+}
+
+footer {
+	@include mixins.flex-row;
+	@include mixins.centered;
+}
+.attribution 	{ 
+	font-size: 11px; text-align: center; 	
+}
+.attribution a 	{ 
+	color: hsl(228, 45%, 44%); 	
 }
 
 @media (min-width: 700px) {
@@ -87,10 +99,10 @@ main {
 /* T Y P O G R A P H Y */
 .loud-voice {
 	font-family: $font-stack;
-	font-size: 2.4rem;
-	font-weight: 700;
+	font-size: 1.6rem;
+	font-weight: 600;
 /*	line-height: 2rem;*/
-	color: $bg-light;	
+	// color: $bg-light;	
 }
 
 @media (min-width: 700px) {
@@ -100,28 +112,35 @@ main {
 }
 
 .attention-voice {
-	font-size: 1rem;
-	font-weight: 700;
+	font-size: 1.6rem;
+	font-weight: 200;
 	line-height: 1.5rem;
-	color: red;
+	color: $ink-dark;
+}
+
+@media (min-width: 700px) {
+	.attention-voice {
+		font-size: 3rem;
+	}
 }
 
 .alert-voice {
-	font-size: .8rem;
-	font-weight: 700;
+	font-size: 1rem;
+	font-weight: 200;
+	line-height: 1.6rem;
 	color: $ink;	
 }
 
 .normal-voice {
-	font-size: .9rem; 
-	line-height: 1.4rem;
-	font-weight: 400;
+	font-size: .8rem; 
+	line-height: 1.5rem;
+	font-weight: 200;
 	color: $ink;
 }
 
 .quiet-voice {
 	font-size: .7rem;
-	color: $ink-light;
+	color: $ink;
 }
 
 .whisper-voice {
@@ -130,12 +149,3 @@ main {
 	color: $ink;
 }
 
-.special {
-	// color: $accent;
-	display: inline;
-}
-
-hr {
-	color: $ink;
-	line-height: 5px;
-}
