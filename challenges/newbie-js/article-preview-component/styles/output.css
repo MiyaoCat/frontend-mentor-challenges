@@ -322,6 +322,7 @@ hr {
     display: none;
   }
   .article-preview-card .share-menu .triangle {
+    display: block;
     width: 0;
     height: 0;
     border-left: 22px solid transparent;
