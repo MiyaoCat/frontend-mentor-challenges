@@ -1,0 +1,141 @@
+@use 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+$font-stack: 'Manrope', sans-serif;
+
+// font-size: 15px;
+
+/* PRIMARY */
+$ink: hsl(217, 19%, 35%); /* Very Dark Grayish Blue */
+$ink-alt: hsl(214, 17%, 51%); /* Desaturated Dark Blue */
+
+$ink-light: hsl(212, 23%, 69%);
+$bg-light: hsl(210, 46%, 95%);
+
+:root {
+	font-size: 15px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+p a {
+	display: inline;
+/*	color: blue;*/
+	text-decoration: underline;
+}
+
+a:hover {
+	// color: $highlight;
+	cursor: pointer;
+}
+
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background-color: $bg-light;
+	font-family: $font-stack;
+	font-size: 13px;
+}
+
+main {
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	background-color: $bg-light;
+}
+
+@media (min-width: 700px) {
+
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+	font-family: $font-stack;
+	font-size: 2.4rem;
+	font-weight: 700;
+/*	line-height: 2rem;*/
+	color: $bg-light;	
+}
+
+@media (min-width: 700px) {
+	.loud-voice {
+		font-size: 3rem;
+	}
+}
+
+.attention-voice {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5rem;
+	color: $ink;
+}
+
+.alert-voice {
+	font-size: .8rem;
+	font-weight: 700;
+	color: $ink;	
+}
+
+.normal-voice {
+	font-size: .9rem; 
+	line-height: 1.4rem;
+	font-weight: 400;
+	color: $ink;
+}
+
+.quiet-voice {
+	font-size: .7rem;
+	color: $ink-light;
+}
+
+.whisper-voice {
+	font-size: .6rem;
+	letter-spacing: .1rem;
+	color: $ink;
+}
+
+.special {
+	// color: $accent;
+	display: inline;
+}
+
+hr {
+	color: $ink;
+	line-height: 5px;
+}
