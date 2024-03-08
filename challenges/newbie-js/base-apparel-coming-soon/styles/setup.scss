@@ -12,11 +12,14 @@ $font-stack: 'Manrope', sans-serif;
 // font-size: 15px;
 
 /* PRIMARY */
-$ink: hsl(217, 19%, 35%); /* Very Dark Grayish Blue */
-$ink-alt: hsl(214, 17%, 51%); /* Desaturated Dark Blue */
+$primary-light: hsl(0, 36%, 70%); /* Desaturated Red*/
+$primary: hsl(0, 93%, 68%); /* Soft Red */
 
-$ink-light: hsl(212, 23%, 69%);
-$bg-light: hsl(210, 46%, 95%);
+$ink: hsl(0, 6%, 24%); /* Dark Grayish Red */
+
+$bg-gradient: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+
+$bg-gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 
 :root {
 	font-size: 15px;
@@ -90,7 +93,7 @@ main {
 	font-size: 2.4rem;
 	font-weight: 700;
 /*	line-height: 2rem;*/
-	color: $bg-light;	
+	// color: $bg-light;	
 }
 
 @media (min-width: 700px) {
