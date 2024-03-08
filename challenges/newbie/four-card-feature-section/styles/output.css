@@ -264,6 +264,9 @@ footer {
   .four-card-feature .heading {
     margin-bottom: 188px;
   }
+  .cards {
+    max-width: 1145px;
+  }
   .cards .card:nth-of-type(2) {
     transform: translateY(-110px);
   }
