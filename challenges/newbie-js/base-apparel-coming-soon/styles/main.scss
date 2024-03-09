@@ -4,6 +4,56 @@
 
 
 
+.landing-page {
+	max-width: 375px;
+	height: 100%;
+	border: 1px solid black;
+	text-align: center;
+
+	.logo {
+		width: 100px;
+		margin: 32px;
+	}
+
+	picture {
+		max-width: 375px;
+		height: 250px;
+	}
+
+
+	.content {
+		padding: 66px 32px 0 32px;
+
+		.title {
+			text-transform: uppercase;
+			margin-bottom: 30px;
+		}
+
+		form {
+			margin-top: 18px;
+			
+			input {
+				border: 1px solid $ink;
+				width: 100%;
+				padding: 18px 14px;
+				border-radius: 25px;
+			}
+
+			.icon {
+				background: url('../images/icon-arrow.svg') no-repeat, left;
+				background-size: 50px;
+				background-color: $primary;
+
+			}
+		}	
+
+	}
+
+}
+
+.desktop {
+	display: none;
+}
 
 
 

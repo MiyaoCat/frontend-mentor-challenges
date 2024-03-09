@@ -1,37 +1,57 @@
 @use 'mixins';
 
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
 	box-sizing: border-box;
 }
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
 
-
-$font-stack: 'Manrope', sans-serif;
-
-// font-size: 15px;
+$font-stack: 'Josefin Sans', sans-serif;
 
 /* PRIMARY */
 $primary-light: hsl(0, 36%, 70%); /* Desaturated Red*/
 $primary: hsl(0, 93%, 68%); /* Soft Red */
 
+/* NEUTRAL */
 $ink: hsl(0, 6%, 24%); /* Dark Grayish Red */
 
+/* GRADIENTS */
 $bg-gradient: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
 
 $bg-gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 
 :root {
-	font-size: 15px;
+	font-family: $font-stack;	
+	font-size: 16px;
 }
 
 html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+body {
+	display: flex;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	height: 100vh;
+	background-color: $bg-gradient;
+}
+
+main {
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	// background-color: $bg-gradient;
+}
+
+footer {
+	@include mixins.flex-row;
+}
+
 
 a {
 	display: block;
@@ -41,12 +61,10 @@ a {
 
 p a {
 	display: inline;
-/*	color: blue;*/
 	text-decoration: underline;
 }
 
 a:hover {
-	// color: $highlight;
 	cursor: pointer;
 }
 
@@ -67,33 +85,16 @@ svg {
 }
 
 
-body {
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
-	background-color: $bg-light;
-	font-family: $font-stack;
-	font-size: 13px;
-}
-
-main {
-	flex-grow: 1;
-	@include mixins.flex-column;
-	@include mixins.centered;
-	background-color: $bg-light;
-}
-
 @media (min-width: 700px) {
 
 }
 
 /* T Y P O G R A P H Y */
 .loud-voice {
-	font-family: $font-stack;
-	font-size: 2.4rem;
+	font-size: 3rem;
 	font-weight: 700;
-/*	line-height: 2rem;*/
-	// color: $bg-light;	
+	letter-spacing: .9rem;
+	color: $ink;	
 }
 
 @media (min-width: 700px) {
@@ -119,26 +120,23 @@ main {
 	font-size: .9rem; 
 	line-height: 1.4rem;
 	font-weight: 400;
-	color: $ink;
+	color: $primary-light;
 }
 
 .quiet-voice {
 	font-size: .7rem;
-	color: $ink-light;
+	color: $primary;
 }
 
 .whisper-voice {
 	font-size: .6rem;
 	letter-spacing: .1rem;
-	color: $ink;
+	color: $primary;
 }
 
 .special {
-	// color: $accent;
-	display: inline;
-}
-
-hr {
-	color: $ink;
-	line-height: 5px;
+	font-size: 3rem;
+	font-weight: 200;
+	letter-spacing: 1rem;
+	color: $primary-light;
 }
