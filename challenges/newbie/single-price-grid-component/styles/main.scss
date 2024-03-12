@@ -8,38 +8,63 @@
 }
 .single-price-component {
 	max-width: 311px;
-	
+	border-radius: 5px;
 
 	.community {
 		background-color: white;
+		border-radius: 5px 5px 0 0;
 	}
 
 	.special {
-		color: $highlight;
-		font-size: 1rem;
-		font-weight: 700;
+
 		margin: 24px 0;
 	}
 
 	.subscription {
-		// padding: 32px 0 24px 0;
 		background-color: $primary;
-		color: white;
+		color: $ink;
 
+		.price {
+			@include mixins.flex-row;
+			align-items: center;
+			gap: 12px;
+			margin: 24px 0 16px;
+		}
+
+		span {
+			font-size: 2rem;
+			font-weight: 700;
+		}
 
 		button {
 			height: 48px;
 			width: 100%;
 			color: white;
 			background-color: $highlight;
+			border: none;
+			border-radius: 5px;
+			font-size: .9rem;
+			box-shadow: 0 4px 8px hsla(0, 0, 0, .21);
+			margin-top: 32px;
 		}
 	}
 
 	.why-us {
 		// padding: 32px 0;
 		background-color: $primary-light;
-		color: white;
+		color: $ink;
+		border-radius: 0 0 5px 5px;
+
+		ul {
+			margin-top: 24px;
+		}
+
+		li + li {
+			margin-top: 8px;
+		}
 	}
+
+
 }
 
 
