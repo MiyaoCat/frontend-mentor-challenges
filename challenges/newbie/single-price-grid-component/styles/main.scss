@@ -3,7 +3,44 @@
 @import 'setup';
 @import 'typography';
 
+.single-price-component > div {
+	padding: 32px 24px;
+}
+.single-price-component {
+	max-width: 311px;
+	
 
+	.community {
+		background-color: white;
+	}
+
+	.special {
+		color: $highlight;
+		font-size: 1rem;
+		font-weight: 700;
+		margin: 24px 0;
+	}
+
+	.subscription {
+		// padding: 32px 0 24px 0;
+		background-color: $primary;
+		color: white;
+
+
+		button {
+			height: 48px;
+			width: 100%;
+			color: white;
+			background-color: $highlight;
+		}
+	}
+
+	.why-us {
+		// padding: 32px 0;
+		background-color: $primary-light;
+		color: white;
+	}
+}
 
 
 
