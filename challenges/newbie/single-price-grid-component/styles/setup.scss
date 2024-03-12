@@ -1,0 +1,88 @@
+@use 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+$font-stack: 'Karla', sans-serif;
+
+/* PRIMARY */
+$primary: hsl(179, 62%, 43%); /* Cyan */
+$highlight: hsl(71, 73%, 54%); /* Bright Yellow */
+
+/* NEUTRAL */
+$ink: hsl(204, 43%, 93%); /* Light Gray */
+$bg: hsl(218, 22%, 67%); /* Grayish Blue */
+
+/* GRADIENTS */
+
+:root {
+	font-family: $font-stack;	
+	font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+	display: flex;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	height: 100vh;
+	background-color: $bg;
+}
+
+main {
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	// background-color: $bg-gradient;
+}
+
+footer {
+	@include mixins.flex-row;
+}
+
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+p a {
+	display: inline;
+	text-decoration: underline;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+
+@media (min-width: 700px) {
+
+}
+

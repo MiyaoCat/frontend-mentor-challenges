@@ -1,0 +1,51 @@
+/* T Y P O G R A P H Y */
+.loud-voice {
+	font-size: clamp(18px, 3rem, 4rem);
+	font-weight: 400;
+	letter-spacing: .9rem;
+	color: $ink;	
+}
+
+@media (min-width: 1440px) {
+	.loud-voice {
+		font-size: 4rem;
+	}
+}
+
+.attention-voice {
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5rem;
+	color: $ink;
+}
+
+.alert-voice {
+	font-size: .8rem;
+	font-weight: 700;
+	color: $ink;	
+}
+
+.normal-voice {
+	font-size: .9rem; 
+	line-height: 1.4rem;
+	font-weight: 400;
+	color: $primary;
+}
+
+.quiet-voice {
+	font-size: .7rem;
+	color: $primary;
+}
+
+.whisper-voice {
+	font-size: .6rem;
+	letter-spacing: .1rem;
+	color: $primary;
+}
+
+.special {
+	font-size: clamp(18px, 3rem, 4.1rem);
+	font-weight: 200;
+	letter-spacing: 1rem;
+	color: $highlight;
+}
