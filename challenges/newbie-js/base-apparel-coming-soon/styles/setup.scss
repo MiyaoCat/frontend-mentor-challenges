@@ -92,15 +92,15 @@ svg {
 
 /* T Y P O G R A P H Y */
 .loud-voice {
-	font-size: 3rem;
+	font-size: clamp(18px, 3rem, 4rem);
 	font-weight: 400;
 	letter-spacing: .9rem;
 	color: $ink;	
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1440px) {
 	.loud-voice {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 }
 
@@ -136,7 +136,7 @@ svg {
 }
 
 .special {
-	font-size: 3rem;
+	font-size: clamp(18px, 3rem, 4.1rem);
 	font-weight: 200;
 	letter-spacing: 1rem;
 	color: $primary-light;
