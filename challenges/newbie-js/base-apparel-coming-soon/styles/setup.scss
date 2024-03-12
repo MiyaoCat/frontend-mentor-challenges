@@ -17,11 +17,12 @@ $primary: hsl(0, 93%, 68%); /* Soft Red */
 
 /* NEUTRAL */
 $ink: hsl(0, 6%, 24%); /* Dark Grayish Red */
+$bg: hsl(330, 100%, 100%);
 
 /* GRADIENTS */
-$bg-gradient: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+$bg-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 
-$bg-gradient2: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+$bg-gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 :root {
 	font-family: $font-stack;	
@@ -38,7 +39,7 @@ body {
 	@include mixins.flex-column;
 	@include mixins.centered;
 	height: 100vh;
-	background-color: $bg-gradient;
+	background-color: $bg;
 }
 
 main {

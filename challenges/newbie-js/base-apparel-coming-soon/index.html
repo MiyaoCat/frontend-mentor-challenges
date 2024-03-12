@@ -38,13 +38,16 @@
         
         <p class='normal-voice'>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
       
-        <form action='submit'>
-          <input type='email' class='icon' placeholder='Email Address'>
+       
+        <form>
+          <input type='email' placeholder='Email Address' value='' autocomplete='off'>
           
-          <!-- <button> -->
-            <!-- <img class='icon' src='./images/icon-arrow' alt=''> -->
-          <!-- </button> -->
+          <img class='error-icon' src='./images/icon-error.svg' alt='Error icon' aria-hidden='true'>  
+          <button type='submit'>
+            <img class='icon' src='./images/icon-arrow.svg' alt='right arrow icon' aria-hidden='true'>
+          </button>
         </form>
+
         <p class='error quiet-voice'>Please provide a valid email</p>
       </div>
     </div>
@@ -56,4 +59,6 @@
     Coded by <a href="https://www.johnmiyao.com">John Miyao</a>.
   </footer>
 </body>
+
+<script src='index.js'></script>
 </html>

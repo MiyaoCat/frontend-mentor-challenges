@@ -31,22 +31,69 @@
 
 		form {
 			margin-top: 18px;
-			
+			position: relative;
+			@include mixins.flex-row;
+			@include mixins.centered;
+
 			input {
 				border: 1px solid $ink;
 				width: 100%;
-				padding: 18px 14px;
+				padding: 18px 24px;
 				border-radius: 25px;
+				border: 1px solid $primary-light;
+			}
+
+			input:focus {
+				border: 1px solid $primary-light;
+			}
+			input::placeholder {
+				font: $font-stack;
+				color: $primary-light;
+				font-size: 14px;
+			}
+
+
+			button {
+				position: absolute;
+				@include mixins.flex-row;
+				@include mixins.centered;
+				background: $bg-gradient2;
+				right: 0;
+				bottom: 0;
+				width: 64px;
+				height: 100%;
+				border-radius: 25px;
+				border: none;
+				transition: all .2s ease-in-out;
+			}
+
+			.error-icon {
+				position: absolute;
+				max-width: 24px; 
+				margin-right: 16px;
+				right: 68px;
+				display: none;
+			}
+
+			button:hover {
+				cursor: pointer;
+				transform: scaleX(1.2);
+				transform-origin: right left; 
+
+				box-shadow: 0px 5px 8px grey;
 			}
 
 			.icon {
-				background: url('../images/icon-arrow.svg') no-repeat, left;
-				background-size: 50px;
-				background-color: $primary;
-
+				width: auto;
 			}
 		}	
 
+		.error {
+			text-align: left;
+			margin-top: 8px;
+			margin-left: 24px;
+			display: none;
+		}
 	}
 
 }

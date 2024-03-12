@@ -82,7 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  background-color: hsl(330, 100%, 100%);
 }
 
 main {
@@ -203,17 +203,63 @@ svg {
 }
 .landing-page .content form {
   margin-top: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 .landing-page .content form input {
   border: 1px solid hsl(0, 6%, 24%);
   width: 100%;
-  padding: 18px 14px;
+  padding: 18px 24px;
   border-radius: 25px;
+  border: 1px solid hsl(0, 36%, 70%);
+}
+.landing-page .content form input:focus {
+  border: 1px solid hsl(0, 36%, 70%);
+}
+.landing-page .content form input::placeholder {
+  font: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+  font-size: 14px;
+}
+.landing-page .content form button {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  right: 0;
+  bottom: 0;
+  width: 64px;
+  height: 100%;
+  border-radius: 25px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.landing-page .content form .error-icon {
+  position: absolute;
+  max-width: 24px;
+  margin-right: 16px;
+  right: 68px;
+  display: none;
+}
+.landing-page .content form button:hover {
+  cursor: pointer;
+  transform: scaleX(1.2);
+  transform-origin: right left;
+  box-shadow: 0px 5px 8px grey;
 }
 .landing-page .content form .icon {
-  background: url("../images/icon-arrow.svg") no-repeat, left;
-  background-size: 50px;
-  background-color: hsl(0, 93%, 68%);
+  width: auto;
+}
+.landing-page .content .error {
+  text-align: left;
+  margin-top: 8px;
+  margin-left: 24px;
+  display: none;
 }
 
 .desktop {
