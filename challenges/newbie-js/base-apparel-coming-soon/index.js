@@ -21,8 +21,7 @@ $form.addEventListener('submit', function(event) {
 		$error.style.display = 'block';
 		$input.style.border = `1px solid ${ink}`;
 		$errorIcon.style.display = 'block';
-	} 
-	else {
+	} else {
 		console.log('success');
 		$error.style.display = 'none';
 		$input.style.border = `1px solid ${borderColor}`;

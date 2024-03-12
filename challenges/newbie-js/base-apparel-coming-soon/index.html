@@ -17,27 +17,22 @@
 <body>
 
 <header>
-  <!-- <div class='inner-column'> -->
-    
-  <!-- </div> -->
+
 </header>
 
 <main>
-  <!-- <div class='inner-column'> -->
-    <div class='landing-page'>
+  <div class='landing-page'>
+    <div class='container-desktop'>
       <img class='logo' src='./images/logo.svg' alt='Base Apparel logo'>
-
-      <picture>
-        <img class='mobile' src='./images/hero-mobile.jpg' alt='hero image of girl wearing orange polo shirt from Base Apparel'>
-    
-        <img class='desktop' src='./images/hero-desktop.jpg' alt='hero image of girl wearing orange polo shirt from Base Apparel'>
+      
+      <picture class='mobile'>
+        <img src='./images/hero-mobile.jpg' alt='hero image of girl wearing orange polo shirt from Base Apparel'>
       </picture>
-
+      
       <div class='content'>
         <h1 class='title loud-voice'><span class='special'>We're</span> coming soon</h1>
         
         <p class='normal-voice'>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      
        
         <form>
           <input type='email' placeholder='Email Address' value='' autocomplete='off'>
@@ -47,13 +42,17 @@
             <img class='icon' src='./images/icon-arrow.svg' alt='right arrow icon' aria-hidden='true'>
           </button>
         </form>
-
+      
         <p class='error quiet-voice'>Please provide a valid email</p>
       </div>
     </div>
 
-  <!-- </div> -->
+    <picture class='desktop'>
+      <img src='./images/hero-desktop.jpg' alt='hero image of girl wearing orange polo shirt from Base Apparel'>
+    </picture>
+  </div>
 </main>
+
 <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.johnmiyao.com">John Miyao</a>.

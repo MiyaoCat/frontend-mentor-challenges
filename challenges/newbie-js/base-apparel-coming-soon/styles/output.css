@@ -132,7 +132,7 @@ svg {
 /* T Y P O G R A P H Y */
 .loud-voice {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.9rem;
   color: hsl(0, 6%, 24%);
 }
@@ -183,16 +183,11 @@ svg {
 .landing-page {
   max-width: 375px;
   height: 100%;
-  border: 1px solid black;
   text-align: center;
 }
 .landing-page .logo {
   width: 100px;
   margin: 32px;
-}
-.landing-page picture {
-  max-width: 375px;
-  height: 250px;
 }
 .landing-page .content {
   padding: 66px 32px 0 32px;
@@ -214,9 +209,6 @@ svg {
   width: 100%;
   padding: 18px 24px;
   border-radius: 25px;
-  border: 1px solid hsl(0, 36%, 70%);
-}
-.landing-page .content form input:focus {
   border: 1px solid hsl(0, 36%, 70%);
 }
 .landing-page .content form input::placeholder {
@@ -264,6 +256,31 @@ svg {
 
 .desktop {
   display: none;
+}
+
+@media (min-width: 1440px) {
+  .landing-page {
+    min-width: 1440px;
+    min-height: 800px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+  }
+  .landing-page .mobile {
+    display: none;
+  }
+  .landing-page .desktop {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+  }
+  .landing-page .desktop img {
+    min-width: 100%;
+    min-height: 100%;
+  }
+  .landing-page .container-desktop {
+    max-width: 830px;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
