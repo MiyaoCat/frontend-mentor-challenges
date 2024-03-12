@@ -47,6 +47,9 @@
 			box-shadow: 0 4px 8px hsla(0, 0, 0, .21);
 			margin-top: 32px;
 		}
+		button:hover {
+			cursor: pointer;
+		}
 	}
 
 	.why-us {
@@ -63,10 +66,49 @@
 			margin-top: 8px;
 		}
 	}
-
-
 }
 
+br {
+	display: none;
+}
+
+@media (min-width: 640px) {
+	.single-price-component > div {
+		padding: 44px 36px;
+	}
+	br {
+		display: inline-block;
+	}
+
+	.single-price-component {
+		display: grid;
+		max-width: 635px;
+		max-height: 475px;
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 50% 50%;
+
+		.community {
+			grid-row: 1;
+			grid-column: 1 / span 2;
+		}
+
+		.subscription {
+			grid-row: 2;
+			grid-column: 1;
+			border-radius: 0 0 0 5px;
+
+			button {
+				margin-top: 14px;
+			}
+		}
+
+		.why-us {
+			grid-row: 2;
+			grid-column: 2;
+			border-radius: 0 0 5px 0;
+		}
+	}	
+}
 
 
 

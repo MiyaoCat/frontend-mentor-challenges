@@ -44,3 +44,26 @@
 	line-height: 1.2rem;
 	color: $highlight;
 }
+
+
+@media (min-width: 640px) {
+	.loud-voice {
+		// font-size: 1.6rem;
+	}
+
+	.attention-voice {
+		// font-size: 1.3rem;
+	}
+
+	.normal-voice {
+		// font-size: 1.1rem;
+	}
+
+	.quiet-voice {
+		// font-size: 1.2rem;
+	}
+
+	.special {
+		// font-size: 1.2rem;
+	}
+}
