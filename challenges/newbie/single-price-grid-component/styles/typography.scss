@@ -3,14 +3,14 @@
 	font-size: 1.2rem;
 	font-weight: 700;
 	// letter-spacing: .9rem;
-	line-height: 1.1rem;
+	line-height: 1.1;
 	color: $primary;	
 }
 
 .attention-voice {
 	font-size: 1.1rem;
 	font-weight: 700;
-	line-height: 1.5rem;
+	line-height: 1.5;
 	color: $ink;
 }
 
@@ -22,7 +22,7 @@
 
 .normal-voice {
 	font-size: .9rem; 
-	line-height: 1.5rem;
+	line-height: 1.5;
 	font-weight: 400;
 	color: $ink;
 }
@@ -41,7 +41,7 @@
 .special {
 	font-size: 1rem;
 	font-weight: 700;
-	line-height: 1.2rem;
+	line-height: 1.2;
 	color: $highlight;
 }
 

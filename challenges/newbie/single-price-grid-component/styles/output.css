@@ -69,7 +69,6 @@ table {
 /* GRADIENTS */
 :root {
   font-family: "Karla", sans-serif;
-  font-size: 16px;
 }
 
 html {
@@ -133,14 +132,14 @@ svg {
 .loud-voice {
   font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.1rem;
+  line-height: 1.1;
   color: hsl(179, 62%, 43%);
 }
 
 .attention-voice {
   font-size: 1.1rem;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: 1.5;
   color: hsl(204, 43%, 93%);
 }
 
@@ -152,7 +151,7 @@ svg {
 
 .normal-voice {
   font-size: 0.9rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
   font-weight: 400;
   color: hsl(204, 43%, 93%);
 }
@@ -171,7 +170,7 @@ svg {
 .special {
   font-size: 1rem;
   font-weight: 700;
-  line-height: 1.2rem;
+  line-height: 1.2;
   color: hsl(71, 73%, 54%);
 }
 
@@ -180,33 +179,41 @@ svg {
 }
 
 .single-price-component {
-  max-width: 311px;
+  min-width: 19.4rem;
   border-radius: 5px;
+  overflow: hidden;
+  margin: 1em;
 }
-.single-price-component .community {
+
+.community {
   background-color: white;
-  border-radius: 5px 5px 0 0;
 }
-.single-price-component .special {
+.community .normal-voice {
+  color: hsl(218, 22%, 67%);
+}
+.community br {
+  display: none;
+}
+.community .special {
   margin: 24px 0;
 }
-.single-price-component .subscription {
+
+.subscription {
   background-color: hsl(179, 62%, 43%);
   color: hsl(204, 43%, 93%);
 }
-.single-price-component .subscription .price {
+.subscription .price {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 12px;
   margin: 24px 0 16px;
 }
-.single-price-component .subscription span {
+.subscription span {
   font-size: 2rem;
   font-weight: 700;
 }
-.single-price-component .subscription button {
-  height: 48px;
+.subscription .button {
   width: 100%;
   color: white;
   background-color: hsl(71, 73%, 54%);
@@ -215,56 +222,53 @@ svg {
   font-size: 0.9rem;
   box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.21);
   margin-top: 32px;
+  text-align: center;
+  padding: 15px;
 }
-.single-price-component .subscription button:hover {
+.subscription .button :hover {
   cursor: pointer;
 }
-.single-price-component .why-us {
+
+.why-us {
   background-color: hsl(179, 47%, 52%);
   color: hsl(204, 43%, 93%);
   border-radius: 0 0 5px 5px;
 }
-.single-price-component .why-us ul {
+.why-us ul {
   margin-top: 24px;
 }
-.single-price-component .why-us li + li {
+.why-us li + li {
   margin-top: 8px;
 }
 
-br {
-  display: none;
-}
-
-@media (min-width: 640px) {
+@media (min-width: 40rem) {
   .single-price-component > div {
     padding: 44px 36px;
   }
-  br {
-    display: inline-block;
-  }
   .single-price-component {
     display: grid;
-    max-width: 635px;
-    max-height: 475px;
+    min-width: 39.7rem;
+    min-height: 29.7rem;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
   }
-  .single-price-component .community {
+  .community {
     grid-row: 1;
     grid-column: 1/span 2;
   }
-  .single-price-component .subscription {
+  .community br {
+    display: inline-block;
+  }
+  .subscription {
     grid-row: 2;
     grid-column: 1;
-    border-radius: 0 0 0 5px;
   }
-  .single-price-component .subscription button {
+  .subscription .button {
     margin-top: 14px;
   }
-  .single-price-component .why-us {
+  .why-us {
     grid-row: 2;
     grid-column: 2;
-    border-radius: 0 0 5px 0;
   }
 }
 
