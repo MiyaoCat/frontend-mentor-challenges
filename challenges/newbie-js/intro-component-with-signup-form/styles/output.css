@@ -84,7 +84,6 @@ body {
   justify-content: center;
   align-items: center;
   background: url("../images/bg-intro-mobile.png");
-  background-repeat: no-repeat;
   background-color: hsl(0, 100%, 74%);
 }
 
@@ -94,8 +93,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("../images/bg-intro-mobile.png");
-  background-color: hsl(0, 100%, 74%);
 }
 
 footer {
@@ -143,7 +140,7 @@ svg {
 }
 
 .attention-voice {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
   color: hsl(0, 0%, 100%);
@@ -184,9 +181,15 @@ strong {
   color: hsl(0, 100%, 74%);
 }
 
+@media (min-width: 43.75rem) {
+  .loud-voice {
+    font-size: 2.75rem;
+    line-height: 1.2;
+  }
+}
 .signup-page {
   border: 1px solid black;
-  max-width: 375px;
+  max-width: 23.4375rem;
   padding: 0 1.5rem;
   padding-top: 6rem;
   padding-bottom: 4.25rem;
@@ -213,7 +216,7 @@ strong {
   background-color: hsl(245, 31%, 50%);
   border-radius: 5px;
   line-height: 1.4;
-  box-shadow: 0 5px 5px hsl(249, 10%, 26%);
+  box-shadow: 0 5px 0 hsla(249, 10%, 26%, 0.25);
 }
 .attention .normal-voice {
   margin-left: auto;
@@ -230,9 +233,10 @@ form {
   align-items: center;
   gap: 1.5rem;
   padding: 1.5rem;
+  padding-bottom: 1.875rem;
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
-  box-shadow: 0 5px 5px hsl(249, 10%, 26%);
+  box-shadow: 0 5px 0 hsla(249, 10%, 26%, 0.25);
 }
 form input {
   border: 1px solid hsl(249, 10%, 26%);
@@ -253,13 +257,22 @@ form button {
   border: none;
   padding: 1.5rem;
   width: 100%;
-  box-shadow: inset 0 -5px 5px hsl(155, 43%, 48%);
+  box-shadow: inset 0 -5px 0 hsl(155, 43%, 48%);
+}
+form button:hover {
+  cursor: pointer;
 }
 form .error {
   color: hsl(0, 100%, 74%);
   display: none;
 }
 form .tos {
+  text-align: center;
+  line-height: 1.5;
+  margin-top: -0.625rem;
+  padding: 0 1.25rem;
+}
+form span {
   color: hsl(0, 100%, 74%);
   font-weight: 700;
   font-size: 0.75rem;
@@ -276,6 +289,25 @@ footer {
   align-items: center;
   font-size: 11px;
   text-align: center;
+}
+
+@media (min-width: 43.75rem) {
+  .signup-page {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 69.375rem;
+    gap: 4.6875rem;
+  }
+  .intro {
+    max-width: 50%;
+    text-align: left;
+  }
+  .signup-container {
+    max-width: 50%;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

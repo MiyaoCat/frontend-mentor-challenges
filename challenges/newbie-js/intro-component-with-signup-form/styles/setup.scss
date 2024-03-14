@@ -47,7 +47,6 @@ body {
 	@include mixins.centered;
 	// height: 100vh;
 	background: url('../images/bg-intro-mobile.png');
-	background-repeat: no-repeat;
 	background-color: $primary;
 }
 
@@ -55,8 +54,8 @@ main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	background: url('../images/bg-intro-mobile.png');
-	background-color: $primary;
+	// background: url('../images/bg-intro-mobile.png');
+	// background-color: $primary;
 }
 
 footer {

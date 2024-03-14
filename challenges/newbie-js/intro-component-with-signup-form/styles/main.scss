@@ -6,7 +6,7 @@
 
 .signup-page {
 	border: 1px solid black;
-	max-width: 375px;
+	max-width: toRem(375);
 	padding: 0 toRem(24);
 	padding-top: toRem(96);
 	padding-bottom: toRem(68);
@@ -31,7 +31,7 @@
 	background-color: $highlight;
 	border-radius: $small;
 	line-height: 1.4;
-	box-shadow: 0 5px 5px $ink-inverse;
+	box-shadow: 0 5px 0 hsla(249, 10%, 26%, .25);
 
 	.normal-voice {
 		@include mixins.centered-margin;
@@ -46,9 +46,10 @@ form {
 	@include mixins.centered;
 	gap: toRem(24);
 	padding: toRem(24);
+	padding-bottom: toRem(30);
 	background-color: $ink;
 	border-radius: $small;
-	box-shadow: 0 5px 5px $ink-inverse;
+	box-shadow: 0 5px 0 hsla(249, 10%, 26%, .25);
 
 	input {
 		border: 1px solid $ink-inverse;
@@ -71,7 +72,11 @@ form {
 		border: none;
 		padding: toRem(24);
 		width: 100%;
-		box-shadow: inset 0 -5px 5px hsl(155, 43%, 48%);
+		box-shadow: inset 0 -5px 0 hsl(155, 43%, 48%);
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	.error {
@@ -80,17 +85,23 @@ form {
 	}	
 
 	.tos {
+		text-align: center;
+		line-height: 1.5;
+		margin-top: toRem(-10);
+		padding: 0 toRem(20);
+	}
+
+	span {
 		color: $primary;
 		font-weight: 700;
 		font-size: toRem(12);
 	}
 }
 
-
-
 footer {
 	padding: toRem(8) 0;
 }
+
 .attribution {
 	display: flex;
 	flex-direction: row;
@@ -99,6 +110,24 @@ footer {
 
 		font-size: 11px;
 		text-align: center;
-	
 }
 
+
+@media (min-width: toRem(700)) {
+	.signup-page {
+		border: 1px solid black;
+		@include mixins.flex-row;
+		@include mixins.centered;
+		max-width: toRem(1110);
+		gap: toRem(75);
+	}
+
+	.intro {
+		max-width: 50%;
+		text-align: left;
+	}
+	
+	.signup-container {
+		max-width: 50%;
+	}
+}

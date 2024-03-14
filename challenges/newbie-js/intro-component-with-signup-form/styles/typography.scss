@@ -14,9 +14,8 @@
 	color: $ink;	
 }
 
-
 .attention-voice {
-	font-size: 32px;
+	font-size: toRem(32);
 	font-weight: 700;
 	line-height: 1.5;
 	color: $ink;
@@ -55,4 +54,11 @@ strong {
 	font-weight: 200;
 	letter-spacing: 1rem;
 	color: $primary;
+}
+
+@media (min-width: toRem(700)) {
+	.loud-voice {
+		font-size: toRem(44);
+		line-height: 1.2;
+	}
 }
