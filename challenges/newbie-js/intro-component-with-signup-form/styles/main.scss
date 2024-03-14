@@ -1,10 +1,104 @@
+@use 'sass:math';
 @use 'mixins';
 @import '../../../../style/meyer-reset';
 @import 'setup';
+@import 'typography';
+
+.signup-page {
+	border: 1px solid black;
+	max-width: 375px;
+	padding: 0 toRem(24);
+	padding-top: toRem(96);
+	padding-bottom: toRem(68);
+}
+
+.intro {
+	text-align: center;
+	@include mixins.flex-column;
+	gap: toRem(28);
+}
+
+.signup-container {
+	@include mixins.flex-column;
+	gap: toRem(36);
+	margin-top: toRem(70);
+}
+
+.attention {
+	padding: toRem(18);
+	color: $ink;
+	text-align: center;
+	background-color: $highlight;
+	border-radius: $small;
+	line-height: 1.4;
+	box-shadow: 0 5px 5px $ink-inverse;
+
+	.normal-voice {
+		@include mixins.centered-margin;
+		max-width: toRem(186);
+		font-weight: 400;
+	}
+}
+
+form {
+	border: 1px solid black;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	gap: toRem(24);
+	padding: toRem(24);
+	background-color: $ink;
+	border-radius: $small;
+	box-shadow: 0 5px 5px $ink-inverse;
+
+	input {
+		border: 1px solid $ink-inverse;
+		padding: 20px;
+		border-radius: $small;
+		width: 100%;
+
+		&::placeholder {
+			font-weight: 600;
+			font-size: toRem(14);
+			color: $ink-inverse;
+		}
+	}
+
+	button {
+		color: $ink;
+		background-color: $highlight-alt;
+		text-transform: uppercase;
+		border-radius: $small;
+		border: none;
+		padding: toRem(24);
+		width: 100%;
+		box-shadow: inset 0 -5px 5px hsl(155, 43%, 48%);
+	}
+
+	.error {
+		color: $primary;
+		display: none;
+	}	
+
+	.tos {
+		color: $primary;
+		font-weight: 700;
+		font-size: toRem(12);
+	}
+}
 
 
 
+footer {
+	padding: toRem(8) 0;
+}
+.attribution {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 
-
-
+		font-size: 11px;
+		text-align: center;
+	
+}
 

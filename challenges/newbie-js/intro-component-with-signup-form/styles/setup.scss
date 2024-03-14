@@ -1,6 +1,9 @@
+@use 'sass:math';
 @use 'mixins';
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@function toRem($value) {
+   @return math.div($value, 16) * 1rem;	
+}
 
 * {
 	box-sizing: border-box;
@@ -9,24 +12,29 @@
   box-sizing: inherit;
 } /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
 
-$font-stack: 'Josefin Sans', sans-serif;
+$font-sans: 'Poppins', sans-serif;
+$font-serif: 'Young Serif', serif;
 
 /* PRIMARY */
-$primary-light: hsl(0, 36%, 70%); /* Desaturated Red*/
-$primary: hsl(0, 93%, 68%); /* Soft Red */
+$primary: hsl(0, 100%, 74%); /* Red */
+$highlight: hsl(245, 31%, 50%); /* Eggplant */;
+$highlight-alt: hsl(154, 59%, 51%); /* Green */
+
+$accent: hsl(248, 32%, 49%); /* Blue */
 
 /* NEUTRAL */
-$ink: hsl(0, 6%, 24%); /* Dark Grayish Red */
-$bg: hsl(330, 100%, 100%);
+$ink: hsl(0, 0%, 100%); /* White */
+$shadow: hsl(246, 25%, 77%); /* Grayish Blue */
+$ink-inverse: hsl(249, 10%, 26%); /* Dark Blue */
+// $bg: hsl(330, 100%, 100%);
 
 /* GRADIENTS */
-$bg-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 
-$bg-gradient2: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+/* BORDERS */
+$small: 5px;
 
 :root {
-	font-family: $font-stack;	
-	font-size: 16px;
+	font-family: $font-sans;	
 }
 
 html {
@@ -35,18 +43,20 @@ html {
 
 
 body {
-	display: flex;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	height: 100vh;
-	background-color: $bg;
+	// height: 100vh;
+	background: url('../images/bg-intro-mobile.png');
+	background-repeat: no-repeat;
+	background-color: $primary;
 }
 
 main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	// background-color: $bg-gradient;
+	background: url('../images/bg-intro-mobile.png');
+	background-color: $primary;
 }
 
 footer {
@@ -85,59 +95,3 @@ svg {
   width: 100%;
 }
 
-
-@media (min-width: 700px) {
-
-}
-
-/* T Y P O G R A P H Y */
-.loud-voice {
-	font-size: clamp(18px, 3rem, 4rem);
-	font-weight: 400;
-	letter-spacing: .9rem;
-	color: $ink;	
-}
-
-@media (min-width: 1440px) {
-	.loud-voice {
-		font-size: 4rem;
-	}
-}
-
-.attention-voice {
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: 1.5rem;
-	color: $ink;
-}
-
-.alert-voice {
-	font-size: .8rem;
-	font-weight: 700;
-	color: $ink;	
-}
-
-.normal-voice {
-	font-size: .9rem; 
-	line-height: 1.4rem;
-	font-weight: 400;
-	color: $primary-light;
-}
-
-.quiet-voice {
-	font-size: .7rem;
-	color: $primary;
-}
-
-.whisper-voice {
-	font-size: .6rem;
-	letter-spacing: .1rem;
-	color: $primary;
-}
-
-.special {
-	font-size: clamp(18px, 3rem, 4.1rem);
-	font-weight: 200;
-	letter-spacing: 1rem;
-	color: $primary-light;
-}

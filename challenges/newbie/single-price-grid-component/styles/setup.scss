@@ -48,7 +48,6 @@ footer {
 	@include mixins.flex-row;
 }
 
-
 a {
 	display: block;
 	text-decoration: none;
@@ -78,10 +77,5 @@ img {
 svg {
   display: block;
   width: 100%;
-}
-
-
-@media (min-width: 700px) {
-
 }
 

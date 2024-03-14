@@ -1,3 +1,5 @@
+
+
 @mixin flex-column {
 	display: flex;
 	flex-direction: column;
@@ -11,4 +13,9 @@
 @mixin centered {
 	justify-content: center;
 	align-items: center;	
+}
+
+@mixin centered-margin {
+	margin-left: auto;
+	margin-right: auto;
 }
