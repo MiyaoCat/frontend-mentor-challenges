@@ -188,7 +188,6 @@ strong {
   }
 }
 .signup-page {
-  border: 1px solid black;
   max-width: 23.4375rem;
   padding: 0 1.5rem;
   padding-top: 6rem;
@@ -226,7 +225,6 @@ strong {
 }
 
 form {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -265,6 +263,8 @@ form button:hover {
 form .error {
   color: hsl(0, 100%, 74%);
   display: none;
+  font-style: italic;
+  font-size: 0.875rem;
 }
 form .tos {
   text-align: center;
@@ -293,7 +293,6 @@ footer {
 
 @media (min-width: 43.75rem) {
   .signup-page {
-    border: 1px solid black;
     display: flex;
     flex-direction: row;
     justify-content: center;

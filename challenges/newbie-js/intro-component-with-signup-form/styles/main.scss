@@ -5,7 +5,6 @@
 @import 'typography';
 
 .signup-page {
-	border: 1px solid black;
 	max-width: toRem(375);
 	padding: 0 toRem(24);
 	padding-top: toRem(96);
@@ -41,7 +40,6 @@
 }
 
 form {
-	border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
 	gap: toRem(24);
@@ -82,6 +80,8 @@ form {
 	.error {
 		color: $primary;
 		display: none;
+		font-style: italic;
+		font-size: toRem(14);
 	}	
 
 	.tos {
@@ -115,7 +115,7 @@ footer {
 
 @media (min-width: toRem(700)) {
 	.signup-page {
-		border: 1px solid black;
+
 		@include mixins.flex-row;
 		@include mixins.centered;
 		max-width: toRem(1110);
