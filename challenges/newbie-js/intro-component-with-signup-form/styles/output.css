@@ -236,6 +236,9 @@ form {
   border-radius: 5px;
   box-shadow: 0 5px 0 hsla(249, 10%, 26%, 0.25);
 }
+form > div {
+  width: 100%;
+}
 form input {
   border: 1px solid hsl(249, 10%, 26%);
   padding: 20px;
@@ -298,7 +301,7 @@ footer {
     justify-content: center;
     align-items: center;
     max-width: 69.375rem;
-    gap: 4.6875rem;
+    gap: 3rem;
   }
   .intro {
     max-width: 50%;

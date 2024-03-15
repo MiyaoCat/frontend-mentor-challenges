@@ -33,18 +33,26 @@
         </p>
       </div>
       
-      <form method="POST">
-        <input type="text" placeholder='First Name'></input>
-        <p class="error">First Name cannot be empty</p>
+      <form>
+        <div class="fName">
+          <input type="text" placeholder='First Name'></input>
+          <p class="error">First Name cannot be empty</p>
+        </div>
     
-        <input type="text" placeholder="Last Name"></input>
-        <p class="error">Last name cannot be empty</p>
+        <div class="lName">
+          <input type="text" placeholder="Last Name"></input>
+          <p class="error">Last name cannot be empty</p>
+        </div>
+
+        <div class="email">
+          <input type="email" name="email" placeholder="Email Address"></input>
+          <p class="error">Looks like this is not an email</p>
+        </div>
     
-        <input type="email" placeholder="Email Address"></input>
-        <p class="error">Looks like this is not an email</p>
-    
-        <input type="password" placeholder="Password"></input>
-        <p class="error">Password name cannot be empty</p>
+        <div class="password">
+          <input type="password" placeholder="Password"></input>
+          <p class="error">Password name cannot be empty</p>
+        </div>
     
         <button type="submit">Claim your free trial</button>
         

@@ -49,6 +49,13 @@ form {
 	border-radius: $small;
 	box-shadow: 0 5px 0 hsla(249, 10%, 26%, .25);
 
+	& > div {
+		width: 100%;
+	}
+	input + input {
+
+	}
+
 	input {
 		border: 1px solid $ink-inverse;
 		padding: 20px;
@@ -119,7 +126,7 @@ footer {
 		@include mixins.flex-row;
 		@include mixins.centered;
 		max-width: toRem(1110);
-		gap: toRem(75);
+		gap: toRem(48);
 	}
 
 	.intro {
