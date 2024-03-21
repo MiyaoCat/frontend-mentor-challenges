@@ -1,19 +1,30 @@
-$form = document.querySelector('form');
-$button = document.querySelector('button');
-$emailError = document.querySelector('.email');
+const $form = document.querySelector('form');
+const $button = document.querySelector('button');
+const $emailError = document.querySelector('.email .error');
+
+const fName = document.querySelector("[name='fName']"); 
 
 $form.addEventListener('click', function(event) {
 	event.preventDefault();
-	var $input = document.querySelector("input[type='email']");
+	var $inputEmail = document.querySelector("input[type='email']");
+
+  
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const emailInput = $input.value;
+  const emailInput = $inputEmail.value;
 
   const trimmedEmail = emailInput.trim(); 
 
   if (emailInput === '' || trimmedEmail && !emailRegex.test(trimmedEmail)) {
     $emailError.style.display = 'block';
-    $input.style.border = '1px solid red';
+    $inputEmail.style.border = '1px solid red';
+    $inputEmail.style.color = 'red';
   } else {
     $emailError.style.display = 'none';
+  }
+
+  if (fName === '') {
+    $emailError.style.display = 'block';
+    $input.style.border = '1px solid red';
+    $input.style.color = 'red';
   }
 })

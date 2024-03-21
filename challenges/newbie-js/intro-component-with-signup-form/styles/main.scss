@@ -52,9 +52,6 @@ form {
 	& > div {
 		width: 100%;
 	}
-	input + input {
-
-	}
 
 	input {
 		border: 1px solid $ink-inverse;
@@ -64,11 +61,15 @@ form {
 
 		&::placeholder {
 			font-weight: 600;
-			font-size: toRem(14);
+			font-size: toRem(12);
 			color: $ink-inverse;
 		}
 	}
 
+	.icon-error {
+		display: none;
+	}
+	
 	button {
 		color: $ink;
 		background-color: $highlight-alt;
@@ -89,6 +90,8 @@ form {
 		display: none;
 		font-style: italic;
 		font-size: toRem(14);
+		text-align: right;
+		margin-top: toRem(8);
 	}	
 
 	.tos {
@@ -105,9 +108,6 @@ form {
 	}
 }
 
-footer {
-	padding: toRem(8) 0;
-}
 
 .attribution {
 	display: flex;
@@ -121,6 +121,9 @@ footer {
 
 
 @media (min-width: toRem(700)) {
+	main {
+		height: 100vh;
+	}
 	.signup-page {
 
 		@include mixins.flex-row;

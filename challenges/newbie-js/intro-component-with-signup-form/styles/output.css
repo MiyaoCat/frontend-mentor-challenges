@@ -79,6 +79,7 @@ html {
 }
 
 body {
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -88,6 +89,7 @@ body {
 }
 
 main {
+  border: 1px solid black;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -96,6 +98,7 @@ main {
 }
 
 footer {
+  border: 1px solid black;
   display: flex;
   flex-direction: row;
 }
@@ -247,8 +250,11 @@ form input {
 }
 form input::placeholder {
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   color: hsl(249, 10%, 26%);
+}
+form .icon-error {
+  display: none;
 }
 form button {
   color: hsl(0, 0%, 100%);
@@ -268,6 +274,8 @@ form .error {
   display: none;
   font-style: italic;
   font-size: 0.875rem;
+  text-align: right;
+  margin-top: 0.5rem;
 }
 form .tos {
   text-align: center;
@@ -281,10 +289,6 @@ form span {
   font-size: 0.75rem;
 }
 
-footer {
-  padding: 0.5rem 0;
-}
-
 .attribution {
   display: flex;
   flex-direction: row;
@@ -295,6 +299,9 @@ footer {
 }
 
 @media (min-width: 43.75rem) {
+  main {
+    height: 100vh;
+  }
   .signup-page {
     display: flex;
     flex-direction: row;
