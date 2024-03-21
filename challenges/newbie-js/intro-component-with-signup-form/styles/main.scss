@@ -51,6 +51,7 @@ form {
 
 	& > div {
 		width: 100%;
+		position: relative;
 	}
 
 	input {
@@ -66,10 +67,6 @@ form {
 		}
 	}
 
-	.icon-error {
-		display: none;
-	}
-	
 	button {
 		color: $ink;
 		background-color: $highlight-alt;
@@ -83,6 +80,21 @@ form {
 		&:hover {
 			cursor: pointer;
 		}
+	}
+
+	.error-state {
+		border: 1px solid $primary;
+
+		&::placeholder {
+			color: $primary;
+		}
+	}
+	.error-icon {
+		display: none;
+		max-width: toRem(24);
+		position: absolute;
+		right: toRem(24);
+		bottom: toRem(16);
 	}
 
 	.error {
