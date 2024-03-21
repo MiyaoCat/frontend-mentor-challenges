@@ -67,6 +67,30 @@ form {
 		}
 	}
 
+	.error-state {
+		border: 1px solid $primary;
+
+		&::placeholder {
+			color: $primary;
+		}
+	}
+	.error-icon {
+		display: none;
+		max-width: toRem(24);
+		position: absolute;
+		right: toRem(24);
+		bottom: toRem(36);
+	}
+
+	.error {
+		color: $primary;
+		display: none;
+		font-style: italic;
+		font-size: toRem(14);
+		text-align: right;
+		margin-top: toRem(8);
+	}	
+
 	button {
 		color: $ink;
 		background-color: $highlight-alt;
@@ -81,30 +105,6 @@ form {
 			cursor: pointer;
 		}
 	}
-
-	.error-state {
-		border: 1px solid $primary;
-
-		&::placeholder {
-			color: $primary;
-		}
-	}
-	.error-icon {
-		display: none;
-		max-width: toRem(24);
-		position: absolute;
-		right: toRem(24);
-		bottom: toRem(16);
-	}
-
-	.error {
-		color: $primary;
-		display: none;
-		font-style: italic;
-		font-size: toRem(14);
-		text-align: right;
-		margin-top: toRem(8);
-	}	
 
 	.tos {
 		text-align: center;

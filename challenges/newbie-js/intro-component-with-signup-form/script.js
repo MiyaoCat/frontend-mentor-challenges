@@ -1,9 +1,10 @@
 const $form = document.querySelector('form');
 const $button = document.querySelector('button');
-const $emailError = document.querySelector('.email .error');
+const $error = document.querySelectorAll('.error');
 
 const fName = document.querySelector("[name='fName']"); 
 const lName = document.querySelector("[name='lName']"); 
+const password = document.querySelector("[name='password']"); 
 var errorIcons = document.querySelectorAll('.error-icon');
 
 $form.addEventListener('submit', function(event) {
@@ -11,20 +12,26 @@ $form.addEventListener('submit', function(event) {
   const $emailError = document.querySelector('.email .error');
   var fNameValue = fName.value;
   var lNameValue = lName.value;
-
-  if (fNameValue == '') {
+  var passwordValue = password.value;
+  
+  if (fNameValue === '') {
     errorIcons[0].style.display = 'block';
     fName.classList.add('error-state');
-
+    $error[0].style.display = 'block';
   } else {
     errorIcons[0].style.display = 'none';
     fName.classList.remove('error-state');
+    $error[0].style.display = 'none';
   }
 
-  if (lNameValue === '') {
-    
-     errorIcons[1].style.display = 'block';
-    
+  if (lNameValue === '') { 
+   errorIcons[1].style.display = 'block';
+   lName.classList.add('error-state');
+   $error[1].style.display = 'block';
+  } else {
+    errorIcons[1].style.display = 'none';
+    lName.classList.remove('error-state');
+    $error[1].style.display = 'none';
   }
 
 	var $inputEmail = document.querySelector("input[type='email']");
@@ -36,16 +43,22 @@ $form.addEventListener('submit', function(event) {
   const trimmedEmail = emailInput.trim(); 
 
   if (emailInput === '' || trimmedEmail && !emailRegex.test(trimmedEmail)) {
-    $emailError.style.display = 'block';
-    $inputEmail.style.border = '1px solid red';
-    $inputEmail.style.color = 'red';
+    $error[2].style.display = 'block';
+    $inputEmail.classList.add('error-state');
+    errorIcons[2].style.display = 'block';
   } else {
-    $emailError.style.display = 'none';
+    $error[2].style.display = 'none';
+    $inputEmail.classList.remove('error-state');
+    errorIcons[2].style.display = 'none';
   }
 
-  if (fName === '') {
-    $emailError.style.display = 'block';
-    $input.style.border = '1px solid red';
-    $input.style.color = 'red';
+  if (passwordValue === '') { 
+   errorIcons[3].style.display = 'block';
+   password.classList.add('error-state');
+   $error[3].style.display = 'block';
+  } else {
+    errorIcons[3].style.display = 'none';
+    password.classList.remove('error-state');
+    $error[3].style.display = 'none';
   }
 })

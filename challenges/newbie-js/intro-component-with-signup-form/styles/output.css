@@ -254,6 +254,27 @@ form input::placeholder {
   font-size: 0.75rem;
   color: hsl(249, 10%, 26%);
 }
+form .error-state {
+  border: 1px solid hsl(0, 100%, 74%);
+}
+form .error-state::placeholder {
+  color: hsl(0, 100%, 74%);
+}
+form .error-icon {
+  display: none;
+  max-width: 1.5rem;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 2.25rem;
+}
+form .error {
+  color: hsl(0, 100%, 74%);
+  display: none;
+  font-style: italic;
+  font-size: 0.875rem;
+  text-align: right;
+  margin-top: 0.5rem;
+}
 form button {
   color: hsl(0, 0%, 100%);
   background-color: hsl(154, 59%, 51%);
@@ -266,27 +287,6 @@ form button {
 }
 form button:hover {
   cursor: pointer;
-}
-form .error-state {
-  border: 1px solid hsl(0, 100%, 74%);
-}
-form .error-state::placeholder {
-  color: hsl(0, 100%, 74%);
-}
-form .error-icon {
-  display: none;
-  max-width: 1.5rem;
-  position: absolute;
-  right: 1.5rem;
-  bottom: 1rem;
-}
-form .error {
-  color: hsl(0, 100%, 74%);
-  display: none;
-  font-style: italic;
-  font-size: 0.875rem;
-  text-align: right;
-  margin-top: 0.5rem;
 }
 form .tos {
   text-align: center;
