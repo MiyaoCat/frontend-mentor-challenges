@@ -220,7 +220,7 @@ svg {
   border: none;
   border-radius: 5px;
   font-size: 0.9rem;
-  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.21);
+  box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.0021);
   margin-top: 32px;
   text-align: center;
   padding: 15px;
