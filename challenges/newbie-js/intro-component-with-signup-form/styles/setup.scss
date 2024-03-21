@@ -43,7 +43,7 @@ html {
 
 
 body {
-	border: 1px solid black;
+	// border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
 	// height: 100vh;
@@ -52,7 +52,7 @@ body {
 }
 
 main {
-	border: 1px solid black;
+	// border: 1px solid black;
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
@@ -61,7 +61,7 @@ main {
 }
 
 footer {
-	border: 1px solid black;
+	// border: 1px solid black;
 	@include mixins.flex-row;
 }
 
