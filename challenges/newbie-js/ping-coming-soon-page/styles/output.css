@@ -71,7 +71,7 @@ table {
 /* BORDERS */
 :root {
   font-family: "Libre Franklin", sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 html {
@@ -84,7 +84,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: hsl(0, 0%, 59%);
 }
 
 main {
@@ -93,6 +92,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 8.4rem 4.9rem 3.6rem 4.9rem;
 }
 
 footer {
@@ -134,9 +134,9 @@ svg {
 /* T Y P O G R A P H Y */
 .loud-voice {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.4;
-  color: hsl(209, 33%, 12%);
+  color: hsl(0, 0%, 59%);
 }
 
 .attention-voice {
@@ -171,7 +171,9 @@ svg {
 }
 
 strong {
+  font-size: 2rem;
   font-weight: 700;
+  color: hsl(209, 33%, 12%);
 }
 
 @media (min-width: 43.75rem) {
@@ -179,6 +181,51 @@ strong {
     font-size: 2.75rem;
     line-height: 1.2;
   }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header h1 {
+  margin-top: 5rem;
+  margin-bottom: 2.25rem;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 4.25rem;
+  margin-bottom: 8.75rem;
+  width: 100%;
+}
+form input {
+  width: 100%;
+  border-radius: 40px;
+  padding: 1.75rem;
+  padding-left: 2rem;
+  border: 1px solid hsl(0, 0%, 59%);
+  font-size: 1rem;
+}
+form button {
+  width: 100%;
+  border-radius: 40px;
+  background-color: hsl(223, 87%, 63%);
+  text-align: center;
+  padding: 1.75rem;
+  color: white;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=output.css.map */

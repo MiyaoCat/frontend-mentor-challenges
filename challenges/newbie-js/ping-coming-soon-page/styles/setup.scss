@@ -2,7 +2,7 @@
 @use 'mixins';
 
 @function toRem($value) {
-   @return math.div($value, 16) * 1rem;	
+   @return math.div($value, 20) * 1rem;	
 }
 
 * {
@@ -25,16 +25,18 @@ $error: hsl(354, 100%, 66%); /* Light Red */;
 /* NEUTRAL */
 $ink: hsl(209, 33%, 12%); /* Very Dark Blue */
 $ink-light: hsl(0, 0%, 59%); /* Gray */
+$ink-inverse: white;
 // $bg: hsl(330, 100%, 100%);
 
 /* GRADIENTS */
 
 /* BORDERS */
 $small: 5px;
+$rounded: 40px;
 
 :root {
 	font-family: $font-sans;	
-	font-size: 20px;
+	font-size: toRem(20);
 }
 
 html {
@@ -47,7 +49,7 @@ body {
 	@include mixins.flex-column;
 	@include mixins.centered;
 	height: 100vh;
-	background-color: $ink-light;
+	// background-color: $ink-light;
 }
 
 main {
@@ -57,6 +59,7 @@ main {
 	@include mixins.centered;
 	// background: url('../images/bg-intro-mobile.png');
 	// background-color: $primary;
+	padding: toRem(168) toRem(98) toRem(72) toRem(98);
 }
 
 footer {

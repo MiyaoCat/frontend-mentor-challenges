@@ -8,10 +8,10 @@
 /* T Y P O G R A P H Y */
 .loud-voice {
 	font-size: toRem(28);
-	font-weight: 700;
+	font-weight: 300;
 	line-height: 1.4;
 	// letter-spacing: .9rem;
-	color: $ink;	
+	color: $ink-light;	
 }
 
 .attention-voice {
@@ -46,7 +46,9 @@
 }
 
 strong {
+	font-size: 2rem;
 	font-weight: 700;
+	color: $ink;
 }
 
 .special {
