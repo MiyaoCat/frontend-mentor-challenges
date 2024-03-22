@@ -1,0 +1,184 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, a {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+/* PRIMARY */
+/* Blue */
+/* SECONDARY */
+/* Pale Blue */
+/* Light Red */
+/* NEUTRAL */
+/* Very Dark Blue */
+/* Gray */
+/* GRADIENTS */
+/* BORDERS */
+:root {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 59%);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+picture {
+  display: block;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: hsl(209, 33%, 12%);
+}
+
+.attention-voice {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: hsl(209, 33%, 12%);
+}
+
+.alert-voice {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: hsl(209, 33%, 12%);
+}
+
+.normal-voice {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: hsl(209, 33%, 12%);
+}
+
+.quiet-voice {
+  font-size: 0.7rem;
+  color: hsl(209, 33%, 12%);
+}
+
+.whisper-voice {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: hsl(223, 87%, 63%);
+}
+
+strong {
+  font-weight: 700;
+}
+
+@media (min-width: 43.75rem) {
+  .loud-voice {
+    font-size: 2.75rem;
+    line-height: 1.2;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

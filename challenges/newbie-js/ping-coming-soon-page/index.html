@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href='styles/output.css'>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Ping coming soon page</title>
@@ -16,13 +19,25 @@
 </head>
 <body>
 
-  We are launching soon!
-
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
+<main>
+  <div class='header'>
+    <img src='./images/logo.svg' alt='PING logo'>
+    <h1 class='loud-voice'>We are launching <special>soon!</special></h1>
+    
+    <p class='normal-voice'>Subscribe and get notified</p>
+  </div>
+  
+  <form action=''>
+    <input type='email' placeholder='Your email address...'>
+    <button type='submit'>Notify Me</button>
+  </form>
+  
+  <picture><img src='./images/illustration-dashboard.png' alt='Illustration of a dashboard'></picture>
+  <div class='socials'>
+    
+  </div>
+  <p class='quiet-voice'>&copy; Copyright Ping. All rights reserved.</p>
+</main>
 
   <footer>
     <p class="attribution">
