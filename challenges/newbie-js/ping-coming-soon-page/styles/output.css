@@ -228,4 +228,20 @@ form button {
   font-size: 1rem;
 }
 
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.icon {
+  max-width: 3.875rem;
+  border-radius: 100%;
+  border: 1px solid hsl(223, 87%, 63%);
+}
+
+.icon path {
+  fill: hsl(223, 87%, 63%);
+}
+
 /*# sourceMappingURL=output.css.map */

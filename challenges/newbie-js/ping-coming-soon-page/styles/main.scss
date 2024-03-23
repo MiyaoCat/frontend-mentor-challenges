@@ -9,7 +9,7 @@
 	@include mixins.flex-column;
 	@include mixins.centered;
 	text-align: center;
-	
+
 	h1 {
 		margin-top: toRem(80);
 		margin-bottom: toRem(36);
@@ -48,5 +48,21 @@ form {
 		font-weight: 500;
 		font-size: 1rem;
 	}
+}
+
+.socials {
+	@include mixins.flex-row;
+	gap: toRem(24);
+}
+
+.icon {
+	max-width: toRem(62);
+	border-radius: 100%;
+	border: 1px solid $primary;	
+
+}
+
+.icon path {
+	fill: $primary;
 }
 
