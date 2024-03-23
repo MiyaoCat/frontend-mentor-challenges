@@ -57,9 +57,9 @@ form {
 
 .icon {
 	max-width: toRem(62);
+	padding: toRem(16);
 	border-radius: 100%;
-	border: 1px solid $primary;	
-
+	border: 1px solid $ink-light;	
 }
 
 .icon path {
