@@ -83,7 +83,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 main {
@@ -208,41 +207,101 @@ form {
   margin-bottom: 8.75rem;
   width: 100%;
 }
-form input {
+
+input {
   width: 100%;
   border-radius: 40px;
-  padding: 1.75rem;
-  padding-left: 2rem;
+  padding: 1rem;
+  padding-left: 1rem;
   border: 1px solid hsl(0, 0%, 59%);
-  font-size: 1rem;
+  font-size: 0.875rem;
 }
-form button {
+
+.input-wrap {
+  width: 100%;
+}
+
+.input-error {
+  border: 1px solid hsl(354, 100%, 66%);
+}
+
+.error {
+  color: hsl(354, 100%, 66%);
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 2.625rem;
+  display: none;
+}
+
+button {
   width: 100%;
   border-radius: 40px;
   background-color: hsl(223, 87%, 63%);
   text-align: center;
-  padding: 1.75rem;
+  padding: 1rem;
   color: white;
   border: none;
   font-weight: 500;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 .socials {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
+  margin-top: 12.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .icon {
-  max-width: 3.875rem;
-  padding: 1rem;
+  max-width: 2.5rem;
+  padding: 0.5rem;
   border-radius: 100%;
   border: 1px solid hsl(0, 0%, 59%);
+  cursor: pointer;
 }
 
 .icon path {
   fill: hsl(223, 87%, 63%);
+}
+
+@media (min-width: 43.75rem) {
+  input {
+    padding: 1.75rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+  }
+  button {
+    padding: 1.75rem;
+  }
+  .icon {
+    max-width: 3.875rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 46.9375rem) {
+  main {
+    max-width: 46.875rem;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5.75rem;
+    align-items: flex-start;
+  }
+  .error {
+    margin-bottom: 0;
+  }
+  button {
+    max-width: 12.5rem;
+  }
+  .socials {
+    margin-top: 4.5rem;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -27,42 +27,105 @@ form {
 	margin-top: toRem(68);
 	margin-bottom: toRem(140);
 	width: 100%;
+}
 
-	input {
-		width: 100%;
-		border-radius: $rounded;
-		padding: toRem(28);
-		padding-left: toRem(32);
-		border: 1px solid $ink-light;
-		font-size: 1rem;
-	}
+input {
+	width: 100%;
+	border-radius: $rounded;
+	padding: toRem(16);
+	padding-left: toRem(16);
+	border: 1px solid $ink-light;
+	font-size: toRem(14);
+}
 
-	button {
-		width: 100%;
-		border-radius: $rounded;
-		background-color: $primary;
-		text-align: center;
-		padding: toRem(28);
-		color: $ink-inverse;
-		border: none;
-		font-weight: 500;
-		font-size: 1rem;
-	}
+.input-wrap {
+	width: 100%;
+}
+
+.input-error {
+	border: 1px solid $error;
+}
+
+.error {
+	color: $error;
+	font-style: italic;
+	text-align: center;
+	margin-top: toRem(8);
+	margin-bottom: toRem(42);
+	display: none;
+}
+
+button {
+	width: 100%;
+	border-radius: $rounded;
+	background-color: $primary;
+	text-align: center;
+	padding: toRem(16);
+	color: $ink-inverse;
+	border: none;
+	font-weight: 500;
+	font-size: 1rem;
+	cursor: pointer;
 }
 
 .socials {
 	@include mixins.flex-row;
+	@include mixins.centered;
 	gap: toRem(24);
+	margin-top: toRem(200);
+	margin-bottom: toRem(56);
 }
 
 .icon {
-	max-width: toRem(62);
-	padding: toRem(16);
+	max-width: toRem(40);
+	padding: toRem(8);
 	border-radius: 100%;
 	border: 1px solid $ink-light;	
+	cursor: pointer;
 }
 
 .icon path {
 	fill: $primary;
 }
 
+
+@media (min-width: toRem(700)) {
+	input {
+		padding: toRem(28);
+		padding-left: toRem(32);
+		font-size: 1rem;
+	}
+
+	button {
+		padding: toRem(28);
+	}	
+
+	.icon {
+		max-width: toRem(62);
+		padding: toRem(16);
+	}
+}
+
+@media (min-width: toRem(751)) {
+	main {
+		max-width: toRem(750);
+	}
+
+	form {
+		@include mixins.flex-row;
+		margin-bottom: toRem(92);
+		align-items: flex-start;
+	}
+
+	.error {
+		margin-bottom: 0;
+	}
+	
+	button {
+		max-width: toRem(200);
+	}
+
+	.socials {
+		margin-top: toRem(72);
+	}
+}

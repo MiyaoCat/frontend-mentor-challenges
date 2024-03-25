@@ -48,7 +48,7 @@ body {
 	// border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	height: 100vh;
+	// height: 100vh;
 	// background-color: $ink-light;
 }
 
@@ -57,7 +57,6 @@ main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	// background: url('../images/bg-intro-mobile.png');
 	// background-color: $primary;
 	padding: toRem(168) toRem(98) toRem(72) toRem(98);
 }
