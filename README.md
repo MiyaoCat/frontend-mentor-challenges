@@ -3,3 +3,21 @@ I started doing the challenges from [Frontend Mentor](https://www.frontendmentor
 - The challenges include a mixture of components, modules and landing pages thus far.
 - As of March 2024, I've completed almost all of the free Newbie challenges. 
 - You can view my completed challenges here: https://frontend-mentor-challenges-coral.vercel.app/
+
+## My process
+* I first open the design files with Affinity Designer and measure the margins and spacing as best I can
+* Then I use the provided design file and get the fonts and colors setup in my CSS setup file
+* Add the HTML tags
+* Build out the mobile CSS
+* Build out the desktop CSS
+* Build out the Javascript
+* Review
+* Publish!
+  
+### Challenges are Built with a combination of...
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [SASS/SCSS](https://sass-lang.com/)
