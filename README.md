@@ -4,7 +4,7 @@ I started doing the challenges from [Frontend Mentor](https://www.frontendmentor
 - As of March 2024, I've completed almost all of the free Newbie challenges. 
 - You can view my completed challenges here: https://frontend-mentor-challenges-coral.vercel.app/
 
-## My process
+## My Process
 * I first open the design files with Affinity Designer and measure the margins and spacing as best I can
 * Then I use the provided design file and get the fonts and colors setup in my CSS setup file
 * Add the HTML tags
