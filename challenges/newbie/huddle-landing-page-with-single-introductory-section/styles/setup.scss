@@ -1,0 +1,100 @@
+@use 'sass:math';
+@use 'mixins';
+
+@function toRem($value) {
+   @return math.div($value, 20) * 1rem;	
+}
+
+* {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+$font-sans: 'Libre Franklin', sans-serif;
+$font-serif: serif;
+
+/* PRIMARY */
+$primary: hsl(223, 87%, 63%); /* Blue */
+
+/* SECONDARY */
+$accent: hsl(223, 100%, 88%); /* Pale Blue */
+$error: hsl(354, 100%, 66%); /* Light Red */;
+
+/* NEUTRAL */
+$ink: hsl(209, 33%, 12%); /* Very Dark Blue */
+$ink-light: hsl(0, 0%, 59%); /* Gray */
+$ink-inverse: white;
+// $bg: hsl(330, 100%, 100%);
+
+/* GRADIENTS */
+
+/* BORDERS */
+$small: 5px;
+$rounded: 40px;
+
+:root {
+	font-family: $font-sans;	
+	font-size: toRem(20);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+	// border: 1px solid black;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	// height: 100vh;
+	// background-color: $ink-light;
+}
+
+main {
+	// border: 1px solid black;
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	// background-color: $primary;
+	padding: toRem(168) toRem(98) toRem(72) toRem(98);
+}
+
+footer {
+	// border: 1px solid black;
+	@include mixins.flex-row;
+}
+
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+p a {
+	display: inline;
+	text-decoration: underline;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+

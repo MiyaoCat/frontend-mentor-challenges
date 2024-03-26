@@ -1,0 +1,66 @@
+@use 'sass:math';
+@use 'mixins';
+
+@function toRem($value) {
+   @return math.div($value, 16) * 1rem;	
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+	font-size: toRem(28);
+	font-weight: 300;
+	line-height: 1.4;
+	// letter-spacing: .9rem;
+	color: $ink-light;	
+}
+
+.attention-voice {
+	font-size: toRem(32);
+	font-weight: 700;
+	line-height: 1.5;
+	color: $ink;
+}
+
+.alert-voice {
+	font-size: .8rem;
+	font-weight: 700;
+	color: $ink;	
+}
+
+.normal-voice {
+	font-size: toRem(16); 
+	line-height: 1.5;
+	font-weight: 400;
+	color: $ink;
+}
+
+.quiet-voice {
+	font-size: .7rem;
+	color: $ink;
+}
+
+.whisper-voice {
+	font-size: .6rem;
+	letter-spacing: .1rem;
+	color: $primary;
+}
+
+strong {
+	font-size: 2rem;
+	font-weight: 700;
+	color: $ink;
+}
+
+.special {
+// 	font-size: clamp(18px, 3rem, 4.1rem);
+// 	font-weight: 200;
+// 	letter-spacing: 1rem;
+// 	color: $primary;
+}
+
+@media (min-width: toRem(700)) {
+	.loud-voice {
+		font-size: toRem(44);
+		line-height: 1.2;
+	}
+}
