@@ -66,6 +66,7 @@ button {
 	font-weight: 500;
 	font-size: 1rem;
 	cursor: pointer;
+	box-shadow: 0 7px 5px hsla(223, 100%, 88%, .4);
 }
 
 .socials {
@@ -111,21 +112,38 @@ button {
 		max-width: toRem(750);
 	}
 
+	.header {
+		h1 {
+			margin-top: toRem(56);
+			margin-bottom: toRem(16);
+		}
+	}
+
 	form {
 		@include mixins.flex-row;
 		margin-bottom: toRem(92);
 		align-items: flex-start;
 	}
 
+	input {
+		padding: toRem(20);
+	}
 	.error {
 		margin-bottom: 0;
 	}
 	
 	button {
 		max-width: toRem(200);
+		padding: toRem(20);
 	}
 
 	.socials {
 		margin-top: toRem(72);
+		gap: toRem(12);
+
+		.icon {
+			max-width: toRem(32);
+			padding: toRem(6);
+		}
 	}
 }
