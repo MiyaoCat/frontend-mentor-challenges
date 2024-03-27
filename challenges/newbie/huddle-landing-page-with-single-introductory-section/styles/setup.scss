@@ -12,20 +12,20 @@
   box-sizing: inherit;
 } /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
 
-$font-sans: 'Libre Franklin', sans-serif;
-$font-serif: serif;
+$font-sans: 'Poppins', sans-serif;
+$font-serif: 'Open Sans', serif;
 
 /* PRIMARY */
-$primary: hsl(223, 87%, 63%); /* Blue */
+$primary: hsl(257, 40%, 49%); /* Violet */
 
 /* SECONDARY */
-$accent: hsl(223, 100%, 88%); /* Pale Blue */
-$error: hsl(354, 100%, 66%); /* Light Red */;
+$accent: hsl(300, 69%, 71%); /* Soft Magenta */
+// $error: hsl(354, 100%, 66%); /* Light Red */;
 
 /* NEUTRAL */
-$ink: hsl(209, 33%, 12%); /* Very Dark Blue */
-$ink-light: hsl(0, 0%, 59%); /* Gray */
-$ink-inverse: white;
+$ink: white; /* Very Dark Blue */
+// $ink-light: hsl(0, 0%, 59%); /* Gray */
+// $ink-inverse: white;
 // $bg: hsl(330, 100%, 100%);
 
 /* GRADIENTS */
@@ -36,7 +36,6 @@ $rounded: 40px;
 
 :root {
 	font-family: $font-sans;	
-	font-size: toRem(20);
 }
 
 html {
@@ -48,17 +47,19 @@ body {
 	// border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	// height: 100vh;
-	// background-color: $ink-light;
+	background: url('../images/bg-mobile.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 45%;
+	background-color: $primary;
 }
 
 main {
-	// border: 1px solid black;
+	border: 1px solid black;
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
 	// background-color: $primary;
-	padding: toRem(168) toRem(98) toRem(72) toRem(98);
+	padding: toRem(40);
 }
 
 footer {

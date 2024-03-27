@@ -5,127 +5,54 @@
 @import 'typography';
 
 
-.header {
+main {
+
+}
+
+.left-side {
+	@include mixins.flex-column;
+	gap: toRem(72);
+}
+
+.intro {
+	text-align: center;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	text-align: center;
-
-	h1 {
-		margin-top: toRem(80);
-		margin-bottom: toRem(36);
-	}
-}
-
-.logo {
-	max-width: 100px;
-}
-
-form {
-	@include mixins.flex-column;
-	@include mixins.centered;
-	gap: toRem(20);	
-	margin-top: toRem(68);
-	margin-bottom: toRem(140);
-	width: 100%;
-}
-
-input {
-	width: 100%;
-	border-radius: $rounded;
-	padding: toRem(16);
-	padding-left: toRem(16);
-	border: 1px solid $ink-light;
-	font-size: toRem(14);
-}
-
-.input-wrap {
-	width: 100%;
-}
-
-.input-error {
-	border: 1px solid $error;
-}
-
-.error {
-	color: $error;
-	font-style: italic;
-	text-align: center;
-	margin-top: toRem(8);
-	margin-bottom: toRem(42);
-	display: none;
+	gap: toRem(48);
 }
 
 button {
-	width: 100%;
-	border-radius: $rounded;
-	background-color: $primary;
+	background-color: $ink;
+	color: $primary;
+	width: toRem(400);
+	padding: toRem(32);
 	text-align: center;
-	padding: toRem(16);
-	color: $ink-inverse;
+	border-radius: 50px;
 	border: none;
-	font-weight: 500;
-	font-size: 1rem;
-	cursor: pointer;
+	box-shadow: 0 5px 5px grey;
+	font-size: 2rem;
 }
 
-.socials {
-	@include mixins.flex-row;
-	@include mixins.centered;
-	gap: toRem(24);
-	margin-top: toRem(200);
-	margin-bottom: toRem(56);
+.logo {
+	max-width: toRem(200);
 }
 
 .icon {
-	max-width: toRem(40);
-	padding: toRem(8);
-	border-radius: 100%;
-	border: 1px solid $ink-light;	
-	cursor: pointer;
+	max-width: toRem(54);
+	color: red;
 }
-
-.icon path {
-	fill: $primary;
-}
-
 
 @media (min-width: toRem(700)) {
-	input {
-		padding: toRem(28);
-		padding-left: toRem(32);
-		font-size: 1rem;
-	}
-
-	button {
-		padding: toRem(28);
-	}	
-
-	.icon {
-		max-width: toRem(62);
-		padding: toRem(16);
-	}
-}
-
-@media (min-width: toRem(751)) {
 	main {
-		max-width: toRem(750);
+		padding: toRem(80);
 	}
 
-	form {
-		@include mixins.flex-row;
-		margin-bottom: toRem(92);
-		align-items: flex-start;
-	}
-
-	.error {
-		margin-bottom: 0;
+	.logo {
+		min-width: toRem(240);
 	}
 	
-	button {
-		max-width: toRem(200);
-	}
-
-	.socials {
-		margin-top: toRem(72);
+	picture {
+		margin-top: toRem(81);
+		margin-bottom: toRem(136);
 	}
 }

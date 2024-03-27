@@ -1,0 +1,236 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, a {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+/* PRIMARY */
+/* Violet */
+/* SECONDARY */
+/* Soft Magenta */
+/* NEUTRAL */
+/* Very Dark Blue */
+/* GRADIENTS */
+/* BORDERS */
+:root {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 45%;
+  background-color: hsl(257, 40%, 49%);
+}
+
+main {
+  border: 1px solid black;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+picture {
+  display: block;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+/* T Y P O G R A P H Y */
+.loud-voice {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: white;
+}
+
+.attention-voice {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: white;
+}
+
+.alert-voice {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.normal-voice {
+  font-family: "Open Sans", serif;
+  font-size: 1.9rem;
+  line-height: 2;
+  font-weight: 400;
+  color: white;
+}
+
+.quiet-voice {
+  font-size: 0.7rem;
+  color: white;
+}
+
+.whisper-voice {
+  font-size: 0.6rem;
+  letter-spacing: 0.1rem;
+  color: hsl(257, 40%, 49%);
+}
+
+strong {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+@media (min-width: 43.75rem) {
+  .loud-voice {
+    font-size: 2.75rem;
+    line-height: 1.2;
+  }
+}
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.intro {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+button {
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+  width: 25rem;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 5px 5px grey;
+  font-size: 2rem;
+}
+
+.logo {
+  max-width: 12.5rem;
+}
+
+.icon {
+  max-width: 3.375rem;
+  color: red;
+}
+
+@media (min-width: 43.75rem) {
+  main {
+    padding: 5rem;
+  }
+  .logo {
+    min-width: 15rem;
+  }
+  picture {
+    margin-top: 5.0625rem;
+    margin-bottom: 8.5rem;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
