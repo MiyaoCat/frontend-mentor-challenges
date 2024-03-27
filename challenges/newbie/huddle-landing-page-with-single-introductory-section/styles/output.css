@@ -155,7 +155,7 @@ svg {
 
 .normal-voice {
   font-family: "Open Sans", serif;
-  font-size: 1.9rem;
+  font-size: 1rem;
   line-height: 2;
   font-weight: 400;
   color: white;
@@ -183,7 +183,14 @@ strong {
     font-size: 2.75rem;
     line-height: 1.2;
   }
+  .normal-voice {
+    font-size: 1.9rem;
+  }
 }
+main {
+  padding: 1rem;
+}
+
 .left-side {
   display: flex;
   flex-direction: column;
@@ -197,32 +204,48 @@ strong {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
 }
 
 button {
   background-color: white;
   color: hsl(257, 40%, 49%);
-  width: 25rem;
-  padding: 2rem;
   text-align: center;
+  width: 12.5rem;
+  padding: 1rem;
   border-radius: 50px;
   border: none;
   box-shadow: 0 5px 5px grey;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .logo {
-  max-width: 12.5rem;
+  max-width: 10rem;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .icon {
-  max-width: 3.375rem;
-  color: red;
+  max-width: 2.25rem;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 @media (min-width: 43.75rem) {
   main {
     padding: 5rem;
+  }
+  .intro {
+    margin-top: 0;
   }
   .logo {
     min-width: 15rem;
@@ -230,6 +253,15 @@ button {
   picture {
     margin-top: 5.0625rem;
     margin-bottom: 8.5rem;
+  }
+  button {
+    width: 25rem;
+    padding: 2rem;
+    font-size: 2rem;
+  }
+  .icon {
+    max-width: 3.375rem;
+    padding: 0.75rem;
   }
 }
 

@@ -29,7 +29,7 @@
 
 .normal-voice {
 	font-family: $font-serif;
-	font-size: 1.9rem; 
+	font-size: 1rem; 
 	line-height: 2;
 	font-weight: 400;
 	color: $ink;
@@ -63,5 +63,9 @@ strong {
 	.loud-voice {
 		font-size: toRem(44);
 		line-height: 1.2;
+	}
+
+	.normal-voice {
+		font-size: 1.9rem;
 	}
 }
