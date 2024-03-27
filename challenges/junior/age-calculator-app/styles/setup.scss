@@ -1,0 +1,105 @@
+@use 'sass:math';
+@use 'mixins';
+
+@function toRem($value) {
+   @return math.div($value, 20) * 1rem;	
+}
+
+* {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+$font-sans: 'Poppins', sans-serif;
+$font-serif: 'Open Sans', serif;
+
+/* PRIMARY */
+$primary: hsl(259, 100%, 65%); //Purple
+$error: hsl(0, 100%, 67%); /* Light Red */;
+
+/* SECONDARY */
+// $accent: hsl(300, 69%, 71%); /* Soft Magenta */
+
+/* NEUTRAL */
+$card-bg: white; /* Very Dark Blue */
+$bg: hsl(0, 0%, 94%); //Off white
+$ink-alt: hsl(0, 0%, 86%) // Light Grey
+$bg: hsl(0, 1%, 44%) // Smokey Grey
+$ink: hsl(0, 0%, 8%) // Off black
+// $ink-inverse: white;
+
+
+/* GRADIENTS */
+
+/* BORDERS */
+$small: 5px;
+$rounded: 40px;
+
+:root {
+	font-family: $font-sans;	
+}
+
+html {
+  box-sizing: border-box;
+}
+
+
+body {
+	// border: 1px solid black;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	background: url('../images/bg-mobile.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 45%;
+	background-color: $primary;
+}
+
+main {
+	// border: 1px solid black;
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	// background-color: $primary;
+	padding: toRem(40);
+	height: 100vh;
+}
+
+footer {
+	// border: 1px solid black;
+	@include mixins.flex-row;
+}
+
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+p a {
+	display: inline;
+	text-decoration: underline;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+

@@ -1,0 +1,152 @@
+@use 'sass:math';
+@use 'mixins';
+@import '../../../../style/meyer-reset';
+@import 'setup';
+@import 'typography';
+
+
+main {
+	padding: 2.5rem;
+}
+
+.left-side {
+	@include mixins.flex-column;
+	gap: toRem(72);
+}
+
+.intro {
+	text-align: center;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	gap: toRem(48);
+	margin-top: toRem(48);
+	margin-bottom: toRem(128);
+}
+
+button {
+	background-color: $ink;
+	color: $primary;
+	text-align: center;
+	width: toRem(200);
+	padding: toRem(16);	
+	border-radius: 50px;
+	border: none;
+	box-shadow: 0 5px 5px hsl(257, 27%, 41%);
+	font-size: 1rem;
+}
+
+.logo {
+	max-width: toRem(160);
+}
+
+.social-icons {
+	@include mixins.flex-row;
+	@include mixins.centered;
+	gap: toRem(20);
+}
+
+.icon {
+	max-width: toRem(36);
+	border: 1px solid $ink;
+	border-radius: 50px;
+	padding: toRem(8);
+	cursor: pointer;
+}
+
+@media (min-width: toRem(700)) {
+	main {
+		padding: toRem(80);
+	}
+
+	.intro {
+		margin-top: 0;
+	}
+
+	.logo {
+		min-width: toRem(240);
+	}
+	
+	picture {
+		margin-top: toRem(81);
+		margin-bottom: toRem(136);
+	}
+
+	button {
+		width: toRem(400);
+		padding: toRem(32);
+		font-size: 2rem;
+	}
+
+	.icon {
+		max-width: toRem(54);
+		padding: toRem(12);
+	}
+}
+
+@media (min-width: toRem(1000)) {
+	body {
+		background: url('../images/bg-desktop.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: $primary;
+	}
+
+	main {
+		@include mixins.flex-row;
+		gap: toRem(56);
+		padding: 64px 80px 40px 80px;
+	}
+
+	.left-side {
+		// border: 1px solid red;
+		width: 51%;
+		height: 100%;
+		gap: toRem(104);
+	}
+
+	picture {
+		margin: 0;
+	}
+
+	.logo {
+		max-width: toRem(200);
+	}
+
+	.right-side {
+		// border: 1px solid black;
+		@include mixins.flex-column;
+		justify-content: space-between;
+		height: 100%;
+		width: 49%;
+		
+		.intro {
+			text-align: left;
+			align-items: flex-start;
+			gap: 0;
+			height: 100%;
+			margin-top: 3rem;
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-top: toRem(20);
+			margin-bottom: toRem(24);
+		}
+	}
+
+	button {
+		width: toRem(200);
+		font-size: 1.2rem;
+		padding: toRem(16);
+	}
+
+	.social-icons {
+		gap: toRem(16);
+		justify-content: flex-end;
+		align-self: flex-end;
+	}
+	.icon {
+		max-width: toRem(40);
+		padding: 10px;
+	}
+}
