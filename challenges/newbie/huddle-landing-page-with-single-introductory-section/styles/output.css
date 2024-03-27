@@ -87,13 +87,13 @@ body {
 }
 
 main {
-  border: 1px solid black;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  height: 100vh;
 }
 
 footer {
@@ -187,8 +187,17 @@ strong {
     font-size: 1.9rem;
   }
 }
+@media (min-width: 62.5rem) {
+  .loud-voice {
+    font-size: 2.85rem;
+    line-height: 1.5;
+  }
+  .normal-voice {
+    font-size: 1.3rem;
+  }
+}
 main {
-  padding: 1rem;
+  padding: 2.5rem;
 }
 
 .left-side {
@@ -216,7 +225,7 @@ button {
   padding: 1rem;
   border-radius: 50px;
   border: none;
-  box-shadow: 0 5px 5px grey;
+  box-shadow: 0 5px 5px hsl(257, 27%, 41%);
   font-size: 1rem;
 }
 
@@ -262,6 +271,64 @@ button {
   .icon {
     max-width: 3.375rem;
     padding: 0.75rem;
+  }
+}
+@media (min-width: 62.5rem) {
+  body {
+    background: url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+    padding: 64px 80px 40px 80px;
+  }
+  .left-side {
+    width: 51%;
+    height: 100%;
+    gap: 6.5rem;
+  }
+  picture {
+    margin: 0;
+  }
+  .logo {
+    max-width: 12.5rem;
+  }
+  .right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 49%;
+  }
+  .right-side .intro {
+    text-align: left;
+    align-items: flex-start;
+    gap: 0;
+    height: 100%;
+    margin-top: 3rem;
+    margin-bottom: 0;
+  }
+  .right-side p {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  button {
+    width: 12.5rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  .social-icons {
+    gap: 1rem;
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+  .icon {
+    max-width: 2.5rem;
+    padding: 10px;
   }
 }
 

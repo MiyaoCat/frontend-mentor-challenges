@@ -69,3 +69,14 @@ strong {
 		font-size: 1.9rem;
 	}
 }
+
+@media (min-width: toRem(1000)) {
+	.loud-voice {
+		font-size: 2.85rem;
+		line-height: 1.5;
+	}
+
+	.normal-voice {
+		font-size: 1.3rem;
+	}
+}

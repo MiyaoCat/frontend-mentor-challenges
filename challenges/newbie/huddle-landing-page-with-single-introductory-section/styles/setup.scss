@@ -54,12 +54,13 @@ body {
 }
 
 main {
-	border: 1px solid black;
+	// border: 1px solid black;
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
 	// background-color: $primary;
 	padding: toRem(40);
+	height: 100vh;
 }
 
 footer {
