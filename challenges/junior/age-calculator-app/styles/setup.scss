@@ -25,9 +25,9 @@ $error: hsl(0, 100%, 67%); /* Light Red */;
 /* NEUTRAL */
 $card-bg: white; /* Very Dark Blue */
 $bg: hsl(0, 0%, 94%); //Off white
-$ink-alt: hsl(0, 0%, 86%) // Light Grey
-$bg: hsl(0, 1%, 44%) // Smokey Grey
-$ink: hsl(0, 0%, 8%) // Off black
+$ink-alt: hsl(0, 0%, 86%); // Light Grey
+$bg-alt: hsl(0, 1%, 44%); // Smokey Grey
+$ink: hsl(0, 0%, 8%); // Off black
 // $ink-inverse: white;
 
 
@@ -50,9 +50,6 @@ body {
 	// border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	background: url('../images/bg-mobile.svg');
-	background-repeat: no-repeat;
-	background-size: 100% 45%;
 	background-color: $primary;
 }
 
