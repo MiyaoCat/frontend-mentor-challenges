@@ -53,10 +53,11 @@ strong {
 }
 
 .special {
-// 	font-size: clamp(18px, 3rem, 4.1rem);
-// 	font-weight: 200;
+	font-size: 2rem;
+	font-weight: 800;
+	font-style: italic;
 // 	letter-spacing: 1rem;
-// 	color: $primary;
+	color: $primary;
 }
 
 @media (min-width: toRem(700)) {

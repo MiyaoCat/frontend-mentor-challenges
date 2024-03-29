@@ -21,41 +21,75 @@
 <body>
 
 <main>
-  <form action='POST'>
-    <label>Day 
-      <input 
-        class='day' 
-        type='number' 
-        placeholder='DD'
-        min=1
-        max=31
-      ></input>
-    </label>   
+  <div class='calc-app'>
+    <form action='POST'>
+      <div class='date-entry'>
+        <label>Day 
+          <input 
+            class='day' 
+            type='number' 
+            placeholder='DD'
+            min=1
+            max=31
+            value=''
+          ></input>
+        </label>   
+            
+        <label>
+          Month
+          <input 
+            class='month' 
+            type='number'  
+            placeholder='MM'
+            min=1
+            max=12
+            value=''
+          ></input>
+        </label>
+        
+        <label>Year
+          <input 
+            class='year' 
+            type='number' 
+            placeholder='YYYY'
+            min=1900
+            max='CurrentYear'
+            value=''
+          ></input>
+        </label>
+      </div>
 
-    <label>
-      Month
-      <input 
-        class='month' 
-        type='number'  
-        placeholder='MM'
-        min=1
-        max=12
-      ></input>
-    </label>
+      <button type='submit'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44">
+          arrow
+        </svg>
+      </button>
+
+
+    </form>
     
-    <label>Year
-      <input 
-        class='year' 
-        type='number' 
-        placeholder='YYYY'
-        min=1900
-      ></input>
-    </label>
-  </form>
-  
-  -- years
-  -- months
-  -- days
+    <output>
+      <div class='output-years'>
+        <div class='total-years'>--</div> 
+        <p class='special'>years</p>
+      </div>
+      
+    
+      <div class='output-months'>
+        <div class='total-months'>--</div> 
+        <p class='special'>months</p>
+      </div>
+    
+      <div class='output-days'>
+        <div class='total-days'>--</div> 
+        <p class='special'>days</p>
+      </div>
+      
+    </output>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"></svg>
+
+  <img class='arrow' src='./assets/images/icon-arrow.svg' alt=''>
 </main>
 
 <footer>
@@ -65,4 +99,6 @@
   </div>
 </footer>
 </body>
+
+<script src='index.js'></script>
 </html>
