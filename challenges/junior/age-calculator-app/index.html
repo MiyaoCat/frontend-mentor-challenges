@@ -24,38 +24,41 @@
   <div class='calc-app'>
     <form action='POST'>
       <div class='date-entry'>
-        <label>Day 
-          <input 
-            class='day' 
+        <label class='day'>Day 
+          <input
+            class='input-day' 
             type='number' 
             placeholder='DD'
             min=1
             max=31
             value=''
           ></input>
+          <div class='error'></div>
         </label>   
             
-        <label>
+        <label class='month'>
           Month
-          <input 
-            class='month' 
+          <input
+            class='input-month' 
             type='number'  
             placeholder='MM'
             min=1
             max=12
             value=''
           ></input>
+          <div class='error'></div>
         </label>
         
-        <label>Year
-          <input 
-            class='year' 
+        <label class='year'>Year
+          <input
+            class='input-year' 
             type='number' 
             placeholder='YYYY'
             min=1900
             max='CurrentYear'
             value=''
           ></input>
+          <div class='error'></div>
         </label>
       </div>
 

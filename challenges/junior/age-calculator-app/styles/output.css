@@ -63,7 +63,7 @@ table {
 /* Light Red */
 /* SECONDARY */
 /* NEUTRAL */
-/* Very Dark Blue */
+/* */
 /* GRADIENTS */
 /* BORDERS */
 :root {
@@ -222,6 +222,22 @@ form {
 label {
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(0, 1%, 44%);
+}
+
+.label-error {
+  color: hsl(0, 100%, 67%);
+}
+
+input {
+  margin: 0.5rem 0;
+  border: 1px solid hsl(0, 0%, 86%);
+}
+
+.input-error {
+  border: 1px solid hsl(0, 100%, 67%);
 }
 
 button {
@@ -234,6 +250,9 @@ button {
 button .arrow {
   max-width: 3.875rem;
 }
+button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
 
 output > div {
   display: flex;
@@ -241,6 +260,14 @@ output > div {
 }
 output .total-years, output .total-months, output .total-days {
   color: hsl(259, 100%, 65%);
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.6rem;
+  display: none;
 }
 
 /*# sourceMappingURL=output.css.map */

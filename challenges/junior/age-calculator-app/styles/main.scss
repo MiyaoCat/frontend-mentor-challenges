@@ -20,8 +20,25 @@ form {
 	@include mixins.flex-row;
 	gap: toRem(16);
 }
+
 label {
 	@include mixins.flex-column;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: $bg-alt;	
+}
+
+.label-error {
+	color: $error;
+}
+
+input {
+	margin: toRem(8) 0;
+	border: 1px solid $ink-alt;
+}
+
+.input-error {
+	border: 1px solid $error;
 }
 
 button {
@@ -34,6 +51,10 @@ button {
 	.arrow {
 		max-width: toRem(62);
 	}
+
+	&:hover {
+		background-color: $ink;
+	}
 }
 
 output {
@@ -44,4 +65,12 @@ output {
 	.total-years, .total-months, .total-days {
 		color: $primary;
 	}
+}
+
+.error {
+	color: $error;
+	font-weight: 400;
+	font-style: italic;
+	font-size: .6rem;
+	display: none;
 }
