@@ -14,18 +14,33 @@ console.log(`Current date: ${currentMonth}-${currentDate}, ${currentYear}`);
 // Get the current day, month, year
 // Subtract the current date from the input date
 
-var day = document.querySelector('.day');
-
-day.addEventListener('input', function() {
-	var dayValue = day.value;
-
-	console.log('input Day: ', dayValue);
-})
-
 const $button = document.querySelector('button');
+const day = document.querySelector('.day');
+const month = document.querySelector('.month');
+const year = document.querySelector('.year');
 
 $button.addEventListener('click', function(event) {
+
 	event.preventDefault();
 
-	console.log('click')
+	dayValue = day.value;
+	monthValue = month.value;
+	yearValue = year.value;
+
+	var birthdate = new Date(yearValue, monthValue - 1, dayValue);
+
+	var birthYear = birthdate.getFullYear();
+	var birthMonth = birthdate.getMonth();
+	var birthDay = birthdate.getDate();
+
+	console.log('birthdate: ', birthdate);
+
+	var years = currentYear - birthYear;
+	var months = Math.abs(currentMonth - birthMonth);
+	var days = Math.abs(currentDate - birthDay);
+
+	console.log(`Days: ${days}, Months: ${months}, Years: ${years}`)
+
 })
+
+console.log(date);

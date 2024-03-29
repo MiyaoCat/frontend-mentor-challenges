@@ -178,7 +178,7 @@ strong {
   font-size: 2rem;
   font-weight: 800;
   font-style: italic;
-  color: hsl(259, 100%, 65%);
+  color: hsl(0, 0%, 8%);
 }
 
 @media (min-width: 43.75rem) {
@@ -231,32 +231,16 @@ button {
   padding: 20px;
   cursor: pointer;
 }
-button svg {
-  z-index: 9;
-}
-button svg path {
-  stroke: red;
-  stroke-width: 5px;
+button .arrow {
+  max-width: 3.875rem;
 }
 
 output > div {
   display: flex;
   flex-direction: row;
 }
-
-svg {
-  border: 1px solid black;
-}
-svg path {
-  stroke: black;
-  fill: black;
-  stroke-width: 10px;
-  z-index: 9;
-}
-
-.arrow {
-  border: 2px solid limegreen;
-  height: 100px;
+output .total-years, output .total-months, output .total-days {
+  color: hsl(259, 100%, 65%);
 }
 
 /*# sourceMappingURL=output.css.map */
