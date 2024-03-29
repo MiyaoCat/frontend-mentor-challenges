@@ -1,11 +1,11 @@
 console.log('hi');
 
-const date = new Date();
-const currentYear = date.getFullYear();
-const currentMonth = date.getMonth();
-const currentDate = date.getDate();
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+const currentMonth = currentDate.getMonth();
+const currentDay = currentDate.getDate();
 
-console.log(`Current date: ${currentMonth}-${currentDate}, ${currentYear}`);
+console.log(`Current date: ${currentMonth}-${currentDay}, ${currentYear}`);
 
 // User inputs a day, month and year
 // Store the input of the day, month year
@@ -36,11 +36,22 @@ $button.addEventListener('click', function(event) {
 	console.log('birthdate: ', birthdate);
 
 	var years = currentYear - birthYear;
-	var months = Math.abs(currentMonth - birthMonth);
-	var days = Math.abs(currentDate - birthDay);
+	var months = currentMonth - birthMonth;
+	var days = currentDay - birthDay;
+
+	if (days < 0) {
+		months--;
+		var monthDays = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+		days += monthDays;
+	}
+
+	if (months < 0) {
+		years--;
+		months += 12;
+	}
 
 	console.log(`Days: ${days}, Months: ${months}, Years: ${years}`)
 
 })
 
-console.log(date);
+console.log(currentDate);
