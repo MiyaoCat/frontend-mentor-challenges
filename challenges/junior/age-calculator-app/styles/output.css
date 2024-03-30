@@ -210,7 +210,17 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  position: relative;
+}
+
+hr {
+  background-color: hsl(0, 0%, 86%);
+  border: none;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  top: 9.375rem;
 }
 
 .date-entry {
@@ -261,6 +271,8 @@ button {
   border-radius: 50%;
   padding: 20px;
   cursor: pointer;
+  margin-bottom: 2.25rem;
+  z-index: 9;
 }
 button .arrow {
   max-width: 3.875rem;
@@ -272,9 +284,17 @@ button:hover {
 output > div {
   display: flex;
   flex-direction: row;
+  gap: 0.25rem;
 }
 output .total-years, output .total-months, output .total-days {
   color: hsl(259, 100%, 65%);
+}
+
+.result {
+  color: hsl(259, 100%, 65%);
+  font-size: 2rem;
+  font-weight: 800;
+  font-style: italic;
 }
 
 .error {

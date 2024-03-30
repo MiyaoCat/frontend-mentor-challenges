@@ -11,6 +11,11 @@ const $year = document.querySelector('.input-year');
 const $label = document.querySelectorAll('label');
 const $error = document.querySelectorAll('.error');
 const $input = document.querySelectorAll('input');
+const $result = document.querySelectorAll('.result');
+
+const $outputYear = document.querySelector('.total-years');
+const $outputMonth = document.querySelector('.total-months');
+const $outputDay = document.querySelector('.total-days');
 
 $button.addEventListener('click', function(event) {
 	event.preventDefault();
@@ -47,44 +52,12 @@ $button.addEventListener('click', function(event) {
 	console.log(`Years: ${years}, Months: ${months}, Days: ${days}`)
 
 	//ERROR MESSAGING
-	if (dayValue === '') {
-		$error[0].style.display = 'block';
-		$error[0].innerHTML = 'This field is required';
-		$label[0].classList.add('label-error');
-		$input[0].classList.add('input-error');
-	} else if (dayValue > 31) {
-		$error[0].style.display = 'block';
-		$error[0].innerHTML = 'Must be a valid date';
-		$label[0].classList.add('label-error');
-		$input[0].classList.add('input-error');
-	} else {
-		$error[0].style.display = 'none';
-		$label[0].classList.remove('label-error');
-		$input[0].classList.remove('input-error');
-	}
-
-	if (monthValue === '') {
-		$error[1].style.display = 'block';
-		$error[1].innerHTML = 'This field is required';
-		$label[1].classList.add('label-error');
-		$input[1].classList.add('input-error');
-	} else if (monthValue > 12) {
-		$error[1].style.display = 'block';
-		$error[1].innerHTML = 'Must be a valid month';
-		$label[1].classList.add('label-error');
-		$input[1].classList.add('input-error');
-	} else {
-		$error[1].style.display = 'none';
-		$label[1].classList.remove('label-error');
-		$input[1].classList.remove('input-error');
-	}
-
 	if (yearValue === '') {
 		$error[2].style.display = 'block';
 		$error[2].innerHTML = 'This field is required';
 		$label[2].classList.add('label-error');
 		$input[2].classList.add('input-error');
-	} else if (yearValue > currentYear) {
+	} else if (yearValue > currentYear || yearValue <= 0) {
 		$error[2].style.display = 'block';
 		$error[2].innerHTML = 'Must be in the past';
 		$label[2].classList.add('label-error');
@@ -93,6 +66,44 @@ $button.addEventListener('click', function(event) {
 		$error[2].style.display = 'none';
 		$label[2].classList.remove('label-error');
 		$input[2].classList.remove('input-error');
+
+		$result[0].innerHTML = years;
+	}
+
+	if (monthValue === '') {
+		$error[1].style.display = 'block';
+		$error[1].innerHTML = 'This field is required';
+		$label[1].classList.add('label-error');
+		$input[1].classList.add('input-error');
+	} else if (monthValue > 12 || monthValue <= 0) {
+		$error[1].style.display = 'block';
+		$error[1].innerHTML = 'Must be a valid month';
+		$label[1].classList.add('label-error');
+		$input[1].classList.add('input-error');
+	} else {
+		$error[1].style.display = 'none';
+		$label[1].classList.remove('label-error');
+		$input[1].classList.remove('input-error');
+
+		$result[1].innerHTML = months;
+	}
+
+	if (dayValue === '') {
+		$error[0].style.display = 'block';
+		$error[0].innerHTML = 'This field is required';
+		$label[0].classList.add('label-error');
+		$input[0].classList.add('input-error');
+	} else if (dayValue > 31 || dayValue <= 0) {
+		$error[0].style.display = 'block';
+		$error[0].innerHTML = 'Must be a valid date';
+		$label[0].classList.add('label-error');
+		$input[0].classList.add('input-error');
+	} else {
+		$error[0].style.display = 'none';
+		$label[0].classList.remove('label-error');
+		$input[0].classList.remove('input-error');
+
+		$result[2].innerHTML = days;
 	}
 })
 
