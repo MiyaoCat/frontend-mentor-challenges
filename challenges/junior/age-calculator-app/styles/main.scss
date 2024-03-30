@@ -24,7 +24,7 @@ form {
 label {
 	@include mixins.flex-column;
 	font-size: 1.2rem;
-	font-weight: 700;
+	font-weight: 400;
 	color: $bg-alt;	
 }
 
@@ -32,9 +32,24 @@ label {
 	color: $error;
 }
 
+.data-entry {
+	@include mixins.flex-row;
+	gap: toRem(16);
+}
+
 input {
 	margin: toRem(8) 0;
+	padding: toRem(16);
+	max-width: toRem(88);
+	border-radius: 10px;
 	border: 1px solid $ink-alt;
+	color: $ink;
+	font-weight: 700;
+
+	&::placeholder {
+		color: $ink;
+		font-weight: 800;
+	}
 }
 
 .input-error {

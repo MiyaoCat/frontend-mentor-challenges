@@ -223,7 +223,7 @@ label {
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: hsl(0, 1%, 44%);
 }
 
@@ -231,9 +231,24 @@ label {
   color: hsl(0, 100%, 67%);
 }
 
+.data-entry {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 input {
   margin: 0.5rem 0;
+  padding: 1rem;
+  max-width: 5.5rem;
+  border-radius: 10px;
   border: 1px solid hsl(0, 0%, 86%);
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+}
+input::placeholder {
+  color: hsl(0, 0%, 8%);
+  font-weight: 800;
 }
 
 .input-error {
