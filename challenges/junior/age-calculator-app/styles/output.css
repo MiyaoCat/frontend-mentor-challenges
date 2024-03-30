@@ -250,7 +250,7 @@ label {
 input {
   margin: 0.5rem 0;
   padding: 1rem;
-  max-width: 5.5rem;
+  width: 5.5rem;
   border-radius: 10px;
   border: 1px solid hsl(0, 0%, 86%);
   color: hsl(0, 0%, 8%);
