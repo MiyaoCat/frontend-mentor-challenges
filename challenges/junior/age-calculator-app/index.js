@@ -31,6 +31,7 @@ $button.addEventListener('click', function(event) {
 	var birthDay = birthdate.getDate();
 
 	var years = currentYear - birthYear;
+	console.log(birthdate);
 	var months = currentMonth - birthMonth;
 	var days = currentDay - birthDay;
 
