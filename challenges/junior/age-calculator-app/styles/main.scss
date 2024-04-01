@@ -29,7 +29,9 @@ form {
 
 label {
 	@include mixins.flex-column;
-	font-size: 1.2rem;
+	font-size: .8rem;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
 	font-weight: 400;
 	color: $bg-alt;	
 }
@@ -53,7 +55,7 @@ input {
 	font-weight: 700;
 
 	&::placeholder {
-		color: $ink;
+		color: $bg-alt;
 		font-weight: 800;
 	}
 }
@@ -111,6 +113,7 @@ output {
 		max-width: toRem(840);
 		max-height: toRem(680);
 		padding: toRem(56);
+		border-radius: 20px 20px 120px 20px;
 	}
 
 	form {
@@ -125,11 +128,22 @@ output {
 	input {
 		width: toRem(160);
 		padding: 24px;
+		font-size: 1.5rem;
+		
+		&::placeholder {
+			font-size: 1.5rem;
+			padding: 0;
+			vertical-align: bottom;
+		}
 	}
 
 	button {
 		max-width: toRem(96);
 		padding: 24px;
 		right: toRem(-16);
+	}
+
+	.special, .result {
+		font-size: 4.5rem;
 	}
 }

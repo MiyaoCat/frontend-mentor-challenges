@@ -79,7 +79,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(259, 100%, 65%);
+  background-color: hsl(0, 0%, 94%);
 }
 
 main {
@@ -228,7 +228,9 @@ form {
 label {
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
   font-weight: 400;
   color: hsl(0, 1%, 44%);
 }
@@ -253,7 +255,7 @@ input {
   font-weight: 700;
 }
 input::placeholder {
-  color: hsl(0, 0%, 8%);
+  color: hsl(0, 1%, 44%);
   font-weight: 800;
 }
 
@@ -308,6 +310,7 @@ output .total-years, output .total-months, output .total-days {
     max-width: 52.5rem;
     max-height: 42.5rem;
     padding: 3.5rem;
+    border-radius: 20px 20px 120px 20px;
   }
   form {
     gap: 4.75rem;
@@ -319,11 +322,20 @@ output .total-years, output .total-months, output .total-days {
   input {
     width: 10rem;
     padding: 24px;
+    font-size: 1.5rem;
+  }
+  input::placeholder {
+    font-size: 1.5rem;
+    padding: 0;
+    vertical-align: bottom;
   }
   button {
     max-width: 6rem;
     padding: 24px;
     right: -1rem;
+  }
+  .special, .result {
+    font-size: 4.5rem;
   }
 }
 

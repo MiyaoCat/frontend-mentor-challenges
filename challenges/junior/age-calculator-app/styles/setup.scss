@@ -38,7 +38,7 @@ $small: 5px;
 $rounded: 40px;
 
 :root {
-	font-family: $font-sans;	
+	font-family: 'Poppins', sans-serif;	
 }
 
 html {
@@ -50,7 +50,7 @@ body {
 	// border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	background-color: $primary;
+	background-color: $bg;
 }
 
 main {
