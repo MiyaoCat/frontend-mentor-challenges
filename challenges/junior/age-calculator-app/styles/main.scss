@@ -13,6 +13,7 @@
 }
 
 form {
+	font-family: var(--ff);
 	@include mixins.flex-column;
 	@include mixins.centered;
 	gap: toRem(32);
@@ -29,6 +30,7 @@ form {
 
 label {
 	@include mixins.flex-column;
+	font-family: var(--ff);
 	font-size: .8rem;
 	letter-spacing: .1rem;
 	text-transform: uppercase;
@@ -98,6 +100,7 @@ output {
 	font-size: 3rem;
 	font-weight: 800;
 	font-style: italic;
+	font-family: var(--ff);
 }
 
 .error {
@@ -129,7 +132,7 @@ output {
 		width: toRem(160);
 		padding: 24px;
 		font-size: 1.5rem;
-		
+
 		&::placeholder {
 			font-size: 1.5rem;
 			padding: 0;
@@ -140,10 +143,11 @@ output {
 	button {
 		max-width: toRem(96);
 		padding: 24px;
+		top: 7.65rem;
 		right: toRem(-16);
 	}
 
 	.special, .result {
-		font-size: 4.5rem;
+		font-size: 6.5rem;
 	}
 }

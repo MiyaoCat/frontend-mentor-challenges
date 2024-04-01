@@ -67,7 +67,7 @@ table {
 /* GRADIENTS */
 /* BORDERS */
 :root {
-  font-family: "Poppins", sans-serif;
+  --ff: "Poppins", sans-serif;
 }
 
 html {
@@ -175,6 +175,7 @@ strong {
 }
 
 .special {
+  font-family: var(--ff);
   font-size: 3rem;
   font-weight: 800;
   font-style: italic;
@@ -208,6 +209,7 @@ strong {
 }
 
 form {
+  font-family: var(--ff);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -228,6 +230,7 @@ form {
 label {
   display: flex;
   flex-direction: column;
+  font-family: var(--ff);
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
@@ -295,6 +298,7 @@ output .total-years, output .total-months, output .total-days {
   font-size: 3rem;
   font-weight: 800;
   font-style: italic;
+  font-family: var(--ff);
 }
 
 .error {
@@ -332,10 +336,11 @@ output .total-years, output .total-months, output .total-days {
   button {
     max-width: 6rem;
     padding: 24px;
+    top: 7.65rem;
     right: -1rem;
   }
   .special, .result {
-    font-size: 4.5rem;
+    font-size: 6.5rem;
   }
 }
 
