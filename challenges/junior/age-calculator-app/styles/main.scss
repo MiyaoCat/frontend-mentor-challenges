@@ -5,6 +5,8 @@
 @import 'typography';
 
 .calc-app {
+	max-width: toRem(342);
+	max-height: toRem(486);
 	padding: toRem(52) toRem(24);
 	border-radius: 20px 20px 60px 20px;
 	background-color: $card-bg;
@@ -15,16 +17,9 @@ form {
 	@include mixins.centered;
 	gap: toRem(32);
 	position: relative;
-}
-
-hr {
-	background-color: $ink-alt;
-	border: none;
-	height: 2px;
-	position: absolute;
-	width: 100%;
-	top: toRem(150);
-	// bottom: toRem(20);
+	padding-bottom: toRem(62);
+	margin-bottom: toRem(68);
+	border-bottom: 1px solid $ink-alt;
 }
 
 .date-entry {
@@ -73,12 +68,10 @@ button {
 	border-radius: 50%;
 	padding: 20px;
 	cursor: pointer;
-	margin-bottom: toRem(36);
+	max-width: toRem(62);
+	position: absolute;
+	top: toRem(116);
 	z-index: 9;
-
-	.arrow {
-		max-width: toRem(62);
-	}
 
 	&:hover {
 		background-color: $ink;
@@ -86,6 +79,8 @@ button {
 }
 
 output {
+	display: block;
+
 	& > div {
 		@include mixins.flex-row;
 		gap: toRem(4);
@@ -98,7 +93,7 @@ output {
 
 .result {
 	color: $primary;
-	font-size: 2rem;
+	font-size: 3rem;
 	font-weight: 800;
 	font-style: italic;
 }
@@ -109,4 +104,32 @@ output {
 	font-style: italic;
 	font-size: .6rem;
 	display: none;
+}
+
+@media (min-width: toRem(850)) {
+	.calc-app {
+		max-width: toRem(840);
+		max-height: toRem(680);
+		padding: toRem(56);
+	}
+
+	form {
+		gap: toRem(76);
+		padding-right: toRem(130);
+	}
+
+	.data-entry {
+		gap: toRem(24);
+	}
+
+	input {
+		width: toRem(160);
+		padding: 24px;
+	}
+
+	button {
+		max-width: toRem(96);
+		padding: 24px;
+		right: toRem(-16);
+	}
 }

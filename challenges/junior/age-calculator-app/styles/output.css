@@ -175,7 +175,7 @@ strong {
 }
 
 .special {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   font-style: italic;
   color: hsl(0, 0%, 8%);
@@ -200,6 +200,8 @@ strong {
   }
 }
 .calc-app {
+  max-width: 21.375rem;
+  max-height: 30.375rem;
   padding: 3.25rem 1.5rem;
   border-radius: 20px 20px 60px 20px;
   background-color: white;
@@ -212,15 +214,9 @@ form {
   align-items: center;
   gap: 2rem;
   position: relative;
-}
-
-hr {
-  background-color: hsl(0, 0%, 86%);
-  border: none;
-  height: 2px;
-  position: absolute;
-  width: 100%;
-  top: 9.375rem;
+  padding-bottom: 3.875rem;
+  margin-bottom: 4.25rem;
+  border-bottom: 1px solid hsl(0, 0%, 86%);
 }
 
 .date-entry {
@@ -271,16 +267,18 @@ button {
   border-radius: 50%;
   padding: 20px;
   cursor: pointer;
-  margin-bottom: 2.25rem;
-  z-index: 9;
-}
-button .arrow {
   max-width: 3.875rem;
+  position: absolute;
+  top: 7.25rem;
+  z-index: 9;
 }
 button:hover {
   background-color: hsl(0, 0%, 8%);
 }
 
+output {
+  display: block;
+}
 output > div {
   display: flex;
   flex-direction: row;
@@ -292,7 +290,7 @@ output .total-years, output .total-months, output .total-days {
 
 .result {
   color: hsl(259, 100%, 65%);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 800;
   font-style: italic;
 }
@@ -303,6 +301,30 @@ output .total-years, output .total-months, output .total-days {
   font-style: italic;
   font-size: 0.6rem;
   display: none;
+}
+
+@media (min-width: 53.125rem) {
+  .calc-app {
+    max-width: 52.5rem;
+    max-height: 42.5rem;
+    padding: 3.5rem;
+  }
+  form {
+    gap: 4.75rem;
+    padding-right: 8.125rem;
+  }
+  .data-entry {
+    gap: 1.5rem;
+  }
+  input {
+    width: 10rem;
+    padding: 24px;
+  }
+  button {
+    max-width: 6rem;
+    padding: 24px;
+    right: -1rem;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
