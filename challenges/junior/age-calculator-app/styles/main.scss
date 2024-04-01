@@ -47,6 +47,15 @@ label {
 	gap: toRem(16);
 }
 
+.error {
+	color: $error;
+	font-weight: 400;
+	font-style: italic;
+	font-size: .6rem;
+	text-transform: none;
+	opacity: 0;
+}
+
 input {
 	margin: toRem(8) 0;
 	padding: toRem(16);
@@ -101,14 +110,6 @@ output {
 	font-weight: 800;
 	font-style: italic;
 	font-family: var(--ff);
-}
-
-.error {
-	color: $error;
-	font-weight: 400;
-	font-style: italic;
-	font-size: .6rem;
-	display: none;
 }
 
 @media (min-width: toRem(850)) {

@@ -248,6 +248,15 @@ label {
   gap: 1rem;
 }
 
+.error {
+  color: hsl(0, 100%, 67%);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.6rem;
+  text-transform: none;
+  opacity: 0;
+}
+
 input {
   margin: 0.5rem 0;
   padding: 1rem;
@@ -299,14 +308,6 @@ output .total-years, output .total-months, output .total-days {
   font-weight: 800;
   font-style: italic;
   font-family: var(--ff);
-}
-
-.error {
-  color: hsl(0, 100%, 67%);
-  font-weight: 400;
-  font-style: italic;
-  font-size: 0.6rem;
-  display: none;
 }
 
 @media (min-width: 53.125rem) {

@@ -53,12 +53,12 @@ $button.addEventListener('click', function(event) {
 
 	//ERROR MESSAGING
 	if (yearValue === '') {
-		$error[2].style.display = 'block';
+		$error[2].style.opacity = 100;
 		$error[2].innerHTML = 'This field is required';
 		$label[2].classList.add('label-error');
 		$input[2].classList.add('input-error');
 	} else if (yearValue > currentYear || yearValue <= 0) {
-		$error[2].style.display = 'block';
+		$error[2].style.opacity = 100;
 		$error[2].innerHTML = 'Must be in the past';
 		$label[2].classList.add('label-error');
 		$input[2].classList.add('input-error');
@@ -71,12 +71,12 @@ $button.addEventListener('click', function(event) {
 	}
 
 	if (monthValue === '') {
-		$error[1].style.display = 'block';
+		$error[1].style.opacity = 100;
 		$error[1].innerHTML = 'This field is required';
 		$label[1].classList.add('label-error');
 		$input[1].classList.add('input-error');
 	} else if (monthValue > 12 || monthValue <= 0) {
-		$error[1].style.display = 'block';
+		$error[1].style.opacity = 100;
 		$error[1].innerHTML = 'Must be a valid month';
 		$label[1].classList.add('label-error');
 		$input[1].classList.add('input-error');
@@ -89,12 +89,12 @@ $button.addEventListener('click', function(event) {
 	}
 
 	if (dayValue === '') {
-		$error[0].style.display = 'block';
+		$error[0].style.opacity = 100;
 		$error[0].innerHTML = 'This field is required';
 		$label[0].classList.add('label-error');
 		$input[0].classList.add('input-error');
 	} else if (dayValue > 31 || dayValue <= 0) {
-		$error[0].style.display = 'block';
+		$error[0].style.opacity = 100;
 		$error[0].innerHTML = 'Must be a valid date';
 		$label[0].classList.add('label-error');
 		$input[0].classList.add('input-error');
