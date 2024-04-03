@@ -1,8 +1,18 @@
 @use 'sass:math';
 @use 'mixins';
 
+@font-face {
+	font-family: 'Inter';
+	src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
 @function toRem($value) {
-   @return math.div($value, 20) * 1rem;	
+   @return math.div($value, 16) * 1rem;	
+}
+
+body * {
+	border: 1px solid black;
+	padding: 2px;
 }
 
 * {
@@ -12,38 +22,32 @@
   box-sizing: inherit;
 } /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
 
-$font-sans: 'Poppins', sans-serif;
-$font-serif: 'Open Sans', serif;
 
 /* PRIMARY */
-$primary: hsl(259, 100%, 65%); //Purple
-$error: hsl(0, 100%, 67%); /* Light Red */;
-
-/* SECONDARY */
-// $accent: hsl(300, 69%, 71%); /* Soft Magenta */
+$primary: hsl(227, 92%, 58%); //Blue
+$accent: hsl(200, 24%, 88%); /* Light Grey */;
 
 /* NEUTRAL */
-$card-bg: white; /* */
-$bg: hsl(0, 0%, 94%); //Off white
-$ink-alt: hsl(0, 0%, 86%); // Light Grey
-$bg-alt: hsl(0, 1%, 44%); // Smokey Grey
-$ink: hsl(0, 0%, 8%); // Off black
+// $card-bg: white; /* */
+$bg: #FFF; //Off white
+
+
+$ink-dark: hsl(215, 31%, 21%); // Gunmetal
+$ink: hsl(215, 17%, 45%); // Dark Electric Blue
 // $ink-inverse: white;
-
-
-/* GRADIENTS */
 
 /* BORDERS */
 $small: 5px;
 $rounded: 40px;
 
 :root {
-	--ff: 'Poppins', sans-serif;	
+	--ff: 'Inter', sans-serif;	
 
 }
 
 html {
   box-sizing: border-box;
+  font-family: var(--ff);
 }
 
 

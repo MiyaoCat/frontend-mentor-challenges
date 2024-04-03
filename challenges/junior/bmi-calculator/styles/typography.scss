@@ -7,36 +7,37 @@
 
 /* T Y P O G R A P H Y */
 .loud-voice {
-	font-size: toRem(28);
+	font-size: toRem(48);
 	font-weight: 600;
-	line-height: 1.6;
+	line-height: 1.1;
 	// letter-spacing: .9rem;
-	color: $ink;	
+	color: $ink-dark;	
 }
 
 .attention-voice {
-	font-size: toRem(32);
+	font-size: toRem(24);
 	font-weight: 700;
-	line-height: 1.5;
-	color: $ink;
+	line-height: 1.1;
+	color: $ink-dark;
 }
 
 .alert-voice {
-	font-size: .8rem;
+	font-size: toRem(20);
 	font-weight: 700;
-	color: $ink;	
+	line-height: 1.1;
+	color: $ink-dark;	
 }
 
 .normal-voice {
-	font-family: $font-serif;
 	font-size: 1rem; 
-	line-height: 2;
+	line-height: 1.5;
 	font-weight: 400;
 	color: $ink;
 }
 
 .quiet-voice {
-	font-size: .7rem;
+	font-size: toRem(14);
+	line-height: 1.5;
 	color: $ink;
 }
 
@@ -47,38 +48,6 @@
 }
 
 strong {
-	font-size: 2rem;
 	font-weight: 700;
-	color: $ink;
 }
 
-.special {
-	font-family: var(--ff);
-	font-size: 3rem;
-	font-weight: 800;
-	font-style: italic;
-// 	letter-spacing: 1rem;
-	color: $ink;
-}
-
-@media (min-width: toRem(700)) {
-	.loud-voice {
-		font-size: toRem(44);
-		line-height: 1.2;
-	}
-
-	.normal-voice {
-		font-size: 1.9rem;
-	}
-}
-
-@media (min-width: toRem(1000)) {
-	.loud-voice {
-		font-size: 2.85rem;
-		line-height: 1.5;
-	}
-
-	.normal-voice {
-		font-size: 1.3rem;
-	}
-}
