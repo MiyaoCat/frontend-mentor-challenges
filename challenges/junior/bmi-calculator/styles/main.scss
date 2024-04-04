@@ -5,7 +5,7 @@
 @import 'typography';
 
 .logo {
-	margin-top: $spacing-big;
+	margin-top: $spacing-large;
 	margin-bottom: $spacing-standard;
 }
 
@@ -21,11 +21,15 @@
 	border-radius: $rounded;
 	padding: $spacing-standard;
 	box-shadow: 5px 10px 8px $accent; 
+	margin-top: $spacing-xlarge;
+	margin-bottom: $spacing-xxlarge;
+	border-radius: $rounded-big;
 }
 
 .unit-type {
 	@include mixins.flex-row;
 	gap: $spacing-standard;
+	margin: $spacing-standard 0;
 	width: 100%;
 
 	label {
@@ -54,19 +58,81 @@ input[type='radio'] {
 		background-color: $primary-light;
 	}
 
-    &:checked::before {
-        content: '';
-        display: block;
-        width: 15px; /* Adjust size of inner circle */
-        height: 15px; /* Adjust size of inner circle */
-        border-radius: 50%; /* Rounded shape */
-        background-color: $primary; /* Color of inner circle */
-        position: relative;
-        top: 7px; /* Adjust position of inner circle */
-        left: 7px; /* Adjust position of inner circle */
-    }	
+  &:checked::before {
+      content: '';
+      display: block;
+      width: 15px; 
+      height: 15px; 
+      border-radius: 50%; 
+      background-color: $primary; 
+      position: relative;
+      top: 7px;
+      left: 7px;
+  }	
+}
+
+.measurements {
+	@include mixins.flex-column;
+	flex-direction: flex-start;
+	gap: $spacing-xsmall;
+	
+	label {
+		@include mixins.flex-column;
+		flex-direction: column-reverse;
+		gap: $spacing-xxsmall;
+	}
+
+	input[type='number'] {
+		position: relative;
+		-moz-appearance: textfield;
+		// display: block;
+		font-size: toRem(24);
+		font-weight: 600;
+		color: $ink-dark;
+		padding: $spacing-standard-small $spacing-standard;
+		border: 1px solid $accent;
+		border-radius: $rounded;
+
+		&:placeholder {
+			color: $ink;
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+    	-webkit-appearance: none;
+    	margin: 0;
+		}
+	}
+
+	label[for='height']::after {
+		content: 'cm';
+		position: absolute;
+		bottom: 184px;
+		left: 284px;
+		color: $primary;
+		font-size: toRem(24);
+		font-weight: 600;
+		// display: block;
+	}
+
+	label[for='weight']::after {
+		content: 'kg';
+		position: absolute;
+		z-index: 9;
+		bottom: 69px;
+		left: 284px;
+		color: $primary;
+		font-size: toRem(24);
+		font-weight: 600;
+		// display: block;
+	}
 }
 
 output {
 	display: block;
+	margin-top: $spacing-standard;
+	padding: $spacing-large;
+	color: $ink-inverse;
+	background-color: $primary;
+	border-radius: $rounded;
 }
