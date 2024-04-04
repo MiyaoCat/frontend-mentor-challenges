@@ -10,9 +10,9 @@
    @return math.div($value, 16) * 1rem;	
 }
 
-body * {
+html * {
 	border: 1px solid black;
-	padding: 2px;
+	// padding: 2px;
 }
 
 * {
@@ -25,6 +25,7 @@ body * {
 
 /* PRIMARY */
 $primary: hsl(227, 92%, 58%); //Blue
+$primary-light: hsla(227, 92%, 58%, .15); //light Blue
 $accent: hsl(200, 24%, 88%); /* Light Grey */;
 
 /* NEUTRAL */
@@ -38,7 +39,12 @@ $ink: hsl(215, 17%, 45%); // Dark Electric Blue
 
 /* BORDERS */
 $small: 5px;
-$rounded: 40px;
+$rounded: 24px;
+
+/* SPACING */
+$spacing-small: toRem(18);
+$spacing-standard: toRem(24);
+$spacing-big: toRem(32);
 
 :root {
 	--ff: 'Inter', sans-serif;	
@@ -64,8 +70,8 @@ main {
 	@include mixins.flex-column;
 	@include mixins.centered;
 	// background-color: $primary;
-	padding: toRem(40);
-	height: 100vh;
+	padding: $spacing-standard;
+	// height: 100vh;
 }
 
 footer {

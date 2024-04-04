@@ -56,9 +56,8 @@ table {
   font-family: "Inter";
   src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
 }
-body * {
+html * {
   border: 1px solid black;
-  padding: 2px;
 }
 
 * {
@@ -72,6 +71,7 @@ body * {
 /* Light Grey */
 /* NEUTRAL */
 /* BORDERS */
+/* SPACING */
 :root {
   --ff: "Inter", sans-serif;
 }
@@ -95,8 +95,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2.5rem;
-  height: 100vh;
+  padding: 1.5rem;
 }
 
 footer {
@@ -145,8 +144,9 @@ svg {
 
 .attention-voice {
   font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.1;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.1rem;
   color: hsl(215, 31%, 21%);
 }
 
@@ -160,7 +160,8 @@ svg {
 .normal-voice {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: -0.02rem;
   color: hsl(215, 17%, 45%);
 }
 
@@ -178,6 +179,70 @@ svg {
 
 strong {
   font-weight: 700;
+}
+
+.logo {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.intro {
+  text-align: center;
+}
+.intro h1 {
+  margin-bottom: 1.5rem;
+}
+
+.calculator-module {
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 5px 10px 8px hsl(200, 24%, 88%);
+}
+
+.unit-type {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  width: 100%;
+}
+.unit-type label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.125rem;
+  font-weight: 600;
+  color: hsl(215, 31%, 21%);
+}
+
+input[type=radio] {
+  appearance: none;
+  height: 31px;
+  width: 31px;
+  margin: 0;
+  border: 1px solid hsl(200, 24%, 88%);
+  border-radius: 50%;
+}
+input[type=radio]:hover {
+  cursor: pointer;
+  border: 1px solid hsl(227, 92%, 58%);
+}
+input[type=radio]:checked {
+  background-color: hsla(227, 92%, 58%, 0.15);
+}
+input[type=radio]:checked::before {
+  content: "";
+  display: block;
+  width: 15px; /* Adjust size of inner circle */
+  height: 15px; /* Adjust size of inner circle */
+  border-radius: 50%; /* Rounded shape */
+  background-color: hsl(227, 92%, 58%); /* Color of inner circle */
+  position: relative;
+  top: 7px; /* Adjust position of inner circle */
+  left: 7px; /* Adjust position of inner circle */
+}
+
+output {
+  display: block;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -1,10 +1,3 @@
-@use 'sass:math';
-@use 'mixins';
-
-@function toRem($value) {
-   @return math.div($value, 16) * 1rem;	
-}
-
 /* T Y P O G R A P H Y */
 .loud-voice {
 	font-size: toRem(48);
@@ -16,8 +9,9 @@
 
 .attention-voice {
 	font-size: toRem(24);
-	font-weight: 700;
-	line-height: 1.1;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.1rem;
 	color: $ink-dark;
 }
 
@@ -31,7 +25,8 @@
 .normal-voice {
 	font-size: 1rem; 
 	line-height: 1.5;
-	font-weight: 400;
+	font-weight: 300;
+	letter-spacing: -0.02rem;
 	color: $ink;
 }
 

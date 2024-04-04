@@ -4,3 +4,69 @@
 @import 'setup';
 @import 'typography';
 
+.logo {
+	margin-top: $spacing-big;
+	margin-bottom: $spacing-standard;
+}
+
+.intro {
+	text-align: center;
+
+	h1 {
+		margin-bottom: $spacing-standard;
+	}
+}
+
+.calculator-module {
+	border-radius: $rounded;
+	padding: $spacing-standard;
+	box-shadow: 5px 10px 8px $accent; 
+}
+
+.unit-type {
+	@include mixins.flex-row;
+	gap: $spacing-standard;
+	width: 100%;
+
+	label {
+		@include mixins.flex-row;
+		align-items: center;
+		gap: $spacing-small;
+		font-weight: 600;
+		color: $ink-dark;
+	}
+}
+
+input[type='radio'] {
+	appearance: none;
+	height: 31px;
+	width: 31px;
+	margin: 0;
+	border: 1px solid $accent;
+	border-radius: 50%;
+
+	&:hover {
+		cursor: pointer;
+		border: 1px solid $primary;
+	}
+
+	&:checked {
+		background-color: $primary-light;
+	}
+
+    &:checked::before {
+        content: '';
+        display: block;
+        width: 15px; /* Adjust size of inner circle */
+        height: 15px; /* Adjust size of inner circle */
+        border-radius: 50%; /* Rounded shape */
+        background-color: $primary; /* Color of inner circle */
+        position: relative;
+        top: 7px; /* Adjust position of inner circle */
+        left: 7px; /* Adjust position of inner circle */
+    }	
+}
+
+output {
+	display: block;
+}
