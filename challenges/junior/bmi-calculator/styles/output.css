@@ -56,10 +56,6 @@ table {
   font-family: "Inter";
   src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
 }
-html * {
-  border: 1px solid black;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -90,12 +86,12 @@ body {
 }
 
 main {
+  border: 1px solid red;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem;
 }
 
 footer {
@@ -161,7 +157,7 @@ svg {
   font-size: 1rem;
   line-height: 1.5;
   font-weight: 300;
-  letter-spacing: -0.02rem;
+  letter-spacing: 0.01rem;
   color: hsl(215, 17%, 45%);
 }
 
@@ -178,7 +174,18 @@ svg {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.background-gradient {
+  position: absolute;
+  background: linear-gradient(to right bottom, white, #D6E6FE);
+  z-index: -1;
+  height: 640px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 35px 35px;
 }
 
 .logo {
@@ -188,6 +195,7 @@ strong {
 
 .intro {
   text-align: center;
+  margin: 0 1.5rem;
 }
 .intro h1 {
   margin-bottom: 1.5rem;
@@ -200,6 +208,9 @@ strong {
   margin-top: 3rem;
   margin-bottom: 4.5rem;
   border-radius: 16px;
+  background-color: #FFF;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .unit-type {
@@ -207,7 +218,6 @@ strong {
   flex-direction: row;
   gap: 1.5rem;
   margin: 1.5rem 0;
-  width: 100%;
 }
 .unit-type label {
   display: flex;
@@ -231,7 +241,7 @@ input[type=radio]:hover {
   border: 1px solid hsl(227, 92%, 58%);
 }
 input[type=radio]:checked {
-  background-color: hsla(227, 92%, 58%, 0.15);
+  background-color: #D6E6FE;
 }
 input[type=radio]:checked::before {
   content: "";
@@ -248,14 +258,8 @@ input[type=radio]:checked::before {
 .measurements {
   display: flex;
   flex-direction: column;
-  flex-direction: flex-start;
   gap: 1rem;
-}
-.measurements label {
-  display: flex;
-  flex-direction: column;
-  flex-direction: column-reverse;
-  gap: 0.5rem;
+  max-height: 649px;
 }
 .measurements input[type=number] {
   position: relative;
@@ -263,9 +267,8 @@ input[type=radio]:checked::before {
   font-size: 1.5rem;
   font-weight: 600;
   color: hsl(215, 31%, 21%);
-  padding: 1.25rem 1.5rem;
-  border: 1px solid hsl(200, 24%, 88%);
-  border-radius: 12px;
+  width: 100%;
+  border: none;
 }
 .measurements input[type=number]:placeholder {
   color: hsl(215, 17%, 45%);
@@ -274,21 +277,27 @@ input[type=radio]:checked::before {
   -webkit-appearance: none;
   margin: 0;
 }
-.measurements label[for=height]::after {
-  content: "cm";
-  position: absolute;
-  bottom: 184px;
-  left: 284px;
-  color: hsl(227, 92%, 58%);
-  font-size: 1.5rem;
-  font-weight: 600;
+.measurements input[type=number]:focus {
+  outline: none;
 }
-.measurements label[for=weight]::after {
-  content: "kg";
-  position: absolute;
-  z-index: 9;
-  bottom: 69px;
-  left: 284px;
+.measurements .input-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid hsl(200, 24%, 88%);
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
+.measurements .input-wrap:hover {
+  border: 1px solid hsl(227, 92%, 58%);
+  cursor: pointer;
+}
+.measurements .input-wrap:focus {
+  border: 1px solid hsl(227, 92%, 58%);
+  outline: none;
+}
+.measurements .cm, .measurements .kg {
   color: hsl(227, 92%, 58%);
   font-size: 1.5rem;
   font-weight: 600;
@@ -301,6 +310,30 @@ output {
   color: #FFF;
   background-color: hsl(227, 92%, 58%);
   border-radius: 12px;
+}
+output .normal-voice {
+  color: #FFF;
+}
+output .result {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+output .result .loud-voice {
+  color: #FFF;
+}
+
+.results-explanation {
+  margin: 1.5rem;
+}
+
+.bmi-factors {
+  margin: 1.5rem;
+}
+
+.limitations {
+  margin: 1.5rem;
 }
 
 /*# sourceMappingURL=output.css.map */

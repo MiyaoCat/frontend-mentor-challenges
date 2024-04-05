@@ -10,11 +10,6 @@
    @return math.div($value, 16) * 1rem;	
 }
 
-html * {
-	border: 1px solid black;
-	// padding: 2px;
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -25,12 +20,12 @@ html * {
 
 /* PRIMARY */
 $primary: hsl(227, 92%, 58%); //Blue
-$primary-light: hsla(227, 92%, 58%, .15); //light Blue
+$primary-light: #D6E6FE; //light Blue
 $accent: hsl(200, 24%, 88%); /* Light Grey */;
 
 /* NEUTRAL */
 // $card-bg: white; /* */
-$bg: #FFF; //Off white
+$bg: #FFF; //White
 
 
 $ink-dark: hsl(215, 31%, 21%); // Gunmetal
@@ -42,6 +37,7 @@ $ink-inverse: #FFF;
 $small: 5px;
 $rounded: 12px;
 $rounded-big: 16px;
+$rounded-xbig: 35px;
 
 /* SPACING */
 $spacing-xxsmall: toRem(8);
@@ -63,22 +59,24 @@ html {
   font-family: var(--ff);
 }
 
+html * {
+	// border: 1px solid black;
+	// padding: 1px;
+}
+
 
 body {
-	// border: 1px solid black;
 	@include mixins.flex-column;
 	@include mixins.centered;
 	background-color: $bg;
 }
 
 main {
-	// border: 1px solid black;
+	border: 1px solid red;
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	// background-color: $primary;
-	padding: $spacing-standard;
-	// height: 100vh;
+	// margin: 0 $spacing-standard;
 }
 
 footer {

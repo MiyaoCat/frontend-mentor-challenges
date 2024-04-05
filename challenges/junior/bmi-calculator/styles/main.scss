@@ -4,6 +4,18 @@
 @import 'setup';
 @import 'typography';
 
+
+.background-gradient {
+	position: absolute;
+	background: linear-gradient(to right bottom, white, #D6E6FE);
+	z-index: -1;
+	height: 640px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 0 0 $rounded-xbig $rounded-xbig;
+}
+
 .logo {
 	margin-top: $spacing-large;
 	margin-bottom: $spacing-standard;
@@ -11,6 +23,7 @@
 
 .intro {
 	text-align: center;
+	margin: 0 $spacing-standard;
 
 	h1 {
 		margin-bottom: $spacing-standard;
@@ -24,13 +37,16 @@
 	margin-top: $spacing-xlarge;
 	margin-bottom: $spacing-xxlarge;
 	border-radius: $rounded-big;
+	background-color: $bg;
+	margin-left: 24px;
+	margin-right: 24px;
 }
 
 .unit-type {
 	@include mixins.flex-row;
 	gap: $spacing-standard;
 	margin: $spacing-standard 0;
-	width: 100%;
+	// width: 100%;
 
 	label {
 		@include mixins.flex-row;
@@ -73,14 +89,8 @@ input[type='radio'] {
 
 .measurements {
 	@include mixins.flex-column;
-	flex-direction: flex-start;
 	gap: $spacing-xsmall;
-	
-	label {
-		@include mixins.flex-column;
-		flex-direction: column-reverse;
-		gap: $spacing-xxsmall;
-	}
+	max-height: 649px;
 
 	input[type='number'] {
 		position: relative;
@@ -89,9 +99,11 @@ input[type='radio'] {
 		font-size: toRem(24);
 		font-weight: 600;
 		color: $ink-dark;
-		padding: $spacing-standard-small $spacing-standard;
-		border: 1px solid $accent;
-		border-radius: $rounded;
+		// padding: $spacing-standard-small $spacing-standard;
+		// border: 1px solid $accent;
+		// border-radius: $rounded;
+		width: 100%;
+		border: none;
 
 		&:placeholder {
 			color: $ink;
@@ -102,30 +114,59 @@ input[type='radio'] {
     	-webkit-appearance: none;
     	margin: 0;
 		}
+
+		&:focus {
+			outline: none;
+		}
 	}
 
-	label[for='height']::after {
-		content: 'cm';
-		position: absolute;
-		bottom: 184px;
-		left: 284px;
+	.input-wrap {
+		@include mixins.flex-row;
+		align-items: center;
+		padding: $spacing-standard-small $spacing-standard;
+		border: 1px solid $accent;
+		border-radius: $rounded;
+		margin-top: $spacing-xxsmall;
+
+		&:hover {
+			border: 1px solid $primary;
+			cursor: pointer;
+		}
+
+		&:focus {
+			border: 1px solid $primary;
+			outline: none;
+		}
+	}
+
+	.cm, .kg {
 		color: $primary;
 		font-size: toRem(24);
 		font-weight: 600;
-		// display: block;
+		// border: 1px solid $accent;
 	}
+	// label[for='height']::after {
+	// 	content: 'cm';
+	// 	position: absolute;
+	// 	bottom: 32%;
+	// 	left: 243px;
+	// 	color: $primary;
+	// 	font-size: toRem(24);
+	// 	font-weight: 600;
+	// 	// display: block;
+	// }
 
-	label[for='weight']::after {
-		content: 'kg';
-		position: absolute;
-		z-index: 9;
-		bottom: 69px;
-		left: 284px;
-		color: $primary;
-		font-size: toRem(24);
-		font-weight: 600;
-		// display: block;
-	}
+	// label[for='weight']::after {
+	// 	content: 'kg';
+	// 	position: absolute;
+	// 	z-index: 9;
+	// 	bottom: 36px;
+	// 	left: 243px;
+	// 	color: $primary;
+	// 	font-size: toRem(24);
+	// 	font-weight: 600;
+	// 	// display: block;
+	// }
 }
 
 output {
@@ -135,4 +176,43 @@ output {
 	color: $ink-inverse;
 	background-color: $primary;
 	border-radius: $rounded;
+
+	.normal-voice {
+		color: $ink-inverse;
+	}
+
+	.result {
+		@include mixins.flex-column;
+		gap: $spacing-xxsmall;
+		margin-bottom: $spacing-standard;
+
+		.loud-voice {
+			color: $ink-inverse;
+		}	
+	}
 }
+
+.results-explanation {
+	margin: $spacing-standard;
+}
+
+.bmi-factors {
+	margin: $spacing-standard;
+}
+
+.limitations {
+	margin: $spacing-standard;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
