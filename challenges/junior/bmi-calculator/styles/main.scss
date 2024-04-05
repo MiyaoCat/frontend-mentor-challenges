@@ -23,7 +23,7 @@
 
 .intro {
 	text-align: center;
-	margin: 0 $spacing-standard;
+	// margin: 0 $spacing-standard;
 
 	h1 {
 		margin-bottom: $spacing-standard;
@@ -38,8 +38,8 @@
 	margin-bottom: $spacing-xxlarge;
 	border-radius: $rounded-big;
 	background-color: $bg;
-	margin-left: 24px;
-	margin-right: 24px;
+	// margin-left: 24px;
+	// margin-right: 24px;
 }
 
 .unit-type {
@@ -129,12 +129,17 @@ input[type='radio'] {
 		margin-top: $spacing-xxsmall;
 
 		&:hover {
-			border: 1px solid $primary;
+			border-color: $primary;
 			cursor: pointer;
 		}
 
 		&:focus {
-			border: 1px solid $primary;
+			border-color: $primary;
+			outline: none;
+		}
+
+		&:active {
+			border-color: $primary;
 			outline: none;
 		}
 	}

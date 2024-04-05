@@ -76,7 +76,7 @@ main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	// margin: 0 $spacing-standard;
+	padding: 0 $spacing-standard;
 }
 
 footer {
