@@ -19,6 +19,7 @@
 .logo {
 	margin-top: $spacing-large;
 	margin-bottom: $spacing-standard;
+	max-width: toRem(36);
 }
 
 .intro {
@@ -33,8 +34,7 @@
 .calculator-module {
 	border-radius: $rounded;
 	padding: $spacing-standard;
-	box-shadow: 5px 10px 8px $accent; 
-	margin-top: $spacing-xlarge;
+	box-shadow: 0 8px 12px #D8E2E7; 
 	margin-bottom: $spacing-xxlarge;
 	border-radius: $rounded-big;
 	background-color: $bg;
@@ -148,30 +148,7 @@ input[type='radio'] {
 		color: $primary;
 		font-size: toRem(24);
 		font-weight: 600;
-		// border: 1px solid $accent;
 	}
-	// label[for='height']::after {
-	// 	content: 'cm';
-	// 	position: absolute;
-	// 	bottom: 32%;
-	// 	left: 243px;
-	// 	color: $primary;
-	// 	font-size: toRem(24);
-	// 	font-weight: 600;
-	// 	// display: block;
-	// }
-
-	// label[for='weight']::after {
-	// 	content: 'kg';
-	// 	position: absolute;
-	// 	z-index: 9;
-	// 	bottom: 36px;
-	// 	left: 243px;
-	// 	color: $primary;
-	// 	font-size: toRem(24);
-	// 	font-weight: 600;
-	// 	// display: block;
-	// }
 }
 
 output {
@@ -179,7 +156,7 @@ output {
 	margin-top: $spacing-standard;
 	padding: $spacing-large;
 	color: $ink-inverse;
-	background-color: $primary;
+	background: linear-gradient(to right, $primary, hsl(227, 100, 67));
 	border-radius: $rounded;
 
 	.normal-voice {
@@ -198,7 +175,7 @@ output {
 }
 
 .results-explanation {
-	margin: $spacing-standard;
+	
 }
 
 .bmi-factors {

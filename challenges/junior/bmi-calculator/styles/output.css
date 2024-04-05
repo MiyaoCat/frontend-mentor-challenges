@@ -92,6 +92,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4.5rem;
   padding: 0 1.5rem;
 }
 
@@ -191,6 +192,7 @@ strong {
 .logo {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+  max-width: 2.25rem;
 }
 
 .intro {
@@ -203,8 +205,7 @@ strong {
 .calculator-module {
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 5px 10px 8px hsl(200, 24%, 88%);
-  margin-top: 3rem;
+  box-shadow: 0 8px 12px #D8E2E7;
   margin-bottom: 4.5rem;
   border-radius: 16px;
   background-color: #FFF;
@@ -309,7 +310,7 @@ output {
   margin-top: 1.5rem;
   padding: 2rem;
   color: #FFF;
-  background-color: hsl(227, 92%, 58%);
+  background: linear-gradient(to right, hsl(227, 92%, 58%), hsl(227, 100%, 67%));
   border-radius: 12px;
 }
 output .normal-voice {
@@ -323,10 +324,6 @@ output .result {
 }
 output .result .loud-voice {
   color: #FFF;
-}
-
-.results-explanation {
-  margin: 1.5rem;
 }
 
 .bmi-factors {

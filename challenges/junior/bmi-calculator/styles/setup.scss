@@ -76,6 +76,7 @@ main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
+	gap: $spacing-xxlarge;
 	padding: 0 $spacing-standard;
 }
 
