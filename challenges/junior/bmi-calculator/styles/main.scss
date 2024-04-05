@@ -7,9 +7,9 @@
 
 .background-gradient {
 	position: absolute;
-	background: linear-gradient(to right bottom, white, #D6E6FE);
+	background: linear-gradient(to left top, $bg-gradient);
 	z-index: -1;
-	height: 640px;
+	height: toRem(710);
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -24,7 +24,7 @@
 
 .intro {
 	text-align: center;
-	// margin: 0 $spacing-standard;
+	margin: 0 $spacing-standard;
 
 	h1 {
 		margin-bottom: $spacing-standard;
@@ -34,12 +34,11 @@
 .calculator-module {
 	border-radius: $rounded;
 	padding: $spacing-standard;
-	box-shadow: 0 8px 12px #D8E2E7; 
+	box-shadow: 0 8px 44px #D8E2E7; 
 	margin-bottom: $spacing-xxlarge;
 	border-radius: $rounded-big;
 	background-color: $bg;
-	// margin-left: 24px;
-	// margin-right: 24px;
+	margin: 0 $spacing-standard;
 }
 
 .unit-type {
@@ -175,17 +174,65 @@ output {
 }
 
 .results-explanation {
-	
+	.explanation-content {
+		margin: $spacing-xlarge $spacing-standard 0 $spacing-standard;
+
+		h2 {
+			margin-bottom: $spacing-large;
+		}
+	}
 }
 
+.bmi-factors-bg {
+	background: linear-gradient(to left top, $bg-gradient);
+}
 .bmi-factors {
+	@include mixins.flex-column;
+	gap: toRem(40);
 	margin: $spacing-standard;
+}
+
+.bmi-factor-cards {
+	.icon {
+		max-width: toRem(64);
+	}
+
+	h3 {
+		margin-top: $spacing-large;
+		margin-bottom: $spacing-standard;
+	}
 }
 
 .limitations {
+	@include mixins.flex-column;
+	gap: $spacing-xsmall;	
 	margin: $spacing-standard;
+
+	.limitations-intro {
+		text-align: center;
+
+		h2 {
+			margin-bottom: $spacing-large;
+		}
+	}
 }
 
+.limitation-card {
+	padding: $spacing-standard;
+	border-radius: $rounded-big;
+	box-shadow: 0 5px 10px $accent;
+
+	.icon {
+		max-width: toRem(32);
+	}
+
+	.limitation-card-heading {
+		@include mixins.flex-row;
+		align-items: center;
+		gap: $spacing-xsmall;
+		margin-bottom: $spacing-xsmall;
+	}
+}
 
 
 

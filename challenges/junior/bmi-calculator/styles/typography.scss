@@ -1,5 +1,5 @@
 /* T Y P O G R A P H Y */
-.loud-voice {
+.yell-voice {
 	font-size: toRem(48);
 	font-weight: 600;
 	line-height: 1.1;
@@ -7,17 +7,24 @@
 	color: $ink-dark;	
 }
 
-.attention-voice {
-	font-size: toRem(24);
+.loud-voice {
+	font-size: toRem(32);
 	font-weight: 500;
-	line-height: 1.5;
+	line-height: 1.1;
 	letter-spacing: -0.1rem;
 	color: $ink-dark;
 }
 
+.attention-voice {
+	font-size: toRem(24);
+	font-weight: 600;
+	line-height: 1.1;
+	color: $ink-dark;	
+}
+
 .alert-voice {
 	font-size: toRem(20);
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1.1;
 	color: $ink-dark;	
 }

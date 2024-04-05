@@ -27,7 +27,7 @@ $accent: hsl(200, 24%, 88%); /* Light Grey */;
 // $card-bg: white; /* */
 $bg: #FFF; //White
 
-
+$bg-gradient: hsl(216, 95, 92), hsla(184, 95, 92, 0);
 $ink-dark: hsl(215, 31%, 21%); // Gunmetal
 $ink: hsl(215, 17%, 45%); // Dark Electric Blue
 $ink-inverse: #FFF;
@@ -72,12 +72,11 @@ body {
 }
 
 main {
-	border: 1px solid red;
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
 	gap: $spacing-xxlarge;
-	padding: 0 $spacing-standard;
+	padding-bottom: toRem(96);
 }
 
 footer {
