@@ -1,0 +1,52 @@
+@use 'sass:math';
+@use '../mixins';
+
+.intro-calc-wrap {
+	@include mixins.flex-column;
+	gap: $spacing-xlarge;
+}
+
+.background-gradient {
+	position: absolute;
+	background: linear-gradient(to left top, $bg-gradient);
+	z-index: -1;
+	height: toRem(710);
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 0 0 $rounded-xbig $rounded-xbig;
+}
+
+.logo {
+	margin-top: $spacing-large;
+	margin-bottom: $spacing-standard;
+	max-width: toRem(36);
+}
+
+.intro {
+	text-align: center;
+	margin: 0 $spacing-standard;
+
+	h1 {
+		margin-bottom: $spacing-standard;
+	}
+}
+
+@media (min-width: toRem(768)) {
+	.logo {
+		min-width: toRem(40);
+	}
+
+	.intro-calc-wrap {
+		@include mixins.flex-column;
+		gap: 40px;
+	}
+
+	.intro {
+		h1 {
+			max-width: 55%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}

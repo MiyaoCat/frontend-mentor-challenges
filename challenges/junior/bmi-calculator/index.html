@@ -17,79 +17,82 @@
   </svg>
 </header>
 <main>
-  <div class='intro'>
-    <h1 class='yell-voice'>Body Mass Index Calculator</h1>
-    
-    <p class='normal-voice'>
-      Better understand your weight in relation to your height using our 
-      body mass index (BM) calculator. While BMI is not the sole determinant 
-      of a healthy weight, it offers a valuable starting point to evaluate 
-      your overall health and well-being.
-    </p>
-  </div>
-  
-  <div class='calculator-module'>
-    <form class='calculator'>
-      <h2 class='attention-voice'>Enter your details below</h2>
+  <div class='intro-calc-wrap'>
+    <div class='intro'>
+      <h1 class='yell-voice'>Body Mass Index Calculator</h1>
       
-      <fieldset class='unit-type'>
-        <label for='metric'>
-          <input type='radio' name='unit-type' id='metric' value='metric'>Metric</input>
-        </label>
+      <p class='normal-voice'>
+        Better understand your weight in relation to your height using our 
+        body mass index (BM) calculator. While BMI is not the sole determinant 
+        of a healthy weight, it offers a valuable starting point to evaluate 
+        your overall health and well-being.
+      </p>
+    </div>
     
-        <label for='imperial'>
-          <input type='radio' name='unit-type' id='imperial' value='imperial'>Imperial</input>
-        </label>
-      </fieldset>
-           
-      <fieldset class='measurements'>
-        <div class='height'>
-          <label for='height' class='quiet-voice'>Height</label>
-
-          <div class='input-wrap' tabindex="0">
+    <div class='calculator-module'>
+      <h2 class='attention-voice'>Enter your details below</h2>
+      <form class='calculator'>
+        
+        
+        <fieldset class='unit-type'>
+          <label for='metric'>
+            <input type='radio' name='unit-type' id='metric' value='metric'>Metric</input>
+          </label>
+      
+          <label for='imperial'>
+            <input type='radio' name='unit-type' id='imperial' value='imperial'>Imperial</input>
+          </label>
+        </fieldset>
+             
+        <fieldset class='measurements'>
+          <div class='height'>
+            <label for='height' class='quiet-voice'>Height</label>
+    
+            <div class='input-wrap' tabindex="0">
+                <input 
+                  type='number' 
+                  id='height' 
+                  value='' 
+                  placeholder= 0
+                  min= 0
+                />
+    
+              <div class='cm'>cm</div>
+            </div>
+          </div>
+      
+          <div class='weight'>
+            <label for='weight' class='quiet-voice'>Weight</label>
+              
+            <div class='input-wrap' tabindex="0">
               <input 
                 type='number' 
-                id='height' 
+                id='weight' 
                 value='' 
-                placeholder= 0
-                min= 0
+                placeholder=0
+                min=0
               />
-
-            <div class='cm'>cm</div>
+              
+              <div class='kg'>kg</div>
+            </div>
           </div>
-        </div>
     
-        <div class='weight'>
-          <label for='weight' class='quiet-voice'>Weight</label>
-            
-          <div class='input-wrap' tabindex="0">
-            <input 
-              type='number' 
-              id='weight' 
-              value='' 
-              placeholder=0
-              min=0
-            />
-            
-            <div class='kg'>kg</div>
-          </div>
+        </fieldset>
+      </form>
+      
+      <output>
+        <div class='result'>
+          <p class='normal-voice'><strong>Welcome!</strong></p>
+           
+          <div class='loud-voice'>23.4</div>
         </div>
-
-      </fieldset>
-    </form>
-    
-    <output>
-      <div class='result'>
-        <p class='normal-voice'><strong>Welcome!</strong></p>
          
-        <div class='loud-voice'>23.4</div>
-      </div>
-       
-      <p class='result-message normal-voice'>
-        Enter your height and weight and you'll see your BMI result here
-        <strong><div class='bmi'></div></strong>
-      </p>
-    </output>
+        <p class='result-message normal-voice'>
+          Enter your height and weight and you'll see your BMI result here
+          <strong><div class='bmi'></div></strong>
+        </p>
+      </output>
+    </div>
   </div>
   
   <div class='results-explanation'>
