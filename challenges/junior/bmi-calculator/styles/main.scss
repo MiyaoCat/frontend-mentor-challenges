@@ -6,6 +6,7 @@
 
 @import 'modules/intro.scss';
 @import 'modules/calculator.scss';
+@import 'modules/limitations.scss';
 
 .bmi-factors-bg {
 	background: linear-gradient(to left top, $bg-gradient);
@@ -28,38 +29,6 @@
 		margin-bottom: $spacing-standard;
 	}
 }
-
-.limitations {
-	@include mixins.flex-column;
-	gap: $spacing-xsmall;	
-	margin: $spacing-standard;
-
-	.limitations-intro {
-		text-align: center;
-
-		h2 {
-			margin-bottom: $spacing-large;
-		}
-	}
-}
-
-.limitation-card {
-	padding: $spacing-standard;
-	border-radius: $rounded-big;
-	box-shadow: 0 5px 10px $accent;
-
-	.icon {
-		max-width: toRem(32);
-	}
-
-	.limitation-card-heading {
-		@include mixins.flex-row;
-		align-items: center;
-		gap: $spacing-xsmall;
-		margin-bottom: $spacing-xsmall;
-	}
-}
-
 
 
 

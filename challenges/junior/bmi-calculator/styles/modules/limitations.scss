@@ -1,0 +1,52 @@
+.limitations {
+	@include mixins.flex-column;
+	gap: $spacing-xsmall;	
+	margin: $spacing-standard;
+
+	.limitations-intro {
+		text-align: center;
+
+		h2 {
+			margin-bottom: $spacing-large;
+		}
+	}
+}
+
+.limitation-card-wrap {
+	@include mixins.flex-column;
+	gap: $spacing-xsmall;
+}
+
+.limitation-card {
+	padding: $spacing-standard;
+	border-radius: $rounded-big;
+	box-shadow: 0 5px 10px $accent;
+
+	.icon {
+		max-width: toRem(32);
+	}
+
+	.limitation-card-heading {
+		@include mixins.flex-row;
+		align-items: center;
+		gap: $spacing-xsmall;
+		margin-bottom: $spacing-xsmall;
+	}
+}
+
+
+@media (min-width: toRem(768)) {
+	.limitations {
+		margin: 0 $tablet-margin-right 0 $tablet-margin-left;
+	}
+
+	.limitation-card-wrap {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	.limitation-card {
+		padding: $spacing-large;
+	}
+}

@@ -51,6 +51,11 @@ $spacing-large: toRem(32);
 $spacing-xlarge: toRem(48);
 $spacing-xxlarge: toRem(72);
 
+$tablet-margin-left: toRem(39);
+$tablet-gap-standard: toRem(40);
+$tablet-margin-right: toRem(43);
+$tablet-space-large: toRem(60);
+
 :root {
 	--ff: 'Inter', sans-serif;	
 

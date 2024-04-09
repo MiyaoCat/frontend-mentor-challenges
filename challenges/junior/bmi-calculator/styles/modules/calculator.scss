@@ -5,7 +5,6 @@
 	margin-bottom: $spacing-xxlarge;
 	border-radius: $rounded-big;
 	background-color: $bg;
-	margin: 0 $spacing-standard;
 }
 
 .unit-type {
@@ -150,10 +149,12 @@ output {
 	}
 }
 
+ // T A B L E T
 @media (min-width: toRem(768)) {
 	.calculator-module {
 		padding: $spacing-large;
 		gap: $spacing-large;
+		margin-bottom: 0;
 	}
 
 	.unit-type {
@@ -193,6 +194,7 @@ output {
 	.results-explanation {
 		@include mixins.flex-row;
 		gap: toRem(75);
+		margin-right: $tablet-margin-right;
 		// position: relative;
 
 		picture {
@@ -203,9 +205,37 @@ output {
 		}
 
 		.explanation-content {
+			width: 50%;
+			margin-left: 50%;
+			
 			.loud-voice {
 				font-size: toRem(32);
 			}
+		}
+	}
+
+	.bmi-factors-bg {
+		padding: $tablet-space-large $tablet-margin-right $tablet-space-large $tablet-margin-left;
+
+		.bmi-factors {
+			margin: 0;
+		}
+	}
+
+	.bmi-factor-cards {
+		@include mixins.flex-row;
+		gap: $tablet-gap-standard;
+		align-items: center;
+
+		.bmi-factors-content {
+			h3 {
+				margin-top: 0;
+				margin-bottom: $spacing-standard;
+			}
+		}
+
+		.icon {
+			max-height: 64px;
 		}
 	}
 }
