@@ -53,3 +53,8 @@ strong {
 	font-weight: 600;
 }
 
+@media (min-width: toRem(768)) {
+	.loud-voice {
+		font-size: toRem(48);
+	}
+}
