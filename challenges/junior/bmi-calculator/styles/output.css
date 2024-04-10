@@ -368,13 +368,6 @@ output .result .loud-voice {
   color: #FFF;
 }
 
-.results-explanation .explanation-content {
-  margin: 3rem 1.5rem 0 1.5rem;
-}
-.results-explanation .explanation-content h2 {
-  margin-bottom: 2rem;
-}
-
 @media (min-width: 48rem) {
   .calculator-module {
     padding: 2rem;
@@ -410,6 +403,15 @@ output .result .loud-voice {
     margin-bottom: 0;
     right: -116px;
   }
+}
+.results-explanation .explanation-content {
+  margin: 3rem 1.5rem 0 1.5rem;
+}
+.results-explanation .explanation-content h2 {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 48rem) {
   .results-explanation {
     display: flex;
     flex-direction: row;

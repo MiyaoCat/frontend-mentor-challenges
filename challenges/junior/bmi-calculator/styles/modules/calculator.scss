@@ -139,16 +139,6 @@ output {
 	}
 }
 
-.results-explanation {
-	.explanation-content {
-		margin: $spacing-xlarge $spacing-standard 0 $spacing-standard;
-
-		h2 {
-			margin-bottom: $spacing-large;
-		}
-	}
-}
-
  // T A B L E T
 @media (min-width: toRem(768)) {
 	.calculator-module {
@@ -188,55 +178,6 @@ output {
 			width: 50%;
 			margin-bottom: 0;
 			right: -116px;
-		}
-	}
-
-	.results-explanation {
-		@include mixins.flex-row;
-		gap: toRem(75);
-		margin-right: $tablet-margin-right;
-		// position: relative;
-
-		picture {
-			max-width: 435px;
-			
-			position: absolute;
-			left: -116px;
-		}
-
-		.explanation-content {
-			width: 50%;
-			margin-left: 50%;
-			
-			.loud-voice {
-				font-size: toRem(32);
-			}
-		}
-	}
-
-	.bmi-factors-bg {
-		padding: $tablet-space-large $tablet-margin-right $tablet-space-large $tablet-margin-left;
-
-		.bmi-factors {
-			margin: 0;
-		}
-	}
-
-	.bmi-factor-cards {
-		@include mixins.flex-row;
-		gap: $tablet-gap-standard;
-		align-items: center;
-
-		.bmi-factors-content {
-			h3 {
-				font-size: toRem(24);
-				margin-top: 0;
-				margin-bottom: $spacing-standard;
-			}
-		}
-
-		.icon {
-			max-height: 64px;
 		}
 	}
 }
