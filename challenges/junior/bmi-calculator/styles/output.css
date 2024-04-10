@@ -193,6 +193,9 @@ strong {
   .loud-voice {
     font-size: 3rem;
   }
+  .attention-voice {
+    font-size: 2rem;
+  }
 }
 .intro-calc-wrap {
   display: flex;
@@ -438,6 +441,7 @@ output .result .loud-voice {
     align-items: center;
   }
   .bmi-factor-cards .bmi-factors-content h3 {
+    font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
   }
@@ -483,6 +487,7 @@ output .result .loud-voice {
 @media (min-width: 48rem) {
   .limitations {
     margin: 0 2.6875rem 0 2.4375rem;
+    gap: 3.5rem;
   }
   .limitation-card-wrap {
     display: grid;
@@ -491,6 +496,12 @@ output .result .loud-voice {
   }
   .limitation-card {
     padding: 2rem;
+    max-width: 20.9375rem;
+  }
+  .limitation-card:nth-of-type(5) {
+    grid-column: 1/span 2;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .bmi-factors-bg {

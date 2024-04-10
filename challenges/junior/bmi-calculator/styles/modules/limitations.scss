@@ -38,6 +38,7 @@
 @media (min-width: toRem(768)) {
 	.limitations {
 		margin: 0 $tablet-margin-right 0 $tablet-margin-left;
+		gap: $tablet-gap-large;
 	}
 
 	.limitation-card-wrap {
@@ -48,5 +49,12 @@
 	
 	.limitation-card {
 		padding: $spacing-large;
+		max-width: toRem(335);
+	}
+
+	.limitation-card:nth-of-type(5) {
+		grid-column: 1 / span 2;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
