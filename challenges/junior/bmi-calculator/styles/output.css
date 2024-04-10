@@ -247,7 +247,7 @@ strong {
 .calculator-module {
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 8px 44px #D8E2E7;
+  box-shadow: 16px 32px 56px hsla(211, 40%, 69%, 0.25);
   margin-bottom: 4.5rem;
   border-radius: 16px;
   background-color: #FFF;
@@ -473,7 +473,8 @@ output .result .loud-voice {
 .limitation-card {
   padding: 1.5rem;
   border-radius: 16px;
-  box-shadow: 0 5px 10px hsl(200, 24%, 88%);
+  background-color: #FFF;
+  box-shadow: 16px 32px 56px hsla(211, 40%, 69%, 0.25);
 }
 .limitation-card .icon {
   max-width: 2rem;
