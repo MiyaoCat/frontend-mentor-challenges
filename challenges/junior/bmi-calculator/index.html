@@ -48,7 +48,7 @@
           <div class='height'>
             <label for='height' class='quiet-voice'>Height</label>
     
-            <div class='input-wrap' tabindex="0">
+            <div class='input-wrap height-metric' tabindex="0">
                 <input 
                   type='number' 
                   id='height' 
@@ -59,12 +59,38 @@
     
               <div class='cm'>cm</div>
             </div>
+
+            <div class='height-imperial'>
+              <div class='input-wrap feet' tabindex="0">
+                  <input 
+                    type='number' 
+                    id='height' 
+                    value='' 
+                    placeholder= 0
+                    min= 0
+                  />
+                  
+                <div class='ft'>ft</div>
+              </div>
+              
+              <div class='input-wrap inches' tabindex="0">
+                  <input 
+                    type='number' 
+                    id='height' 
+                    value='' 
+                    placeholder= 0
+                    min= 0
+                  />
+                  
+                <div class='in'>in</div>
+              </div>
+            </div>
           </div>
       
           <div class='weight'>
             <label for='weight' class='quiet-voice'>Weight</label>
               
-            <div class='input-wrap' tabindex="0">
+            <div class='input-wrap weight-metric' tabindex="0">
               <input 
                 type='number' 
                 id='weight' 
@@ -74,6 +100,18 @@
               />
               
               <div class='kg'>kg</div>
+            </div>
+
+            <div class='input-wrap weight-imperial' tabindex="0">
+              <input 
+                type='number' 
+                id='weight' 
+                value='' 
+                placeholder=0
+                min=0
+              />
+              
+              <div class='lb'>lb</div>
             </div>
           </div>
     
@@ -195,4 +233,6 @@
 </main>
 
 </body>
+
+<script src='index.js'></script>
 </html>

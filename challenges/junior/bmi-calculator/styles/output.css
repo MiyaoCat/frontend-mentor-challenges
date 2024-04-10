@@ -341,7 +341,16 @@ input[type=radio]:checked::before {
   border-color: hsl(227, 92%, 58%);
   outline: none;
 }
-.measurements .cm, .measurements .kg {
+.measurements .height-imperial {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  display: none;
+}
+.measurements .weight-imperial {
+  display: none;
+}
+.measurements .cm, .measurements .kg, .measurements .in, .measurements .ft, .measurements .lb {
   color: hsl(227, 92%, 58%);
   font-size: 1.5rem;
   font-weight: 600;
@@ -487,26 +496,6 @@ output .result .loud-voice {
   margin-bottom: 1rem;
 }
 
-@media (min-width: 48rem) {
-  .limitations {
-    margin: 0 2.6875rem 0 2.4375rem;
-    gap: 3.5rem;
-  }
-  .limitation-card-wrap {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-  .limitation-card {
-    padding: 2rem;
-    max-width: 20.9375rem;
-  }
-  .limitation-card:nth-of-type(5) {
-    grid-column: 1/span 2;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 .bmi-factors-bg {
   background: linear-gradient(to left top, hsl(216, 95%, 92%), hsla(184, 95%, 92%, 0));
   padding-top: 2rem;
@@ -526,6 +515,27 @@ output .result .loud-voice {
 .bmi-factor-cards h3 {
   margin-top: 2rem;
   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .limitations {
+    margin: 0 2.6875rem 0 2.4375rem;
+    gap: 3.5rem;
+  }
+  .limitation-card-wrap {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+  .limitation-card {
+    padding: 2rem;
+    max-width: 20.9375rem;
+  }
+  .limitation-card:nth-of-type(5) {
+    grid-column: 1/span 2;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
