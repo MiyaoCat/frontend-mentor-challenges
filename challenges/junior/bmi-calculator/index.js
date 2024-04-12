@@ -1,4 +1,7 @@
 const unitType = document.querySelector('.unit-type');
+const measurements = document.querySelector('.measurements');
+const height = document.querySelector('.height');
+
 const metricType = document.querySelector('#metric');
 const imperialType = document.querySelector('#imperial');
 
@@ -10,15 +13,23 @@ const weightLabel = document.querySelector('.kg');
 unitType.addEventListener('change', function() {
 
 	if (imperialType.checked) {
-		console.log('imperial')
+
+		if (window.innerWidth <= 678) {
+			measurements.style.gridTemplateRows = '1fr 1fr';
+			height.style.gridColumn = '1 / 3';
+		}
 
 		heightImperial.style.display = 'flex';
 		heightMetric.style.display = 'none';
 
 		weightLabel.innerText = 'lb';
-		
+
 	} else {
-		console.log('other')
+
+		if (window.innerWidth <=678) {
+			measurements.style.gridTemplateRows = '1fr';
+			height.style.gridColumn = '1 / 2';
+		}
 
 		heightImperial.style.display = 'none';
 		heightMetric.style.display = 'flex';
