@@ -9,7 +9,7 @@
 }
 
  // T A B L E T
-@media (min-width: toRem(768)) {
+@media ($tablet-view) {
 	.results-explanation {
 		@include mixins.flex-row;
 		gap: toRem(75);

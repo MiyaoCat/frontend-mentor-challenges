@@ -5,8 +5,7 @@ const imperialType = document.querySelector('#imperial');
 const heightImperial = document.querySelector('.height-imperial');
 const heightMetric = document.querySelector('.height-metric');
 
-const weightImperial = document.querySelector('.weight-imperial');
-const weightMetric = document.querySelector('.weight-metric');
+const weightLabel = document.querySelector('.kg');
 
 unitType.addEventListener('change', function() {
 
@@ -16,15 +15,16 @@ unitType.addEventListener('change', function() {
 		heightImperial.style.display = 'flex';
 		heightMetric.style.display = 'none';
 
-		weightImperial.style.display = 'flex';
-		weightMetric.style.display = 'none';
+		weightLabel.innerText = 'lb';
+		
 	} else {
 		console.log('other')
 
 		heightImperial.style.display = 'none';
 		heightMetric.style.display = 'flex';
 
-		weightImperial.style.display = 'none';
-		weightMetric.style.display = 'flex';
+		weightLabel.innerText = 'kg';
 	}
 })
+
+

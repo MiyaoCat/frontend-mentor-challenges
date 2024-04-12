@@ -228,7 +228,7 @@ strong {
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 35.9375rem) {
   .logo {
     min-width: 2.5rem;
   }
@@ -377,7 +377,7 @@ output .result .loud-voice {
   color: #FFF;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 35.9375rem) {
   .calculator-module {
     padding: 2rem;
     gap: 2rem;
@@ -420,7 +420,7 @@ output .result .loud-voice {
   margin-bottom: 2rem;
 }
 
-@media (min-width: 48rem) {
+@media (35.9375rem) {
   .results-explanation {
     display: flex;
     flex-direction: row;
@@ -517,7 +517,7 @@ output .result .loud-voice {
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 35.9375rem) {
   .limitations {
     margin: 0 2.6875rem 0 2.4375rem;
     gap: 3.5rem;

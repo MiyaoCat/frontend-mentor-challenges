@@ -58,7 +58,7 @@
 }
 
 
-@media (min-width: toRem(768)) {
+@media (min-width: $tablet-view) {
 	.limitations {
 		margin: 0 $tablet-margin-right 0 $tablet-margin-left;
 		gap: $tablet-gap-large;

@@ -150,7 +150,7 @@ output {
 }
 
  // T A B L E T
-@media (min-width: toRem(768)) {
+@media (min-width: $tablet-view) {
 	.calculator-module {
 		padding: $spacing-large;
 		gap: $spacing-large;

@@ -57,6 +57,10 @@ $tablet-margin-right: toRem(43);
 $tablet-gap-large: toRem(56);
 $tablet-space-large: toRem(60);
 
+
+$tablet-view: toRem(575);
+$desktop-view: toRem(900);
+
 :root {
 	--ff: 'Inter', sans-serif;	
 

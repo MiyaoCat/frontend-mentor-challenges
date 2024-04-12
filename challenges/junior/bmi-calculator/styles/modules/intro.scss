@@ -32,7 +32,7 @@
 	}
 }
 
-@media (min-width: toRem(768)) {
+@media (min-width: $tablet-view) {
 	.logo {
 		min-width: toRem(40);
 	}
