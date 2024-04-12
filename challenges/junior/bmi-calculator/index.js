@@ -9,6 +9,53 @@ const $heightMetric = document.querySelector("label[for='heightMetric']");
 
 const weightLabel = document.querySelector('.kg');
 
+// BMI CALCULATION
+const heightCm = document.querySelector('#heightMetric');
+const heightFeet = document.querySelector('#heightFt');
+const heightIn = document.querySelector('#heightIn');
+const weightKg = document.querySelector('#weightMetric');
+const weightLb = document.querySelector('#weightImperial');
+
+let heightCmValue;
+let heightFtValue;
+let heightInValue;
+
+let weightKgValue;
+let weightLbValue;
+
+heightCm.addEventListener('change', function() {
+	heightCmValue = parseInt(this.value);
+	calculateBMI()
+})
+
+heightFeet.addEventListener('change', function() {
+	heightFtValue = parseInt(this.value);
+	console.log(heightFtValue);
+})
+
+heightIn.addEventListener('change', function() {
+	heightInValue = parseInt(this.value);
+	console.log(heightInValue);
+})
+
+weightKg.addEventListener('change', function() {
+	weightKgValue = parseInt(this.value);
+	calculateBMI()
+})
+
+console.log('weight in kg: ', weightKgValue)
+
+
+
+document.addEventListener('keydown', function(event) {
+	if (event.key === 'Enter') {
+		console.log('metric bmi: ', metricBMI);
+		console.log('weight in kg: ', weightKgValue)
+	}
+})
+
+let metricBMI;
+
 $unitType.addEventListener('change', function() {
 
 	if ($imperialType.checked) {
@@ -25,6 +72,8 @@ $unitType.addEventListener('change', function() {
 
 	} else {
 
+		metricBMI = weightKgValue / (heightCm * heightCm);
+
 		if (window.innerWidth <=650) {
 			$measurements.style.gridTemplateRows = '1fr';
 			$heightWrap.style.gridColumn = '1 / 2';
@@ -37,48 +86,15 @@ $unitType.addEventListener('change', function() {
 	}
 })
 
-// BMI CALCULATION
-const heightCm = document.querySelector('#heightMetric');
-const heightFeet = document.querySelector('#heightFt');
-const heightIn = document.querySelector('#heightIn');
-const weightKg = document.querySelector('#weightMetric');
-const weightLb = document.querySelector('#weightImperial');
 
-let heightCmValue;
-let heightFtValue;
-let heightInValue;
+function calculateBMI() {
+	if (heightCmValue !== '' || heightCmValue !== undefined && weightKgValue !== '' || weightKgValue !== undefined) {
+		const heightMeters = heightCmValue / 100;
+		metricBMI = ( weightKgValue / (heightMeters * heightMeters) ).toFixed(1);
 
-let weightKgValue;
-let weightLbValue;
-
-heightCm.addEventListener('change', function() {
-	heightCmValue = this.value;
-	console.log(heightCmValue);
-})
-
-heightFeet.addEventListener('change', function() {
-	heightFtValue = this.value;
-	console.log(heightFtValue);
-})
-
-heightIn.addEventListener('change', function() {
-	heightInValue = this.value;
-	console.log(heightInValue);
-})
-
-weightKg.addEventListener('change', function() {
-	weightKgValue = this.value;
-	console.log(weightKgValue);
-})
-
-console.log('weight in kg: ', weightKgValue)
-
-
-
-
-
-
-
+		console.log('metric bmi: ', metricBMI);
+	}
+}
 
 
 
