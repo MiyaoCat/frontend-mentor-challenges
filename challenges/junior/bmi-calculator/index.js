@@ -5,7 +5,7 @@ const $heightWrap = document.querySelector('.height');
 const $imperialType = document.querySelector('#imperial');
 
 const $heightImperial = document.querySelector('.height-imperial');
-const $heightMetric = document.querySelector('.height-metric');
+const $heightMetric = document.querySelector("label[for='heightMetric']");
 
 const weightLabel = document.querySelector('.kg');
 
@@ -71,10 +71,7 @@ weightKg.addEventListener('change', function() {
 	console.log(weightKgValue);
 })
 
-weightLb.addEventListener('change', function() {
-	weightLbValue = this.value;
-	console.log(weightLbValue);
-})
+console.log('weight in kg: ', weightKgValue)
 
 
 

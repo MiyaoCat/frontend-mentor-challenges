@@ -45,35 +45,36 @@
         </fieldset>
              
         <fieldset class='measurements'>
-          <div class='height'>
-            <label for='heightMetric' class='quiet-voice'>Height</label>
-    
-            <div class='input-wrap height-metric' tabindex="0">
-                <input 
-                  type='number' 
-                  id='heightMetric' 
-                  value='' 
-                  placeholder= 0
-                  min= 0
-                />
-    
+          <div class='height quiet-voice'>
+            Height
+            <label for='heightMetric' class='quiet-voice'>
+
+              <input 
+                type='number' 
+                id='heightMetric' 
+                value='' 
+                placeholder= 0
+                min= 0
+              />
+  
               <div class='cm'>cm</div>
-            </div>
+            </label>              
+
 
             <div class='height-imperial'>
-              <div class='input-wrap feet' tabindex="0">
+              <label for='heightFt'>
                   <input 
                     type='number' 
-                    id='heightFt' 
+                    id='heightFt'     
                     value='' 
                     placeholder= 0
                     min= 0
                   />
                   
                 <div class='ft'>ft</div>
-              </div>
+              </label>
               
-              <div class='input-wrap inches' tabindex="0">
+              <label for='heightIn'>
                   <input 
                     type='number' 
                     id='heightIn' 
@@ -83,14 +84,15 @@
                   />
                   
                 <div class='in'>in</div>
-              </div>
+              </label>                
+              
             </div>
           </div>
       
-          <div class='weight'>
-            <label for='weightMetric' class='quiet-voice'>Weight</label>
+          <div class='weight quiet-voice'>
+            Weight
+            <label for='weightMetric' class='quiet-voice'>
               
-            <div class='input-wrap weight-metric' tabindex="0">
               <input 
                 type='number' 
                 id='weightMetric' 
@@ -100,9 +102,9 @@
               />
               
               <div class='kg'>kg</div>
-            </div>
+            </label>
 
-            <div class='input-wrap weight-imperial' tabindex="0">
+<!--             <div class='input-wrap weight-imperial' tabindex="0">
               <input 
                 type='number' 
                 id='weightImperial' 
@@ -112,7 +114,7 @@
               />
               
               <div class='lb'>lb</div>
-            </div>
+            </div> -->
           </div>
     
         </fieldset>

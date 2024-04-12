@@ -301,6 +301,13 @@ input[type=radio]:checked::before {
   gap: 1rem;
   max-height: 649px;
 }
+.measurements label {
+  display: flex;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid hsl(200, 24%, 88%);
+  border-radius: 12px;
+  margin-top: 0.5rem;
+}
 .measurements input[type=number] {
   position: relative;
   -moz-appearance: textfield;
@@ -318,9 +325,10 @@ input[type=radio]:checked::before {
   margin: 0;
 }
 .measurements input[type=number]:focus {
+  border-color: hsl(227, 92%, 58%);
   outline: none;
 }
-.measurements .input-wrap {
+.measurements label {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -329,16 +337,12 @@ input[type=radio]:checked::before {
   border-radius: 12px;
   margin-top: 0.5rem;
 }
-.measurements .input-wrap:hover {
+.measurements label:hover {
   border-color: hsl(227, 92%, 58%);
   cursor: pointer;
 }
-.measurements .input-wrap:focus {
-  border-color: hsl(227, 92%, 58%);
-  outline: none;
-}
-.measurements .input-wrap:active {
-  border-color: hsl(227, 92%, 58%);
+.measurements label:focus-within {
+  border: 1px solid hsl(227, 92%, 58%);
   outline: none;
 }
 .measurements .height-imperial {
