@@ -249,6 +249,8 @@ strong {
   padding: 1.5rem;
   box-shadow: 16px 32px 56px hsla(211, 40%, 69%, 0.25);
   margin-bottom: 4.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   border-radius: 16px;
   background-color: #FFF;
 }
