@@ -149,6 +149,11 @@ output {
 			color: $ink-inverse;
 		}	
 	}
+
+	.result-message, .bmi-range {
+		display: inline;
+		
+	}
 }
 
  // T A B L E T

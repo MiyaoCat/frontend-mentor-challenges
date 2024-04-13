@@ -53,7 +53,7 @@ $unitType.addEventListener('input', function() {
 	if ($imperialType.checked) {
 		
 		calculateBMI();
-	
+		bmiMessage();
 		if (window.innerWidth <= 678) {
 			$measurements.style.gridTemplateRows = '1fr 1fr';
 			$heightWrap.style.gridColumn = '1 / 3';
@@ -63,13 +63,12 @@ $unitType.addEventListener('input', function() {
 		$heightMetric.style.display = 'none';
 
 		$weightLabel.innerText = 'lb';
-
 	} 
 
 	if ($metricType.checked) {
 
 		calculateBMI();
-		
+		bmiMessage();
 		if (window.innerWidth <=650) {
 			$measurements.style.gridTemplateRows = '1fr';
 			$heightWrap.style.gridColumn = '1 / 2';
@@ -94,6 +93,7 @@ function calculateBMI() {
 
 			if ( !isNaN(metricBMI) ) {
 				$bmi.innerHTML = metricBMI;
+				bmiMessage(metricBMI);
 			} else {
 				$bmi.innerHTML = '';
 			}
@@ -112,15 +112,25 @@ function calculateBMI() {
 			} else {
 				$bmi.innerHTML = '';
 			}
-
 		}
 	}
 		
 }
 
+const $bmiRange = document.querySelector('.bmi-range');
+const $resultMessage = document.querySelector('.result-message');
 
+function bmiMessage(calculateBMI) {
+	if (calculateBMI < 18.5) {
+		console.log('underweight');
+		$bmiRange.innerHTML = '61.3kg - 100kg';
+		$resultMessage.textContent = 'Youre too skinny. Your ideal wheight is between';
+	}
 
-
+	if (calculateBMI >= 18.5 && calculateBMI <= 24.9) {
+		console.log('healthy');
+	}
+}
 
 
 

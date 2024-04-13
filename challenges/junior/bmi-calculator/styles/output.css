@@ -382,6 +382,9 @@ output .result {
 output .result .loud-voice {
   color: #FFF;
 }
+output .result-message, output .bmi-range {
+  display: inline;
+}
 
 @media (min-width: 35.9375rem) {
   .calculator-module {
