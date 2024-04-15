@@ -10,7 +10,9 @@ const $heightMetric = document.querySelector("label[for='heightMetric']");
 
 const $weightLabel = document.querySelector('.kg');
 
+const $welcome = document.querySelector('.welcome');
 const $bmi = document.querySelector('.bmi');
+
 // BMI CALCULATION
 const heightCm = document.querySelector('#heightMetric');
 const heightFeet = document.querySelector('#heightFt');
@@ -94,6 +96,7 @@ function calculateBMI() {
 			if ( !isNaN(metricBMI) ) {
 				$bmi.innerHTML = metricBMI;
 				bmiMessage(metricBMI);
+				$welcome.innerHTML = 'Your BMI is...';
 			} else {
 				$bmi.innerHTML = '';
 			}
@@ -109,12 +112,14 @@ function calculateBMI() {
 
 			if ( !isNaN(imperialBMI) ) {
 				$bmi.innerHTML = imperialBMI;
+				bmiMessage(imperialBMI);
+				$welcome.innerHTML = 'Your BMI is...';
 			} else {
 				$bmi.innerHTML = '';
 			}
 		}
 	}
-		
+	
 }
 
 const $bmiRange = document.querySelector('.bmi-range');
@@ -122,21 +127,59 @@ const $resultMessage = document.querySelector('.result-message');
 
 function bmiMessage(calculateBMI) {
 	if (calculateBMI < 18.5) {
-		console.log('underweight');
-		$bmiRange.innerHTML = '61.3kg - 100kg';
-		$resultMessage.textContent = 'Youre too skinny. Your ideal wheight is between';
+		$resultMessage.textContent = `Your BMI suggests you're under weight. Your ideal weight is between`;
+		$bmiRange.innerHTML = '61.3kg - 85.2kgs';
 	}
 
 	if (calculateBMI >= 18.5 && calculateBMI <= 24.9) {
-		console.log('healthy');
+		$resultMessage.textContent = `Your BMI suggests you're a healthy weight. Your ideal wheight is between`;
+		$bmiRange.innerHTML = '61.3kg - 85.2kgs';
+	}
+
+	if (calculateBMI >= 25 && calculateBMI <= 29.9) {
+		$resultMessage.textContent = `Your BMI suggests you're overweight. Your ideal weight is between`;
+		$bmiRange.innerHTML = '61.3kg - 85.2kgs';
+	}
+
+	if (calculateBMI >= 30 && calculateBMI) {
+		$resultMessage.textContent = `Your BMI suggests you're obese. Your ideal weight is between`;
+		$bmiRange.innerHTML = '61.3kg - 85.2kgs';
 	}
 }
 
 
+// fetch('data.json')
+// 	.then(function(response) {
+
+// 		if (!response.ok) {
+// 			throw new Error('Network response not ok');
+// 		}
+// 		return response.json();
+// 	})
+// 	.then(function(data) {
+// 		console.log('data: ', data)
+// 		function getWeightRange(inputHeight, data) {
+// 			let weightRange = '';
+
+// 			data.forEach(function(range) {
+// 				const minHeight = range.height_range_cm.min;
+// 				const maxHeight = range.height_range_cm.max;	
+
+// 				if (inputHeight >= minHeight && inputHeight <= maxHeight) {
+// 					weightRange = item.weight_range_kg;
+// 				}		
+// 			});			
+
+// 			return weightRange;
+// 			console.log('weight range: ', weightRange);
+// 		}			
+// 	})
 
 
-
-
+// data of heights and weight
+// if weight value is equal to weight in data table
+// get coresponding weight range
+// apply weight range in bmiRange.innerHTML
 
 
 

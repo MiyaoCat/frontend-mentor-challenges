@@ -1,0 +1,63 @@
+[
+  {
+    "height_range_cm": { "min": 100, "max": 109 },
+    "weight_range_kg": { "min": 13.9, "max": 21.9 }
+  },
+  {
+    "height_range_cm": { "min": 110, "max": 119 },
+    "weight_range_kg": { "min": 14.3, "max": 23.3 }
+  },
+  {
+    "height_range_cm": { "min": 120, "max": 129 },
+    "weight_range_kg": { "min": 15.0, "max": 24.8 }
+  },
+  {
+    "height_range_cm": { "min": 130, "max": 139 },
+    "weight_range_kg": { "min": 15.7, "max": 26.2 }
+  },
+  {
+    "height_range_cm": { "min": 140, "max": 149 },
+    "weight_range_kg": { "min": 16.5, "max": 27.7 }
+  },
+  {
+    "height_range_cm": { "min": 150, "max": 159 },
+    "weight_range_kg": { "min": 17.4, "max": 29.2 }
+  },
+  {
+    "height_range_cm": { "min": 160, "max": 169 },
+    "weight_range_kg": { "min": 18.5, "max": 31.0 }
+  },
+  {
+    "height_range_cm": { "min": 170, "max": 179 },
+    "weight_range_kg": { "min": 19.6, "max": 32.8 }
+  },
+  {
+    "height_range_cm": { "min": 180, "max": 189 },
+    "weight_range_kg": { "min": 20.8, "max": 34.7 }
+  },
+  {
+    "height_range_cm": { "min": 190, "max": 199 },
+    "weight_range_kg": { "min": 22.1, "max": 36.6 }
+  },
+  {
+    "height_range_cm": { "min": 200, "max": 209 },
+    "weight_range_kg": { "min": 23.5, "max": 38.6 }
+  },
+  {
+    "height_range_cm": { "min": 210, "max": 219 },
+    "weight_range_kg": { "min": 24.9, "max": 40.7 }
+  },
+  {
+    "height_range_cm": { "min": 220, "max": 229 },
+    "weight_range_kg": { "min": 26.5, "max": 42.9 }
+  },
+  {
+    "height_range_cm": { "min": 230, "max": 239 },
+    "weight_range_kg": { "min": 28.1, "max": 45.3 }
+  },
+  {
+    "height_range_cm": { "min": 240, "max": 249 },
+    "weight_range_kg": { "min": 29.9, "max": 47.7 }
+  }
+ ]
+
