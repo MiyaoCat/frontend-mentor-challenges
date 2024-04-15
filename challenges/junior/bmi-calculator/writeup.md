@@ -22,3 +22,6 @@ Second - I looked at some real world forms that have some sort of image or text 
 `. I then added all of the CSS like hover and focus to the wrap. But one thing that I didn't really like was when I'd tab from one 'input-wrap' to the next input, it would require the user to press tab twice to get to the actually input field (once for the wrap then a second tab to get into the input). I figured I could get away with this, but it wasn't a great experience.
 
 This led me to my final solution. Instead of wrapping the input and text in a separate div, I used the label to wrap the div. The only unfortunate part about this solution is that the label doesn't have any text inside it. However, this solved the tab issue. Now you can easily tab between inputs. 
+
+THings I learned:
+I can use a negative value for margin to move elements rather than position: absolute. 

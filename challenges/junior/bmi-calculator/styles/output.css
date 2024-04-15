@@ -429,21 +429,25 @@ output .result-message, output .bmi-range {
   margin-bottom: 2rem;
 }
 
-@media (35.9375rem) {
+@media (min-width: 35.9375rem) {
   .results-explanation {
     display: flex;
     flex-direction: row;
     gap: 4.6875rem;
     margin-right: 2.6875rem;
   }
+  .results-explanation .pic-explanation-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 4.6875rem;
+  }
   .results-explanation picture {
     max-width: 435px;
-    position: absolute;
-    left: -116px;
+    margin-left: -75px;
   }
   .results-explanation .explanation-content {
+    margin: 0;
     width: 50%;
-    margin-left: 50%;
   }
   .results-explanation .explanation-content .loud-voice {
     font-size: 2rem;
