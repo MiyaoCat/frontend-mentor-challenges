@@ -9,17 +9,13 @@
 }
 
  // T A B L E T
-@media (min-width: $tablet-view) {
+@media (min-width: toRem(680)) {
 	.results-explanation {
 		@include mixins.flex-row;
+		align-items: center;
 		gap: toRem(75);
 		margin-right: $tablet-margin-right;
-		// position: relative;
 
-		.pic-explanation-wrap {
-			@include mixins.flex-row;
-			gap: toRem(75);
-		}
 		picture {
 			max-width: 435px;
 			margin-left: -75px;
@@ -27,9 +23,7 @@
 
 		.explanation-content {
 			margin: 0;
-			width: 50%;
-			// width: 50%;
-			// margin-left: 50%;
+			max-width: 331px;
 			
 			.loud-voice {
 				font-size: toRem(32);
