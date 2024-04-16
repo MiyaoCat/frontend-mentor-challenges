@@ -57,3 +57,22 @@
 		}
 	}
 }
+
+// D E S K T O P
+@media (min-width: toRem(1100)) {
+	.results-explanation {
+		gap: toRem(140);
+		justify-content: center;
+		max-width: toRem(1160);
+		margin: toRem(151) toRem(140) toRem(96) toRem(140);
+
+		picture {
+			margin: 0;
+			min-width: toRem(533);
+		}
+
+		.explanation-content {
+			max-width: toRem(465);
+		}
+	}
+}

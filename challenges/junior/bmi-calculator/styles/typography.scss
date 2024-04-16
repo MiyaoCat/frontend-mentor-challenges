@@ -62,3 +62,9 @@ strong {
 		font-size: toRem(32);
 	}
 }
+
+@media (min-width: toRem(1200)) {
+	.yell-voice {
+		font-size: toRem(64);
+	}
+}

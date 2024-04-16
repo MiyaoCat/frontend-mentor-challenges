@@ -200,6 +200,13 @@ output {
 }
 
 
+// D E S K T O P
+@media (min-width: toRem(1100)) {
+
+	.calculator-module {
+		max-width: toRem(564);
+	}
+}
 
 
 

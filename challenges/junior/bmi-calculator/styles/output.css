@@ -136,6 +136,11 @@ svg {
     gap: 6rem;
   }
 }
+@media (min-width: 68.75rem) {
+  main {
+    gap: 0;
+  }
+}
 /* T Y P O G R A P H Y */
 .yell-voice {
   font-size: 3rem;
@@ -197,6 +202,11 @@ strong {
     font-size: 2rem;
   }
 }
+@media (min-width: 75rem) {
+  .yell-voice {
+    font-size: 4rem;
+  }
+}
 .intro-calc-wrap {
   display: flex;
   flex-direction: column;
@@ -242,6 +252,39 @@ strong {
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media (min-width: 68.75rem) {
+  header {
+    border: 1px solid black;
+    width: 100%;
+  }
+  header .logo {
+    max-width: 4rem;
+    margin-top: 4.6875rem;
+    margin-left: 8.75rem;
+  }
+  header .background-gradient {
+    margin-left: 1.5rem;
+    max-width: 61.125rem;
+    max-height: 46.0625rem;
+  }
+  .intro-calc-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin: 0.0625rem 8.75rem 0 8.75rem;
+  }
+  .intro-calc-wrap .intro {
+    text-align: left;
+    max-width: 35.25rem;
+    margin: 0;
+  }
+  .intro-calc-wrap .intro h1 {
+    margin: 0;
+    margin-bottom: 2.1875rem;
+    max-width: 92%;
   }
 }
 .calculator-module {
@@ -422,6 +465,11 @@ output .result-message, output .bmi-range {
     right: -116px;
   }
 }
+@media (min-width: 68.75rem) {
+  .calculator-module {
+    max-width: 35.25rem;
+  }
+}
 .results-explanation .explanation-content {
   margin: 3rem 1.5rem 0 1.5rem;
 }
@@ -467,6 +515,21 @@ output .result-message, output .bmi-range {
   }
   .bmi-factor-cards .icon {
     max-height: 64px;
+  }
+}
+@media (min-width: 68.75rem) {
+  .results-explanation {
+    gap: 8.75rem;
+    justify-content: center;
+    max-width: 72.5rem;
+    margin: 9.4375rem 8.75rem 6rem 8.75rem;
+  }
+  .results-explanation picture {
+    margin: 0;
+    min-width: 33.3125rem;
+  }
+  .results-explanation .explanation-content {
+    max-width: 29.0625rem;
   }
 }
 .limitations {

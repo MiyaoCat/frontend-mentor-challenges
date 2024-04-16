@@ -51,3 +51,44 @@
 		}
 	}
 }
+
+// D E S K T O P
+@media (min-width: toRem(1100)) {
+	header {
+		border: 1px solid black;
+		width: 100%;
+
+		.logo {
+			max-width: toRem(64);
+			margin-top: toRem(75);
+			margin-left: toRem(140);
+		}
+
+		.background-gradient {
+			margin-left: $spacing-standard;
+			max-width: toRem(978);
+			max-height: toRem(737);
+		}
+	}
+
+	.intro-calc-wrap {
+		// border: 1px solid black;
+		@include mixins.flex-row;
+		gap: $spacing-large;
+		align-items: center;
+		margin: toRem(1) toRem(140) 0 toRem(140);
+
+		.intro {
+			// border: 1px solid red;
+			text-align: left;
+			max-width: toRem(564);
+			margin: 0;
+
+			h1 {
+				margin: 0;
+				margin-bottom: toRem(35);
+				max-width: 92%;
+			}
+		}
+	}
+}	
