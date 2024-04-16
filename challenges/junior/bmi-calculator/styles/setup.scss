@@ -29,7 +29,7 @@ $accent: hsl(200, 24%, 88%); /* Light Grey */;
 // $card-bg: white; /* */
 $bg: #FFF; //White
 
-$bg-gradient: hsl(216, 95%, 92%), hsla(184, 95%, 92%, 0%);
+$bg-gradient: hsl(216, 95%, 92%) 50%, hsla(184, 95%, 92%, 0%);
 $ink-dark: hsl(215, 31%, 21%); // Gunmetal
 $ink: hsl(215, 17%, 45%); // Dark Electric Blue
 $ink-inverse: #FFF;

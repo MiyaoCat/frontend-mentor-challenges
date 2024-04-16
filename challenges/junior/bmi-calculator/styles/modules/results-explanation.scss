@@ -30,32 +30,6 @@
 			}
 		}
 	}
-
-	.bmi-factors-bg {
-		padding: $tablet-space-large $tablet-margin-right $tablet-space-large $tablet-margin-left;
-
-		.bmi-factors {
-			margin: 0;
-		}
-	}
-
-	.bmi-factor-cards {
-		@include mixins.flex-row;
-		gap: $tablet-gap-standard;
-		align-items: center;
-
-		.bmi-factors-content {
-			h3 {
-				font-size: toRem(24);
-				margin-top: 0;
-				margin-bottom: $spacing-standard;
-			}
-		}
-
-		.icon {
-			max-height: 64px;
-		}
-	}
 }
 
 // D E S K T O P

@@ -35,29 +35,7 @@
 	}
 }
 
-.bmi-factors-bg {
-	background: linear-gradient(to left top, $bg-gradient);
-	padding-top: $spacing-large;
-	padding-bottom: $spacing-large;
-}
-.bmi-factors {
-	@include mixins.flex-column;
-	gap: toRem(40);
-	margin: $spacing-standard;
-}
-
-.bmi-factor-cards {
-	.icon {
-		max-width: toRem(64);
-	}
-
-	h3 {
-		margin-top: $spacing-large;
-		margin-bottom: $spacing-standard;
-	}
-}
-
-
+ // T A B L E T
 @media (min-width: $tablet-view) {
 	.limitations {
 		margin: 0 $tablet-margin-right 0 $tablet-margin-left;

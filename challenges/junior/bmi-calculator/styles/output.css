@@ -215,7 +215,7 @@ strong {
 
 .background-gradient {
   position: absolute;
-  background: linear-gradient(to left top, hsl(216, 95%, 92%), hsla(184, 95%, 92%, 0));
+  background: linear-gradient(to left top, hsl(216, 95%, 92%) 50%, hsla(184, 95%, 92%, 0));
   z-index: -1;
   height: 44.375rem;
   width: 100%;
@@ -496,6 +496,44 @@ output .result-message, output .bmi-range {
   .results-explanation .explanation-content .loud-voice {
     font-size: 2rem;
   }
+}
+@media (min-width: 68.75rem) {
+  .results-explanation {
+    gap: 8.75rem;
+    justify-content: center;
+    max-width: 72.5rem;
+    margin: 9.4375rem 8.75rem 6rem 8.75rem;
+  }
+  .results-explanation picture {
+    margin: 0;
+    min-width: 33.3125rem;
+  }
+  .results-explanation .explanation-content {
+    max-width: 29.0625rem;
+  }
+}
+.bmi-factors-bg {
+  background: linear-gradient(to left top, hsl(216, 95%, 92%) 50%, hsla(184, 95%, 92%, 0));
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.bmi-factors {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 1.5rem;
+}
+
+.bmi-factor-cards .icon {
+  max-width: 4rem;
+}
+.bmi-factor-cards h3 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 42.5rem) {
   .bmi-factors-bg {
     padding: 3.75rem 2.6875rem 3.75rem 2.4375rem;
   }
@@ -518,18 +556,22 @@ output .result-message, output .bmi-range {
   }
 }
 @media (min-width: 68.75rem) {
-  .results-explanation {
-    gap: 8.75rem;
-    justify-content: center;
-    max-width: 72.5rem;
-    margin: 9.4375rem 8.75rem 6rem 8.75rem;
+  .bmi-factors-bg {
+    max-width: 90rem;
+    margin: 0 1.5rem;
+    padding: 4.5rem 7.3125rem 6rem 7.25rem;
+    background: linear-gradient(to left, hsl(216, 95%, 92%) 50%, hsla(184, 95%, 92%, 0));
   }
-  .results-explanation picture {
-    margin: 0;
-    min-width: 33.3125rem;
+  .bmi-factors {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
   }
-  .results-explanation .explanation-content {
-    max-width: 29.0625rem;
+  .bmi-factor-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.8125rem;
   }
 }
 .limitations {
@@ -566,27 +608,6 @@ output .result-message, output .bmi-range {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
-}
-
-.bmi-factors-bg {
-  background: linear-gradient(to left top, hsl(216, 95%, 92%), hsla(184, 95%, 92%, 0));
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.bmi-factors {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  margin: 1.5rem;
-}
-
-.bmi-factor-cards .icon {
-  max-width: 4rem;
-}
-.bmi-factor-cards h3 {
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 35.9375rem) {
