@@ -39,6 +39,7 @@
 
 	.intro-calc-wrap {
 		@include mixins.flex-column;
+		align-items: center;
 		gap: 40px;
 		margin: 0 $tablet-margin-right 0 $tablet-margin-left;
 	}
@@ -53,9 +54,8 @@
 }
 
 // D E S K T O P
-@media (min-width: toRem(1100)) {
+@media (min-width: toRem(1350)) {
 	header {
-		border: 1px solid black;
 		width: 100%;
 
 		.logo {
@@ -72,23 +72,32 @@
 	}
 
 	.intro-calc-wrap {
-		// border: 1px solid black;
 		@include mixins.flex-row;
-		gap: $spacing-large;
+		gap: toRem(131);
 		align-items: center;
 		margin: toRem(1) toRem(140) 0 toRem(140);
 
 		.intro {
-			// border: 1px solid red;
 			text-align: left;
 			max-width: toRem(564);
 			margin: 0;
 
+			p {
+				max-width: toRem(465);
+			}
 			h1 {
 				margin: 0;
 				margin-bottom: toRem(35);
-				max-width: 92%;
+				max-width: 100%;
 			}
 		}
+	}
+
+	.intro-calc-wrap:after {
+		content: '';
+		background-image: url('../assets/images/pattern-curved-line-left.svg');
+		position: absolute;
+		z-index: 99;
+		top: 500px;
 	}
 }	

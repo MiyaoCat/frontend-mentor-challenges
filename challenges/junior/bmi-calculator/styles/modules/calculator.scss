@@ -205,6 +205,10 @@ output {
 
 	.calculator-module {
 		max-width: toRem(564);
+
+		h2.attention-voice {
+			font-size: toRem(24);
+		}
 	}
 }
 
