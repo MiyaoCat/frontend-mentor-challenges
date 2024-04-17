@@ -89,6 +89,7 @@ main {
 	@include mixins.centered;
 	gap: $spacing-xxlarge;
 	padding-bottom: toRem(96);
+	max-width: toRem(1440);
 }
 
 footer {

@@ -57,6 +57,8 @@
 @media (min-width: toRem(1350)) {
 	header {
 		width: 100%;
+		max-width: toRem(1440);
+		margin-left: $spacing-standard;
 
 		.logo {
 			max-width: toRem(64);

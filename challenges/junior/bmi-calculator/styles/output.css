@@ -93,6 +93,7 @@ main {
   align-items: center;
   gap: 4.5rem;
   padding-bottom: 6rem;
+  max-width: 90rem;
 }
 
 footer {
@@ -264,6 +265,8 @@ strong {
 @media (min-width: 84.375rem) {
   header {
     width: 100%;
+    max-width: 90rem;
+    margin-left: 1.5rem;
   }
   header .logo {
     max-width: 4rem;
