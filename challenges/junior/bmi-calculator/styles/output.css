@@ -284,6 +284,7 @@ strong {
     gap: 8.1875rem;
     align-items: center;
     margin: 0.0625rem 8.75rem 0 8.75rem;
+    max-width: 72.5rem;
   }
   .intro-calc-wrap .intro {
     text-align: left;
