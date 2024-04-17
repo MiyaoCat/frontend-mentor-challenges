@@ -39,7 +39,11 @@
 @media (min-width: $tablet-view) {
 	.limitations {
 		margin: 0 $tablet-margin-right 0 $tablet-margin-left;
-		gap: $tablet-gap-large;
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		// gap: $tablet-gap-large;
+		border: 1px solid black;
 	}
 
 	.limitation-card-wrap {
@@ -48,14 +52,107 @@
 		grid-template-columns: 1fr 1fr;
 	}
 	
+	.limitations-intro {
+		grid-row: 1;
+		grid-column: 1 / span 2;
+		align-self: center;
+	}	
 	.limitation-card {
 		padding: $spacing-large;
 		max-width: toRem(335);
 	}
 
-	.limitation-card:nth-of-type(5) {
+	.gender {
+		grid-row: 2;
+		grid-column: 1;
+	}
+
+	.age {
+		grid-row: 2;
+		grid-column: 2;
+	}
+
+	.muscle {
+		grid-row: 3;
+		grid-column: 1;
+	}
+
+	.pregnancy {
+		grid-row: 3;
+		grid-column: 2;
+	}
+
+	.race {
+		grid-row: 4;
 		grid-column: 1 / span 2;
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
+
+// D E S K T O P
+@media (min-width: toRem(1100)) {
+	.limitations {
+		border: 1px solid black;
+		padding: toRem(120) toRem(140);
+		// @include mixins.flex-row;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: 1fr 1fr 1fr;
+
+		.limitations-intro {
+			max-width: toRem(564);
+			text-align: left;
+			grid-row: 1;
+			grid-column: 1 / span 3;
+			border: 1px solid red;
+		}
+
+		.gender {
+			grid-row: 1;
+			grid-column: 5 / span 2;
+		}
+
+		.age {
+			grid-row: 2;
+			grid-column: 3 / span 2;
+		}
+
+		.muscle {
+			grid-row: 2;
+			grid-column: 5 / span 2;
+		}
+
+		.pregnancy {
+			grid-row: 3;
+			grid-column: 2 / span 2;
+		}
+
+		.race {
+			grid-row: 3;
+			grid-column: 4 / span 2;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

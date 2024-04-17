@@ -613,21 +613,83 @@ output .result-message, output .bmi-range {
 @media (min-width: 35.9375rem) {
   .limitations {
     margin: 0 2.6875rem 0 2.4375rem;
-    gap: 3.5rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid black;
   }
   .limitation-card-wrap {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
+  .limitations-intro {
+    grid-row: 1;
+    grid-column: 1/span 2;
+    align-self: center;
+  }
   .limitation-card {
     padding: 2rem;
     max-width: 20.9375rem;
   }
-  .limitation-card:nth-of-type(5) {
+  .gender {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .age {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .muscle {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .pregnancy {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .race {
+    grid-row: 4;
     grid-column: 1/span 2;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+@media (min-width: 68.75rem) {
+  .limitations {
+    border: 1px solid black;
+    padding: 7.5rem 8.75rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .limitations .limitations-intro {
+    max-width: 35.25rem;
+    text-align: left;
+    grid-row: 1;
+    grid-column: 1/span 3;
+    border: 1px solid red;
+  }
+  .limitations .gender {
+    grid-row: 1;
+    grid-column: 5/span 2;
+  }
+  .limitations .age {
+    grid-row: 2;
+    grid-column: 3/span 2;
+  }
+  .limitations .muscle {
+    grid-row: 2;
+    grid-column: 5/span 2;
+  }
+  .limitations .pregnancy {
+    grid-row: 3;
+    grid-column: 2/span 2;
+  }
+  .limitations .race {
+    grid-row: 3;
+    grid-column: 4/span 2;
   }
 }
 
