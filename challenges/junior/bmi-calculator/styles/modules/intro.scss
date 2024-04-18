@@ -68,11 +68,11 @@
 
 		.background-gradient {
 			margin-left: $spacing-standard;
-			max-width: toRem(978);
+			max-width: 68.5vw;
 			max-height: toRem(737);
 		}
 	}
-
+	
 	.intro-calc-wrap {
 		@include mixins.flex-row;
 		gap: toRem(131);
