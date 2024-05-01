@@ -27,22 +27,28 @@ let heightInValue;
 let weightKgValue;
 let weightLbValue;
 
-heightCm.addEventListener('change', function() {
+// heightCm.addEventListener('keyup', calculateBMI);
+// heightFeet.addEventListener('keyup', calculateBMI);
+// heightIn.addEventListener('keyup', calculateBMI);
+// weightKg.addEventListener('keyup', calculateBMI);
+// weightLb.addEventListener('keyup', calculateBMI);
+
+heightCm.addEventListener('keyup', function() {
 	heightCmValue = parseInt(this.value);
 	calculateBMI();
 })
 
-heightFeet.addEventListener('change', function() {
+heightFeet.addEventListener('keyup', function() {
 	heightFtValue = parseInt(this.value);
 	calculateBMI();
 })
 
-heightIn.addEventListener('change', function() {
+heightIn.addEventListener('keyup', function() {
 	heightInValue = parseInt(this.value);
 	calculateBMI();
 })
 
-weightKg.addEventListener('change', function() {
+weightKg.addEventListener('keyup', function() {
 	weightKgValue = parseInt(this.value);
 	calculateBMI();
 })
