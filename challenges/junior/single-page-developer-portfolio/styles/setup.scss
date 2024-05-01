@@ -1,0 +1,145 @@
+@use 'sass:math';
+@use 'mixins';
+@import '../../../../style/meyer-reset';
+
+
+@font-face {
+	font-family: 'Space Grotesk';
+	src: url('../assets/fonts/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
+}
+
+@function toRem($value) {
+   @return math.div($value, 16) * 1rem;	
+}
+
+* {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+
+
+/* PRIMARY */
+$primary: hsl(227, 92%, 58%); //Blue
+$primary-light: #D6E6FE; //light Blue
+$accent: hsl(200, 24%, 88%); /* Light Grey */;
+
+/* NEUTRAL */
+// $card-bg: white; /* */
+$bg: #FFF; //White
+
+$bg-gradient: hsl(216, 95%, 92%) 50%, hsla(184, 95%, 92%, 0%);
+$ink-dark: hsl(215, 31%, 21%); // Gunmetal
+$ink: hsl(215, 17%, 45%); // Dark Electric Blue
+$ink-inverse: #FFF;
+// $ink-inverse: white;
+
+/* BORDERS */
+$small: 5px;
+$rounded: 12px;
+$rounded-big: 16px;
+$rounded-xbig: 35px;
+
+/* SPACING */
+$spacing-xxsmall: toRem(8);
+$spacing-xsmall: toRem(16);
+$spacing-small: toRem(18);
+$spacing-standard-small: toRem(20);
+$spacing-standard: toRem(24);
+$spacing-large: toRem(32);
+$spacing-xlarge: toRem(48);
+$spacing-xxlarge: toRem(72);
+
+$tablet-margin-left: toRem(39);
+$tablet-gap-standard: toRem(40);
+$tablet-margin-right: toRem(43);
+$tablet-gap-large: toRem(56);
+$tablet-space-large: toRem(60);
+
+
+$tablet-view: toRem(575);
+$desktop-view: toRem(900);
+
+:root {
+	--ff: 'Inter', sans-serif;	
+
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--ff);
+}
+
+html * {
+	// border: 1px solid black;
+	// padding: 1px;
+}
+
+
+body {
+	@include mixins.flex-column;
+	@include mixins.centered;
+	background-color: $bg;
+}
+
+main {
+	flex-grow: 1;
+	@include mixins.flex-column;
+	@include mixins.centered;
+	gap: $spacing-xxlarge;
+	padding-bottom: toRem(96);
+	max-width: toRem(1440);
+}
+
+footer {
+	// border: 1px solid black;
+	@include mixins.flex-row;
+}
+
+
+a {
+	display: block;
+	text-decoration: none;
+	color: inherit;
+}
+
+p a {
+	display: inline;
+	text-decoration: underline;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+picture {
+	display: block;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+
+@media (min-width: toRem(768)) {
+	$spacing-xlarge: toRem(40);
+
+	main {
+		gap: toRem(96);
+	}
+}
+
+@media (min-width: toRem(1100)) {
+	main {
+		gap: 0;
+	}
+}
