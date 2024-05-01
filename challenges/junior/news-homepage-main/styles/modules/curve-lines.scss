@@ -1,0 +1,21 @@
+.curved-line-left, .curved-line-right {
+	display: none;
+}
+
+@media (min-width: toRem(1350)) {
+	.svg-wrap {
+		margin: toRem(110) toRem(-1060) 0 toRem(24);
+		display: flex;
+		justify-content: flex-end;
+	}
+	.curved-line-left {
+		display: block;
+		width: fit-content;
+	}
+
+	.curved-line-right {
+		display: block;
+		grid-row: 2;
+		grid-column: 2;
+	}
+}

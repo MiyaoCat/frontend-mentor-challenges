@@ -1,0 +1,227 @@
+.calculator-module {
+	border-radius: $rounded;
+	padding: $spacing-standard;
+	box-shadow: 16px 32px 56px hsla(211, 40%, 69%, .25);
+	margin-bottom: $spacing-xxlarge;
+	margin-left: $spacing-standard;
+	margin-right: $spacing-standard;
+	border-radius: $rounded-big;
+	background-color: $bg;
+}
+
+.unit-type {
+	@include mixins.flex-row;
+	gap: $spacing-standard;
+	margin: $spacing-standard 0;
+	// width: 100%;
+
+	label {
+		@include mixins.flex-row;
+		align-items: center;
+		gap: $spacing-small;
+		font-weight: 600;
+		color: $ink-dark;
+	}
+}
+
+input[type='radio'] {
+	appearance: none;
+	height: 31px;
+	width: 31px;
+	margin: 0;
+	border: 1px solid $accent;
+	border-radius: 50%;
+
+	&:hover {
+		cursor: pointer;
+		border: 1px solid $primary;
+	}
+
+	&:checked {
+		background-color: $primary-light;
+	}
+
+  &:checked::before {
+      content: '';
+      display: block;
+      width: 15px; 
+      height: 15px; 
+      border-radius: 50%; 
+      background-color: $primary; 
+      position: relative;
+      top: 7px;
+      left: 7px;
+  }	
+}
+
+.measurements {
+	@include mixins.flex-column;
+	gap: $spacing-xsmall;
+	max-height: 649px;
+
+	label {
+		display: flex;
+		padding: $spacing-standard-small $spacing-standard;
+		border: 1px solid $accent;
+		border-radius: $rounded;
+		margin-top: $spacing-xxsmall;
+	}
+
+	input[type='number'] {
+		position: relative;
+		-moz-appearance: textfield;
+		font-size: toRem(24);
+		font-weight: 600;
+		color: $ink-dark;
+		width: 100%;
+		border: none;
+
+		&:placeholder {
+			color: $ink;
+		}
+
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+    	-webkit-appearance: none;
+    	margin: 0;
+		}
+
+		&:focus {
+			border-color: $primary;
+			outline: none;
+		}
+	}
+
+	label {
+		@include mixins.flex-row;
+		align-items: center;
+		padding: $spacing-standard-small $spacing-standard;
+		border: 1px solid $accent;
+		border-radius: $rounded;
+		margin-top: $spacing-xxsmall;
+
+		&:hover {
+			border-color: $primary;
+			cursor: pointer;
+		}
+
+		&:focus-within {
+			border: 1px solid $primary;
+			outline: none;
+		}
+	}
+
+	.height-imperial {
+		@include mixins.flex-row;
+		gap: $spacing-standard;
+		display: none;
+	}
+
+	.weight-imperial {
+		display: none;
+	}
+
+	.cm, .kg, .in, .ft, .lb {
+		color: $primary;
+		font-size: toRem(24);
+		font-weight: 600;
+	}
+}
+
+output {
+	display: block;
+	margin-top: $spacing-standard;
+	padding: $spacing-large;
+	color: $ink-inverse;
+	background: linear-gradient(to right, $primary, hsl(227, 100%, 67%));
+	border-radius: $rounded;
+
+	.normal-voice {
+		color: $ink-inverse;
+	}
+
+	.result {
+		@include mixins.flex-column;
+		gap: $spacing-xxsmall;
+		margin-bottom: $spacing-standard;
+
+		.loud-voice {
+			color: $ink-inverse;
+		}	
+	}
+
+	.result-message, .bmi-range {
+		display: inline;
+
+	}
+}
+
+ // T A B L E T
+@media (min-width: $tablet-view) {
+	.calculator-module {
+		padding: $spacing-large;
+		gap: $spacing-large;
+		margin: 0;
+	}
+
+	.unit-type {
+		margin: $spacing-large 0;
+	}
+
+	.unit-type, .measurements {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: $spacing-standard;
+	}
+
+	label[for='metric'] {
+		grid-column: 1;
+	}
+
+	label[for='imperial'] {
+		grid-column: 2;
+	}
+
+	output {
+		margin-top: $spacing-large;
+		border-radius: $rounded-big 100px 100px $rounded-big;
+		@include mixins.flex-row;
+		align-items: center;
+		gap: $spacing-standard;
+		padding: $spacing-large;
+		position: relative;
+
+		.result {
+			width: 50%;
+			margin-bottom: 0;
+			right: -116px;
+		}
+	}
+}
+
+
+// D E S K T O P
+@media (min-width: toRem(1100)) {
+
+	.calculator-module {
+		max-width: toRem(564);
+
+		h2.attention-voice {
+			font-size: toRem(24);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

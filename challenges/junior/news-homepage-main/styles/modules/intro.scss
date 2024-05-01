@@ -1,0 +1,106 @@
+@use 'sass:math';
+@use '../mixins';
+
+.intro-calc-wrap {
+	@include mixins.flex-column;
+	gap: $spacing-xlarge;
+}
+
+.background-gradient {
+	position: absolute;
+	background: linear-gradient(to left top, $bg-gradient);
+	z-index: -1;
+	height: toRem(710);
+	width: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 0 0 $rounded-xbig $rounded-xbig;
+}
+
+.logo {
+	margin-top: $spacing-large;
+	margin-bottom: $spacing-standard;
+	max-width: toRem(36);
+}
+
+.intro {
+	text-align: center;
+	margin: 0 $spacing-standard;
+
+	h1 {
+		margin-bottom: $spacing-standard;
+	}
+}
+
+@media (min-width: $tablet-view) {
+	.logo {
+		min-width: toRem(40);
+	}
+
+	.intro-calc-wrap {
+		@include mixins.flex-column;
+		align-items: center;
+		gap: 40px;
+		margin: 0 $tablet-margin-right 0 $tablet-margin-left;
+	}
+
+	.intro {
+		h1 {
+			max-width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+// D E S K T O P
+@media (min-width: toRem(1350)) {
+	header {
+		width: 100%;
+		max-width: toRem(1440);
+		margin-left: $spacing-standard;
+
+		.logo {
+			max-width: toRem(64);
+			margin-top: toRem(75);
+			margin-left: toRem(140);
+		}
+
+		.background-gradient {
+			margin-left: $spacing-standard;
+			max-width: 68.5vw;
+			max-height: toRem(737);
+		}
+	}
+	
+	.intro-calc-wrap {
+		@include mixins.flex-row;
+		gap: toRem(131);
+		align-items: center;
+		margin: toRem(1) toRem(140) 0 toRem(140);
+		max-width: toRem(1160);
+
+		.intro {
+			text-align: left;
+			max-width: toRem(564);
+			margin: 0;
+
+			p {
+				max-width: toRem(465);
+			}
+			h1 {
+				margin: 0;
+				margin-bottom: toRem(35);
+				max-width: 100%;
+			}
+		}
+	}
+
+	.intro-calc-wrap:after {
+		content: '';
+		background-image: url('../assets/images/pattern-curved-line-left.svg');
+		position: absolute;
+		z-index: 99;
+		top: 500px;
+	}
+}	

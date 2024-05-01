@@ -1,0 +1,71 @@
+.bmi-factors-bg {
+	background: linear-gradient(to left top, $bg-gradient);
+	padding-top: $spacing-large;
+	padding-bottom: $spacing-large;
+}
+.bmi-factors {
+	@include mixins.flex-column;
+	gap: toRem(40);
+	margin: $spacing-standard;
+}
+
+.bmi-factor-cards {
+	.icon {
+		max-width: toRem(64);
+	}
+
+	h3 {
+		margin-top: $spacing-large;
+		margin-bottom: $spacing-standard;
+	}
+}
+
+ // T A B L E T
+@media (min-width: toRem(680)) {
+	.bmi-factors-bg {
+		padding: $tablet-space-large $tablet-margin-right $tablet-space-large $tablet-margin-left;
+
+		.bmi-factors {
+			margin: 0;
+		}
+	}
+
+	.bmi-factor-cards {
+		@include mixins.flex-row;
+		gap: $tablet-gap-standard;
+		align-items: center;
+
+		.bmi-factors-content {
+			h3 {
+				font-size: toRem(24);
+				margin-top: 0;
+				margin-bottom: $spacing-standard;
+			}
+		}
+
+		.icon {
+			max-height: 64px;
+		}
+	}
+}
+
+// D E S K T O P
+@media (min-width: toRem(1100)) {
+	.bmi-factors-bg {
+		max-width: toRem(1440);
+		margin: 0 $spacing-standard;
+		padding: toRem(72) toRem(117) toRem(96) toRem(116);
+		background: linear-gradient(to left, $bg-gradient);
+	}
+
+	.bmi-factors {
+		@include mixins.flex-row;
+		gap: $spacing-large;
+	}
+
+	.bmi-factor-cards {
+		@include mixins.flex-column;
+		align-items: flex-start;
+		gap: toRem(45);
+	}
+}
