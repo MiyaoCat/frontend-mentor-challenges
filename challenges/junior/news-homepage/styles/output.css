@@ -204,5 +204,12 @@ strong {
     font-size: 3rem;
   }
 }
+header > * {
+  border: 1px solid black;
+}
+
+header {
+  border: 1px solid black;
+}
 
 /*# sourceMappingURL=output.css.map */
