@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul, a {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+} /* https://www.paulirish.com/2012/box-sizing-border-box-ftw */
+/* PRIMARY */
+/* Soft red */
+/* NEUTRAL */
+/* BORDERS */
+/* SPACING */
+:root {
+  --ff: "Inter", sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: var(--ff);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(36, 100%, 99%);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4.5rem;
+  padding-bottom: 6rem;
+  max-width: 90rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+p a {
+  display: inline;
+  text-decoration: underline;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+picture {
+  display: block;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+svg {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  main {
+    gap: 6rem;
+  }
+}
+@media (min-width: 68.75rem) {
+  main {
+    gap: 0;
+  }
+}
+/* T Y P O G R A P H Y */
+.loud-voice {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+
+.attention-voice {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: hsl(240, 100%, 5%);
+}
+
+.alert-voice {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: hsl(240, 100%, 5%);
+}
+
+.normal-voice {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  font-weight: 400;
+  color: hsl(236, 13%, 42%);
+}
+
+.quiet-voice {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  color: hsl(236, 13%, 42%);
+}
+
+.whisper-voice {
+  font-size: 0.9375rem;
+  color: hsl(236, 13%, 42%);
+}
+
+strong {
+  font-weight: 600;
+}
+
+@media (min-width: 48rem) {
+  .loud-voice {
+    font-size: 3rem;
+  }
+  .attention-voice {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 75rem) {
+  .yell-voice {
+    font-size: 4rem;
+  }
+  .loud-voice {
+    font-size: 3rem;
+  }
+  .attention-voice {
+    font-size: 3rem;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

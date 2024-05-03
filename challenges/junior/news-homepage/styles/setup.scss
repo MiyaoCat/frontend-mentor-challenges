@@ -76,7 +76,7 @@ html * {
 body {
 	@include mixins.flex-column;
 	@include mixins.centered;
-	background-color: $bg;
+	background-color: $paper;
 }
 
 main {
