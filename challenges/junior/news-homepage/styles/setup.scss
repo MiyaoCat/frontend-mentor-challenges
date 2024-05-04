@@ -2,7 +2,6 @@
 @use 'mixins';
 @import '../../../../style/meyer-reset';
 
-
 @font-face {
 	font-family: 'Inter';
 	src: url('../assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
@@ -38,15 +37,13 @@ $rounded-big: 16px;
 $rounded-xbig: 35px;
 
 /* SPACING */
-$spacing-xxsmall: toRem(8);
-$spacing-xsmall: toRem(16);
-$spacing-small: toRem(18);
-$spacing-standard-small: toRem(20);
-$spacing-standard: toRem(24);
-$spacing-large: toRem(32);
-$spacing-xlarge: toRem(48);
-$spacing-xxlarge: toRem(72);
+$mobile-margin-sm: toRem(16);
+$mobile-margin-med: toRem(28);
+$mobile-margin: toRem(32);
+$mobile-margin-lg: toRem(64);
+$mobile-margin-xlg: toRem(80);
 
+$li-margin: toRem(24);
 $tablet-margin-left: toRem(39);
 $tablet-gap-standard: toRem(40);
 $tablet-margin-right: toRem(43);
@@ -67,11 +64,7 @@ html {
   font-family: var(--ff);
 }
 
-html * {
-	// border: 1px solid black;
-	// padding: 1px;
-}
-
+// r
 
 body {
 	@include mixins.flex-column;
@@ -83,7 +76,7 @@ main {
 	flex-grow: 1;
 	@include mixins.flex-column;
 	@include mixins.centered;
-	gap: $spacing-xxlarge;
+	// gap: $spacing-xxlarge;
 	padding-bottom: toRem(96);
 	max-width: toRem(1440);
 }
@@ -98,6 +91,10 @@ a {
 	display: block;
 	text-decoration: none;
 	color: inherit;
+
+	&:hover {
+		color: $accent;
+	}
 }
 
 p a {
@@ -125,9 +122,8 @@ svg {
   width: 100%;
 }
 
-
 @media (min-width: toRem(768)) {
-	$spacing-xlarge: toRem(40);
+	// $spacing-xlarge: toRem(40);
 
 	main {
 		gap: toRem(96);

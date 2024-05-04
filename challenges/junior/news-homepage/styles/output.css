@@ -91,7 +91,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4.5rem;
   padding-bottom: 6rem;
   max-width: 90rem;
 }
@@ -105,6 +104,9 @@ a {
   display: block;
   text-decoration: none;
   color: inherit;
+}
+a:hover {
+  color: hsl(5, 85%, 63%);
 }
 
 p a {
@@ -142,6 +144,10 @@ svg {
     gap: 0;
   }
 }
+body {
+  margin: 1.75rem 1rem 5rem 1rem;
+}
+
 /* T Y P O G R A P H Y */
 .loud-voice {
   font-size: 3.5rem;
@@ -204,12 +210,44 @@ strong {
     font-size: 3rem;
   }
 }
-header > * {
-  border: 1px solid black;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
-header {
-  border: 1px solid black;
+.hamburger-menu {
+  align-self: center;
+}
+
+.menu {
+  position: fixed;
+  margin-left: 500px;
+  display: flex;
+  flex-direction: column;
+  width: 256px;
+  height: 100vh;
+  background-color: hsl(36, 100%, 99%);
+  transition: margin-left 0.8s ease;
+  font-size: 1.125rem;
+}
+.menu ul {
+  margin-top: 5.375rem;
+  margin-left: 1.5rem;
+}
+.menu li + li {
+  margin-top: 1.5rem;
+}
+
+.exit-menu-btn {
+  max-width: fit-content;
+  align-self: end;
+}
+.exit-menu-btn:hover {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=output.css.map */

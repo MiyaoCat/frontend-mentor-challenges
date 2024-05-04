@@ -1,7 +1,44 @@
-header > * {
-	border: 1px solid black;
+header {
+	@include mixins.flex-row;
+	justify-content: space-between;
+	// align-items: center;
+	width: 100%;
+	margin-bottom: $mobile-margin;
+	position: relative;
 }
 
-header {
-	border: 1px solid black;
+.hamburger-menu {
+	align-self: center;
+}
+.menu {
+	// position: relative;
+	// background-color: $paper;
+}
+
+.menu {
+	position: fixed;
+	margin-left: 500px;
+	@include mixins.flex-column;
+	width: 256px;
+	height: 100vh;
+	background-color: $paper;
+	transition: margin-left .8s ease;
+	font-size: toRem(18);
+
+	ul {
+		margin-top: toRem(86);
+		margin-left: toRem(24);
+	}
+	li + li {
+		margin-top: $li-margin;
+	}
+}
+
+.exit-menu-btn {
+	max-width: fit-content;
+	align-self: end;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
