@@ -1,44 +1,24 @@
 header {
 	@include mixins.flex-row;
 	justify-content: space-between;
-	// align-items: center;
+	align-items: center;
 	width: 100%;
 	margin-bottom: $mobile-margin;
-	position: relative;
 }
 
-.hamburger-menu {
-	align-self: center;
-}
-.menu {
-	// position: relative;
-	// background-color: $paper;
-}
+.menu-button-toggle {
+	display: block;
+	background: none;
+	border: none;
+	
+	width: toRem(40);
+	aspect-ratio: 1;
 
-.menu {
-	position: fixed;
-	margin-left: 500px;
-	@include mixins.flex-column;
-	width: 256px;
-	height: 100vh;
-	background-color: $paper;
-	transition: margin-left .8s ease;
-	font-size: toRem(18);
-
-	ul {
-		margin-top: toRem(86);
-		margin-left: toRem(24);
-	}
-	li + li {
-		margin-top: $li-margin;
-	}
+	background-image: url('../assets/images/icon-menu.svg');
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-.exit-menu-btn {
-	max-width: fit-content;
-	align-self: end;
-
-	&:hover {
-		cursor: pointer;
-	}
+.site-menu {
+	display: none;
 }

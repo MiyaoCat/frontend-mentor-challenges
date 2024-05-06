@@ -214,40 +214,24 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin-bottom: 2rem;
-  position: relative;
 }
 
-.hamburger-menu {
-  align-self: center;
+.menu-button-toggle {
+  display: block;
+  background: none;
+  border: none;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  background-image: url("../assets/images/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.menu {
-  position: fixed;
-  margin-left: 500px;
-  display: flex;
-  flex-direction: column;
-  width: 256px;
-  height: 100vh;
-  background-color: hsl(36, 100%, 99%);
-  transition: margin-left 0.8s ease;
-  font-size: 1.125rem;
-}
-.menu ul {
-  margin-top: 5.375rem;
-  margin-left: 1.5rem;
-}
-.menu li + li {
-  margin-top: 1.5rem;
-}
-
-.exit-menu-btn {
-  max-width: fit-content;
-  align-self: end;
-}
-.exit-menu-btn:hover {
-  cursor: pointer;
+.site-menu {
+  display: none;
 }
 
 /*# sourceMappingURL=output.css.map */
