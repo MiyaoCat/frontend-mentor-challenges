@@ -20,6 +20,15 @@ header {
 	inset: 0 0 0 30%;
 	border: 1px solid blue;
 	background-color: white;
+	display: none;
+	z-index: 99;
+	height: 100vh;
+
+	padding-top: 60px;
+}
+
+.menu-wrap[data-visible] {
+	display: block;
 }
 
 .site-menu {
@@ -30,6 +39,7 @@ header {
 	display: block;
 	background: none;
 	border: none;
+	// z-index: 99;
 
 	width: toRem(40);
 	aspect-ratio: 1;
@@ -39,10 +49,7 @@ header {
 	background-position: center;
 }
 
-.menu-button-toggle[data-closeButton] {
+.menu-button-toggle[data-closebutton] {
 	background-image: url('../assets/images/icon-menu-close.svg');
-}
-
-.site-menu {
-	display: none;
+	z-index: 999;
 }

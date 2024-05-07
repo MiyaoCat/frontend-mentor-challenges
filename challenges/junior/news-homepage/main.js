@@ -1,13 +1,13 @@
 const menuButtonToggle = document.querySelector('.menu-button-toggle');
-const menu = document.querySelector('.site-menu');
+const menu = document.querySelector('.menu-wrap');
 const body = document.querySelector('body');
 
 function toggleMenu() {
 	var computedDisplay = window.getComputedStyle(menu).getPropertyValue('display');
 
-	menu.style.display = computedDisplay === 'none' ? 'flex' : 'none';
+	menu.style.display = computedDisplay === 'none' ? 'block' : 'none';
 
-	menuButtonToggle.toggleAttribute('data-closeButton');
+	menuButtonToggle.toggleAttribute('data-closebutton');
 
 	body.toggleAttribute('data-overlay');
 }
