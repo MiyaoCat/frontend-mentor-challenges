@@ -1,22 +1,46 @@
+body[data-overlay]:before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background-color: hsla(0, 0%, 0%, .5);
+}
+
 header {
 	@include mixins.flex-row;
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 	margin-bottom: $mobile-margin;
+
+	border: 1px solid red;
+}
+
+.menu-wrap {
+	position: absolute;
+	inset: 0 0 0 30%;
+	border: 1px solid blue;
+	background-color: white;
+}
+
+.site-menu {
+	border: 1px solid black;
 }
 
 .menu-button-toggle {
 	display: block;
 	background: none;
 	border: none;
-	
+
 	width: toRem(40);
 	aspect-ratio: 1;
 
 	background-image: url('../assets/images/icon-menu.svg');
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.menu-button-toggle[data-closeButton] {
+	background-image: url('../assets/images/icon-menu-close.svg');
 }
 
 .site-menu {

@@ -210,6 +210,13 @@ strong {
     font-size: 3rem;
   }
 }
+body[data-overlay]:before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -217,6 +224,18 @@ header {
   align-items: center;
   width: 100%;
   margin-bottom: 2rem;
+  border: 1px solid red;
+}
+
+.menu-wrap {
+  position: absolute;
+  inset: 0 0 0 30%;
+  border: 1px solid blue;
+  background-color: white;
+}
+
+.site-menu {
+  border: 1px solid black;
 }
 
 .menu-button-toggle {
@@ -228,6 +247,10 @@ header {
   background-image: url("../assets/images/icon-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.menu-button-toggle[data-closeButton] {
+  background-image: url("../assets/images/icon-menu-close.svg");
 }
 
 .site-menu {
