@@ -243,7 +243,15 @@ header {
 }
 
 .site-menu {
-  border: 1px solid black;
+  padding-top: 9rem;
+  padding-left: 1.5rem;
+}
+.site-menu a {
+  font-size: 1.125rem;
+}
+
+.site-menu li + li {
+  margin-top: 1.5rem;
 }
 
 .menu-button-toggle {

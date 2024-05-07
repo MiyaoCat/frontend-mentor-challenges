@@ -32,7 +32,16 @@ header {
 }
 
 .site-menu {
-	border: 1px solid black;
+	padding-top: toRem(144);
+	padding-left: toRem(24);
+
+	a {
+		font-size: toRem(18);
+	}
+}
+
+.site-menu li + li {
+	margin-top: toRem(24);
 }
 
 .menu-button-toggle {

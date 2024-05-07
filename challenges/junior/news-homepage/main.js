@@ -2,7 +2,7 @@ const menuButtonToggle = document.querySelector('.menu-button-toggle');
 const menu = document.querySelector('.menu-wrap');
 const body = document.querySelector('body');
 
-function toggleMenu() {
+const toggle = function toggleMenu() {
 	var computedDisplay = window.getComputedStyle(menu).getPropertyValue('display');
 
 	menu.style.display = computedDisplay === 'none' ? 'block' : 'none';
@@ -11,3 +11,7 @@ function toggleMenu() {
 
 	body.toggleAttribute('data-overlay');
 }
+
+menuButtonToggle.addEventListener('click', function() {
+	toggle();
+})
