@@ -1,0 +1,12 @@
+.new-articles {
+	margin-top: $spacing-standard;
+	margin-bottom: $spacing-standard;
+	background-color: $ink-dark;
+
+	h2 {
+		color: $accent-alt;
+	}
+	h3, p {
+		color: $paper;
+	}
+}
