@@ -1,0 +1,15 @@
+.btn {
+	background-color: $accent;
+	text-transform: uppercase;
+	color: white;
+	width: toRem(185);
+	padding-top: toRem(13);
+	padding-bottom: toRem(13);
+	text-align: center;
+	letter-spacing: toRem(4.4);
+
+	&:hover {
+		color: $paper;
+		background-color: $ink-dark;
+	}
+}

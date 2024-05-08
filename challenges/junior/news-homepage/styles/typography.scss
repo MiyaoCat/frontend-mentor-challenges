@@ -8,7 +8,7 @@
 // }
 
 .loud-voice {
-	font-size: toRem(56);
+	font-size: toRem(40);
 	font-weight: 800;
 	// line-height: 1.1;
 	// letter-spacing: -0.1rem;
@@ -46,6 +46,7 @@
 .whisper-voice {
 	font-size: toRem(15);
 	// letter-spacing: .1rem;
+	line-height: 1.5;
 	color: $ink;
 }
 

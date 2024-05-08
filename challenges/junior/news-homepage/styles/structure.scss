@@ -1,3 +1,14 @@
 body {
 	margin: $mobile-margin-med $mobile-margin-sm $mobile-margin-xlg $mobile-margin-sm;
 }
+
+body[data-overlay]:before {
+	content: '';
+	position: fixed;
+	inset: 0;
+	background-color: hsla(0, 0%, 0%, .5);
+}
+
+body[data-overlay] {
+	overflow: hidden;
+}
