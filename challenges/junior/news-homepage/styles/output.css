@@ -217,6 +217,10 @@ body[data-overlay]:before {
   background-color: hsla(0, 0%, 0%, 0.5);
 }
 
+body[data-overlay] {
+  overflow: hidden;
+}
+
 header {
   display: flex;
   flex-direction: row;

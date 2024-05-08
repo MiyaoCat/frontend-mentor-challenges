@@ -15,3 +15,9 @@ const toggle = function toggleMenu() {
 menuButtonToggle.addEventListener('click', function() {
 	toggle();
 })
+
+body.addEventListener('click', function(event) {
+	if ( event.target.hasAttribute('data-overlay') ) {
+		toggle();
+	}
+})
