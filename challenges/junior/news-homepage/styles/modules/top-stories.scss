@@ -1,0 +1,32 @@
+.top-stories-card {
+	@include mixins.flex-row;
+	gap: toRem(24);
+
+
+	picture {
+		max-width: toRem(100);
+	}
+}
+
+.top-stories-card + .top-stories-card {
+	margin-top: toRem(32);
+}
+
+.top-stories-content {
+	@include mixins.flex-column;
+	justify-content: space-between;
+
+	h4 {
+		color: $ink-dark;
+		font-weight: 800;
+	}
+
+	p {
+		color: $ink;
+	}
+}
+
+.number {
+	color: $ink-inverse;
+	font-weight: 700;
+}

@@ -29,6 +29,14 @@
 	color: $ink-dark;	
 }
 
+.normal-voice-bold {
+	font-size: toRem(20); 
+	line-height: 1.2;
+	font-weight: 600;
+	// letter-spacing: 0.01rem;
+	color: $ink;
+}
+
 .normal-voice {
 	font-size: toRem(20); 
 	line-height: 1.2;
@@ -46,8 +54,7 @@
 .whisper-voice {
 	font-size: toRem(15);
 	// letter-spacing: .1rem;
-	line-height: 1.5;
-	color: $ink;
+	line-height: 1.625;
 }
 
 strong {

@@ -1,4 +1,5 @@
 .new-articles {
+	padding: toRem(24) toRem(20) toRem(24) toRem(21);
 	margin-top: $spacing-standard;
 	margin-bottom: $spacing-standard;
 	background-color: $ink-dark;
@@ -6,7 +7,21 @@
 	h2 {
 		color: $accent-alt;
 	}
-	h3, p {
+	h3 {
 		color: $paper;
+		margin-bottom: toRem(8);
 	}
+}
+
+.new-articles-card {
+	padding-top: toRem(31);
+	padding-bottom: toRem(24);
+}
+.new-articles-card + .new-articles-card {
+	border-top: 1px solid $ink;
+}
+
+.teaser {
+	font-weight: 200;
+	color: $ink-inverse;
 }
