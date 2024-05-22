@@ -6,7 +6,7 @@ const toggle = function toggleMenu() {
 	// var computedDisplay = window.getComputedStyle(menu).getPropertyValue('display');
 
 	// menu.style.display = computedDisplay === 'none' ? 'block' : 'none';
-	menu.hasAttribute('data-show') ? menuButtonToggle.setAttribute('data-closebutton', false) : menuButtonToggle.setAttribute('data-show', true);
+	// menu.hasAttribute('data-show') ? menuButtonToggle.setAttribute('data-closebutton', false) : menuButtonToggle.setAttribute('data-show', true);
 
 	menu.toggleAttribute('data-show');
 	menuButtonToggle.toggleAttribute('data-closebutton');
