@@ -14,13 +14,16 @@ header {
 	display: none;
 	z-index: 99;
 	height: 100vh;
-
 	padding-top: 60px;
 }
 
-.menu-wrap[data-visible] {
+.menu-wrap[data-show] {
 	display: block;
 }
+
+// .menu-wrap[data-visible] {
+// 	display: block;
+// }
 
 .site-menu {
 	padding-top: toRem(144);

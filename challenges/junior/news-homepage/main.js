@@ -3,12 +3,13 @@ const menu = document.querySelector('.menu-wrap');
 const body = document.querySelector('body');
 
 const toggle = function toggleMenu() {
-	var computedDisplay = window.getComputedStyle(menu).getPropertyValue('display');
+	// var computedDisplay = window.getComputedStyle(menu).getPropertyValue('display');
 
-	menu.style.display = computedDisplay === 'none' ? 'block' : 'none';
+	// menu.style.display = computedDisplay === 'none' ? 'block' : 'none';
+	menu.hasAttribute('data-show') ? menuButtonToggle.setAttribute('data-closebutton', false) : menuButtonToggle.setAttribute('data-show', true);
 
-	menuButtonToggle.toggleAttribute('data-closebutton');
-
+	menu.toggleAttribute('data-show');
+	// menuButtonToggle.toggleAttribute('data-closebutton');
 	body.toggleAttribute('data-overlay');
 }
 
@@ -21,3 +22,4 @@ body.addEventListener('click', function(event) {
 		toggle();
 	}
 })
+

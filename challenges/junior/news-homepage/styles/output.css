@@ -247,7 +247,7 @@ header {
   padding-top: 60px;
 }
 
-.menu-wrap[data-visible] {
+.menu-wrap[data-show] {
   display: block;
 }
 
