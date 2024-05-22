@@ -9,7 +9,7 @@ const toggle = function toggleMenu() {
 	menu.hasAttribute('data-show') ? menuButtonToggle.setAttribute('data-closebutton', false) : menuButtonToggle.setAttribute('data-show', true);
 
 	menu.toggleAttribute('data-show');
-	// menuButtonToggle.toggleAttribute('data-closebutton');
+	menuButtonToggle.toggleAttribute('data-closebutton');
 	body.toggleAttribute('data-overlay');
 }
 
