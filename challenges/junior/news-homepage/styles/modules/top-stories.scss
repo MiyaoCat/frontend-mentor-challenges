@@ -19,6 +19,11 @@
 	h4 {
 		color: $ink-dark;
 		font-weight: 800;
+
+		&:hover {
+			cursor: pointer;
+			color: $accent;
+		}
 	}
 
 	p {

@@ -235,13 +235,11 @@ header {
   align-items: center;
   width: 100%;
   margin-bottom: 2rem;
-  border: 1px solid red;
 }
 
 .menu-wrap {
   position: absolute;
   inset: 0 0 0 30%;
-  border: 1px solid blue;
   background-color: white;
   display: none;
   z-index: 99;
@@ -281,6 +279,30 @@ header {
   z-index: 999;
 }
 
+@media (min-width: 45.625rem) {
+  .menu-button-toggle {
+    display: none;
+  }
+  .menu-wrap {
+    position: initial;
+    inset: initial;
+    background-color: initial;
+    display: initial;
+    z-index: initial;
+    height: initial;
+    padding-top: initial;
+  }
+  .site-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    padding: 0;
+    color: hsl(236, 13%, 42%);
+  }
+  .site-menu li + li {
+    margin: 0;
+  }
+}
 .headline h1 {
   margin-top: 4rem;
   margin-bottom: 1rem;
@@ -338,6 +360,10 @@ header {
 .top-stories-content h4 {
   color: hsl(240, 100%, 5%);
   font-weight: 800;
+}
+.top-stories-content h4:hover {
+  cursor: pointer;
+  color: hsl(5, 85%, 63%);
 }
 .top-stories-content p {
   color: hsl(236, 13%, 42%);

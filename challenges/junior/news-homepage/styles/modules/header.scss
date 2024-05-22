@@ -5,14 +5,11 @@ header {
 	align-items: center;
 	width: 100%;
 	margin-bottom: $mobile-margin;
-
-	border: 1px solid red;
 }
 
 .menu-wrap {
 	position: absolute;
 	inset: 0 0 0 30%;
-	border: 1px solid blue;
 	background-color: white;
 	display: none;
 	z-index: 99;
@@ -42,7 +39,6 @@ header {
 	display: block;
 	background: none;
 	border: none;
-	// z-index: 99;
 
 	width: toRem(40);
 	aspect-ratio: 1;
@@ -55,4 +51,31 @@ header {
 .menu-button-toggle[data-closebutton] {
 	background-image: url('../assets/images/icon-menu-close.svg');
 	z-index: 999;
+}
+
+@media ( min-width: toRem(730) ) {
+	.menu-button-toggle {
+		display: none;
+	}
+
+	.menu-wrap {
+		position: initial;
+		inset: initial;
+		background-color: initial;
+		display: initial;
+		z-index: initial;
+		height: initial;
+		padding-top: initial;
+	}
+
+	.site-menu {
+		@include mixins.flex-row;
+		gap: toRem(40);
+		padding: 0;
+		color: $ink;
+	}
+
+	.site-menu li + li {
+	margin: 0;
+}
 }
