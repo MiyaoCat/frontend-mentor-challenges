@@ -25,3 +25,11 @@
 	font-weight: 200;
 	color: $ink-inverse;
 }
+
+@media ( min-width: toRem(1000) ) {
+	.new-articles {
+		grid-area: b;
+		max-width: toRem(350);
+		margin: 0;
+	}
+}

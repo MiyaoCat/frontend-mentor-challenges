@@ -1,4 +1,8 @@
 .headline {
+	picture {
+		max-height: toRem(300);
+	}
+	
 	h1 {
 		margin-top: $spacing-standard;
 		margin-bottom: $spacing-small;
@@ -6,5 +10,43 @@
 
 	p {
 		margin-bottom: $spacing-standard;
+	}
+}
+
+@media ( min-width: toRem(1000) ) {
+	.headline-new-container {
+		@include mixins.flex-row;
+		gap: toRem(30);
+	}
+
+	.headline {
+		grid-area: a;
+
+		@include mixins.flex-column;
+		gap: toRem(28);
+		max-width: 730px;
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	.hero-image {
+		// max-width: 730px;
+		max-height: 300px;
+	}
+	.headline-content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: toRem(30);
+	}
+
+	.headline-teaser {
+		@include mixins.flex-column;
+		gap: toRem(28);
+
+		p {
+			margin: 0;
+		}
 	}
 }

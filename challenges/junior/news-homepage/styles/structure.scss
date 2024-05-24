@@ -12,3 +12,32 @@ body[data-overlay]:before {
 body[data-overlay] {
 	overflow: hidden;
 }
+
+@media ( min-width: toRem(730) ) {
+	body {
+		margin: toRem(89) toRem(65) toRem(129) toRem(65);
+	}
+
+	main {
+		max-width: toRem(1110);
+		// display: grid;
+		// grid-template-columns: 1fr 1fr 1fr;
+		// grid-template-areas: 
+		// 	"a b c"
+		// 	"d d d"
+		// ;
+		@include mixins.flex-column;
+		gap: toRem(30);
+		row-gap: toRem(71);
+	}		
+}
+
+@media ( min-width: toRem(1200)) {
+	body {
+		margin: toRem(89) toRem(165) toRem(129) toRem(165);
+	}
+
+	main {
+		width: toRem(1110);
+	}
+}

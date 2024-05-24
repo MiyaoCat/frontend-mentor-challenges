@@ -89,8 +89,6 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding-bottom: 6rem;
   max-width: 90rem;
 }
@@ -159,6 +157,26 @@ body[data-overlay] {
   overflow: hidden;
 }
 
+@media (min-width: 45.625rem) {
+  body {
+    margin: 5.5625rem 4.0625rem 8.0625rem 4.0625rem;
+  }
+  main {
+    max-width: 69.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    row-gap: 4.4375rem;
+  }
+}
+@media (min-width: 75rem) {
+  body {
+    margin: 5.5625rem 10.3125rem 8.0625rem 10.3125rem;
+  }
+  main {
+    width: 69.375rem;
+  }
+}
 /* T Y P O G R A P H Y */
 .loud-voice {
   font-size: 2.5rem;
@@ -280,6 +298,10 @@ header {
 }
 
 @media (min-width: 45.625rem) {
+  header {
+    max-width: 69.375rem;
+    margin-bottom: 3.8125rem;
+  }
   .menu-button-toggle {
     display: none;
   }
@@ -303,6 +325,9 @@ header {
     margin: 0;
   }
 }
+.headline picture {
+  max-height: 18.75rem;
+}
 .headline h1 {
   margin-top: 4rem;
   margin-bottom: 1rem;
@@ -311,6 +336,39 @@ header {
   margin-bottom: 4rem;
 }
 
+@media (min-width: 62.5rem) {
+  .headline-new-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+  .headline {
+    grid-area: a;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    max-width: 730px;
+  }
+  .headline h1 {
+    margin: 0;
+  }
+  .hero-image {
+    max-height: 300px;
+  }
+  .headline-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.875rem;
+  }
+  .headline-teaser {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+  .headline-teaser p {
+    margin: 0;
+  }
+}
 .new-articles {
   padding: 1.5rem 1.25rem 1.5rem 1.3125rem;
   margin-top: 4rem;
@@ -339,6 +397,13 @@ header {
   color: hsl(233, 8%, 79%);
 }
 
+@media (min-width: 62.5rem) {
+  .new-articles {
+    grid-area: b;
+    max-width: 21.875rem;
+    margin: 0;
+  }
+}
 .top-stories-card {
   display: flex;
   flex-direction: row;
@@ -374,6 +439,17 @@ header {
   font-weight: 700;
 }
 
+@media (min-width: 62.5rem) {
+  .top-stories {
+    grid-area: c;
+    display: flex;
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+  .top-stories-card + .top-stories-card {
+    margin-top: 0rem;
+  }
+}
 .btn {
   background-color: hsl(5, 85%, 63%);
   text-transform: uppercase;

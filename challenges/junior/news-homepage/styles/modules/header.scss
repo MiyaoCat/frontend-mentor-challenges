@@ -57,6 +57,11 @@ header {
 }
 
 @media ( min-width: toRem(730) ) {
+	header {
+		max-width: toRem(1110);
+		margin-bottom: toRem(61);
+	}
+
 	.menu-button-toggle {
 		display: none;
 	}
@@ -79,6 +84,6 @@ header {
 	}
 
 	.site-menu li + li {
-	margin: 0;
-}
+		margin: 0;
+	}
 }

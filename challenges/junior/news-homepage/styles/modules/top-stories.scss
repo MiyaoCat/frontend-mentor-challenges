@@ -35,3 +35,15 @@
 	color: $ink-inverse;
 	font-weight: 700;
 }
+
+@media ( min-width: toRem(1000) )  {
+	.top-stories {
+		grid-area: c;
+		@include mixins.flex-row;
+		gap: toRem(30);
+	}
+
+	.top-stories-card + .top-stories-card {
+		margin-top: toRem(0);
+	}
+}

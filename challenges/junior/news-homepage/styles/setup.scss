@@ -78,7 +78,7 @@ body {
 main {
 	flex-grow: 1;
 	@include mixins.flex-column;
-	@include mixins.centered;
+	// @include mixins.centered;
 	// gap: $spacing-xxlarge;
 	padding-bottom: toRem(96);
 	max-width: toRem(1440);
