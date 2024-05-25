@@ -20,12 +20,6 @@ body[data-overlay] {
 
 	main {
 		max-width: toRem(1110);
-		// display: grid;
-		// grid-template-columns: 1fr 1fr 1fr;
-		// grid-template-areas: 
-		// 	"a b c"
-		// 	"d d d"
-		// ;
 		@include mixins.flex-column;
 		gap: toRem(30);
 		row-gap: toRem(71);
