@@ -10,7 +10,7 @@ I started doing the challenges from [Frontend Mentor](https://www.frontendmentor
 * Add the HTML tags
 * Build out the mobile CSS
 * Build out the desktop CSS
-* Build out the Javascript
+* Build out the Javascript (This is sometimes done while building out the baseline CSS)
 * Review
 * Publish!
   
